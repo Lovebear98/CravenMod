@@ -1,0 +1,60 @@
+{
+  "${modID}:PathmakerBadge": {
+    "NAME": "Pathmaker's Badge",
+    "FLAVOR": "A badge given to Pathmakers after their apprenticeship, but I'm still a fledgling. She insisted I take it before she left.",
+    "DESCRIPTIONS": [
+      "The first time you #y${modID}:Bloom each combat, #y${modID}:Grow #b",
+      "."
+    ]
+  },
+  "${modID}:ColorfulStones": {
+    "NAME": "Colorful Stones",
+    "FLAVOR": "They say that the glint off stones like these can guide you back home from out in the desert.",
+    "DESCRIPTIONS": [
+      "At the end of the turn, #yRetain ALL #y${modID}:Oases in your hand."
+    ]
+  },
+  "${modID}:DesertNectar": {
+    "NAME": "Desert Nectar",
+    "FLAVOR": "It loosens up the body and the mind, allowing easier use of magic if you can keep your head...clear.",
+    "DESCRIPTIONS": [
+      "#y${modID}:Growth can trigger #y${modID}:Bloom."
+    ]
+  },
+  "${modID}:CobrasSerpentine": {
+    "NAME": "Cobra's Serpentine",
+    "FLAVOR": "A stone made from The Scoundrel's own venom. When used to focus magic, it becomes unwieldy in exchange for efficiency.",
+    "DESCRIPTIONS": [
+      "Lose #b1 maximum energy. NL At the start of the turn, channel a random #y${modID}:Flower."
+    ]
+  },
+  "${modID}:CrocodilesJade": {
+    "NAME": "Crocodile's Jade",
+    "FLAVOR": "A stone formed around a small lizard. It can't enhance magic, but it does clear the mind if you try anyways.",
+    "DESCRIPTIONS": [
+      "After playing an #yAttack, #ySkill, and #yPower in the same turn, gain",
+      " and draw #b",
+      " card",
+      "s",
+      "."
+    ]
+  },
+  "${modID}:JackalsBloodstone": {
+    "NAME": "Jackal's Bloodstone",
+    "FLAVOR": "A stone that grew where the Inquisitor's blood fell. It converts mana to strength in the face of danger.",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yStrength after reaching an #y${modID}:Oasis."
+    ]
+  },
+  "${modID}:FalconsMoonstone": {
+    "NAME": "Falcon's Moonstone",
+    "FLAVOR": "A stone left behind by The Warden wherever she perches. It's said to charge protective energies under moonlight.",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yDexterity at the start of combat. NL Lose #b",
+      " #yDexterity at the end of each turn for the first #b",
+      " turns of combat."
+    ]
+  }
+}

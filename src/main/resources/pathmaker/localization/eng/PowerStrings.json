@@ -1,0 +1,99 @@
+{
+  "${modID}:EndlessExpansePower": {
+    "NAME": "Endless Expanse",
+    "DESCRIPTIONS": [
+      "The first time each turn you draw a card you can't play, gain [E] .",
+      "The first #b",
+      " times each turn you draw a card you can't play, gain [E] .",
+      " NL #g",
+      " #gof #g",
+      ".",
+      " NL #rUSED"
+    ]
+  },
+  "${modID}:BloomForEnergyPower": {
+    "NAME": "Seeker",
+    "DESCRIPTIONS": [
+      "#yBloom: Gain",
+      " .",
+      " NL Reduce this power by #b",
+      " when it triggers."
+    ]
+  },
+  "${modID}:BloomForDrawPower": {
+    "NAME": "Sunrise",
+    "DESCRIPTIONS": [
+      "#yBloom: Draw #b",
+      " card.",
+      " cards.",
+      " NL Reduce this power by #b",
+      " when it triggers."
+    ]
+  },
+  "${modID}:WeaknessExploitPower": {
+    "NAME": "Weakness Exploit",
+    "DESCRIPTIONS": [
+      "Until the end of its turn, when this enemy gains #yBlock or a #yBuff, it also gains #b",
+      " #yVulnerable."
+    ]
+  },
+  "${modID}:RepeatBloomPower": {
+    "NAME": "The Designer's Grace",
+    "DESCRIPTIONS": [
+      "The first time each turn you #yBloom, do it again with a blank card.",
+      "The first #b",
+      " times each turn you #yBloom, do it again with a blank card.",
+      " NL #g",
+      " #gof #g",
+      ".",
+      " NL #rUSED"
+    ]
+  },
+  "${modID}:WardenDexterityPower": {
+    "NAME": "Warden's Calm",
+    "DESCRIPTIONS": [
+      "Each time you #yBloom this turn, gain #b",
+      " temporary #yDexterity."
+    ]
+  },
+  "${modID}:WardenStrengthPower": {
+    "NAME": "Warden's Wrath",
+    "DESCRIPTIONS": [
+      "Each time you #yBloom this turn, gain #b",
+      " temporary #yStrength."
+    ]
+  },
+  "${modID}:OasisVigorPower": {
+    "NAME": "Jackal's Path",
+    "DESCRIPTIONS": [
+      "Each time you reach an #yOasis, gain #b",
+      " #yVigor."
+    ]
+  },
+  "${modID}:BloomForFlowerPower": {
+    "NAME": "Cobra's Path",
+    "DESCRIPTIONS": [
+      "The first time you #yBloom each turn, channel a #yFlower of that card's type.",
+      "The first #b",
+      " times each turn you #yBloom each turn, channel a #yFlower of that card's type.",
+      " NL #g",
+      " #gof #g",
+      ".",
+      " NL #rUSED"
+    ]
+  },
+  "${modID}:PathoftheCrocodilePower": {
+    "NAME": "Crocodile's Path",
+    "DESCRIPTIONS": [
+      "When you #yGrow, the card will be treated as ",
+      "an #rAttack for #b",
+      "a #gSkill for #b",
+      "a #bPower for #b",
+      "a #yStatus for #b",
+      "a #pCurse for #b",
+      " turn",
+      "s",
+      "."
+    ]
+  }
+}
