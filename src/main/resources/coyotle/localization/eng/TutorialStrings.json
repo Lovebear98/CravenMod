@@ -1,0 +1,16 @@
+{
+  "${modID}:TutorialPatch": {
+    "TEXT": [
+      "If it's not empty, your draw pile will #rALWAYS have a #yShard as its bottom card, displayed above it. NL NL The #yShard's properties will change based on #pProphecies applied to it. Each #yShard will generate with different starting #pProphecies.",
+      "[${modID}:RPIcon] #rRuby increases damage by #b3. NL NL [${modID}:DPIcon] Diamond increases #yBlock by #b2. NL NL [${modID}:SPIcon] #bSapphire increases secondary effects by #bhalf its amount, but no less than #b1. NL NL [${modID}:WPIcon] #gWild counts as one of each [${modID}:DPIcon] [${modID}:RPIcon] and [${modID}:SPIcon] , but increases cost by #b1. NL NL [${modID}:BPIcon] #pBlood randomly lowers [${modID}:DPIcon] [${modID}:RPIcon] and [${modID}:SPIcon] NL by #b2 total, but lowers cost by #b1.",
+      "When the last card leaves your draw pile, you'll enter #yThe #yDream. Certain effects will change while you're in #yThe #yDream, and you'll exit #yThe #yDream if you end your turn with cards left in your hand."
+    ],
+    "LABEL": [
+      "Continue",
+      "Exit",
+      "The Coyotle",
+      "Page ",
+      " of 3"
+    ]
+  }
+}

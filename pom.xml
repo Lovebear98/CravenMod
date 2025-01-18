@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
-        <modID>pathmaker</modID>
+        <modID>coyotle</modID>
         <author>Svitasch</author>
 
         <!-- Change the path for your system to match your Steam installation. -->
@@ -23,12 +23,12 @@
     </properties>
 
     <!-- This information will be displayed in ModTheSpire, the modded launcher. -->
-    <name>Pathmaker Mod</name>
-    <version>0.1.1</version>
+    <name>Coyotle Mod</name>
+    <version>0.0.1</version>
     <!-- Avoid using \ in this description, as they can cause the description to fail to load. -->
     <!-- If you really want to use them, you'll need to "escape" them by putting another one in front, like \\ -->
     <description>
-        Traverse the Spire in search of your lost mentor! Carefully plan your way so that your abundant enthusiasm doesn't lead you to a dead end.\n Introduces The Sand Druid, a custom character with x Card, y Relics, and z Potions.
+        In loving memory of Hex TCG, my favorite CCG I ever had the pleasure of playing.
     </description>
 
     <!--You shouldn't need to change anything below this point, but feel free to look at it.-->

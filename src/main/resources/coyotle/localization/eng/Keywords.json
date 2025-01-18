@@ -1,0 +1,64 @@
+[
+  {
+    "PROPER_NAME": "x13yMultiword Keyword",
+    "NAMES": [
+      "multiword keyword",
+      "multiword_keyword",
+      "multiword_keywords"
+    ],
+    "DESCRIPTION": "Make sure the first element in NAMES has no underscores. The rest should use _ in the place of spaces. In card text, you'll use the underscore versions."
+  },
+
+  {
+    "PROPER_NAME": "The Dream",
+    "NAMES": [
+      "The Dream",
+      "the dream",
+      "the_dream",
+      "Dream",
+      "dream",
+      "Dreaming",
+      "dreaming"
+    ],
+    "DESCRIPTION": "Enter #yThe #yDream after drawing the last card in the draw pile. Exit #yThe #yDream after ending the turn with cards left in your hand. #yDreaming cards transform while you're in #yThe #yDream."
+  },
+  {
+    "PROPER_NAME": "Prophecy",
+    "NAMES": [
+      "Prophecy",
+      "prophecy",
+      "prophecies"
+    ],
+    "DESCRIPTION": "Grant bonuses to ALL #yShards in the draw pile. NL [${modID}:BPIcon] : Cost and #b2 random [${modID}:DPIcon] [${modID}:RPIcon] [${modID}:SPIcon] #yProphecies #b-1 NL [${modID}:DPIcon] : #yBlock #b+2 NL [${modID}:RPIcon] : Damage #b+3 NL [${modID}:SPIcon] : Magic number #b+1 #bper #b2 [${modID}:SPIcon] NL [${modID}:WPIcon] : Cost #b+1, but counts as #b1 of each [${modID}:DPIcon] [${modID}:RPIcon] [${modID}:SPIcon] #yProphecy"
+  },
+  {
+    "PROPER_NAME": "Mill",
+    "NAMES": [
+      "Mill",
+      "mill",
+      "mills",
+      "milling",
+      "milled"
+    ],
+    "DESCRIPTION": "Send X cards from the draw pile to the discard pile."
+  },
+  {
+    "PROPER_NAME": "Shard",
+    "NAMES": [
+      "Shard",
+      "shard",
+      "shards"
+    ],
+    "DESCRIPTION": "When your draw pile isn't empty, there will be a blank #yShard at the bottom of it that can be modified by #yProphecies."
+  },
+  {
+    "PROPER_NAME": "Valor",
+    "NAMES": [
+      "Valor",
+      "valor",
+      "valors",
+      "valorous"
+    ],
+    "DESCRIPTION": "After playing #b5 in a combat, they gain #b2 damage that combat. NL At #b15, they draw a card. NL At #b25, they're always upgraded. NL At #b30, they grant #yBlock and stop growing."
+  }
+]

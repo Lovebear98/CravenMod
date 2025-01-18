@@ -1,0 +1,33 @@
+{
+  "${modID}:BrightmoonBrave": {
+    "NAME": "Brightmoon Brave",
+    "FLAVOR": "How does the moon think of Hex? As a brother? Or as an enemy?",
+    "DESCRIPTIONS": [
+      "Your first #y${modID}:Shard each combat will be a #yHowling #yBluegrass.",
+      "."
+    ]
+  },
+  "${modID}:MasteroftheHunt": {
+    "NAME": "Master of the Hunt",
+    "FLAVOR": "When Coyotle pups are born as twins, one will be a hero and one will be a trickster; I choose to be both. -Windsinger",
+    "DESCRIPTIONS": [
+      "Double the cost, damage, and #yBlock of all #yStrikes and #yDefends. Gain",
+      " when you play a #yStrike, draw #b",
+      " card",
+      "s",
+      " when you play a #yDefend. The first time you play both each turn, do both."
+    ]
+  },
+  "${modID}:MemoryoftheDream": {
+    "NAME": "Memory of the Dream",
+    "FLAVOR": "Even this far away, you can truly feel it now: The Dream spinning around you, and other life interweaving your own.",
+    "DESCRIPTIONS": [
+      "On the #yfirst turn of combat, choose #b",
+      " to add from your draw pile to your hand. NL NL On the #ysecond turn of combat, discard #b",
+      " random",
+      " card",
+      "s",
+      "."
+    ]
+  }
+}

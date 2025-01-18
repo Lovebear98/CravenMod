@@ -1,0 +1,67 @@
+{
+  "${modID}:UIText": {
+    "TEXT": [
+      "Enable \"Eye Candy\" animations for The Coyotle.",
+      "Enable \"Ear Candy\" audio cues for The Coyotle.",
+      "Enable alternate UI elements from the Hex TCG.",
+      "Display The Coyotle's tutorial upon first entering combat.",
+      "Enable events from The Coyotle for other characters."
+    ],
+    "EXTRA_TEXT": [
+      "Discard",
+      "Exhaust",
+      "Grow",
+      "Recover"
+    ],
+    "TEXT_DICT": {
+      "This": "",
+      "This is a key": ""
+    }
+  },
+  "${modID}:Variables": {
+    "TEXT": [
+      " [E]",
+      " [${modID}:BPIcon]",
+      " [${modID}:DPIcon]",
+      " [${modID}:RPIcon]",
+      " [${modID}:SPIcon]",
+      " [${modID}:WPIcon]"
+    ],
+    "EXTRA_TEXT": [
+      ""
+    ]
+  },
+  "${modID}:ProphecyPanel": {
+    "TEXT": [
+      "Shard",
+      "#r[ATTACK]",
+      "#g[SKILL]",
+      "#b[POWER]",
+      "#y[STATUS]",
+      "#p[CURSE]",
+      "NO TYPE???"
+    ],
+    "EXTRA_TEXT": [
+      "NO NAME???",
+      "NO DESCRIPTION???",
+      "Shard",
+      "This #yShard is currently on the bottom of your draw pile."
+    ],
+    "TEXT_DICT": {
+      "This": "",
+      "This is a key": ""
+    }
+  },
+  "${modID}:StrikeDefendChecks": {
+    "TEXT": [
+      "strike",
+      "striking",
+      "strikes",
+      "defend",
+      "defensive"
+    ],
+    "EXTRA_TEXT": [
+      ""
+    ]
+  }
+}

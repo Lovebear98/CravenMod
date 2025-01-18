@@ -1,0 +1,107 @@
+{
+  "${modID}:WindsingerEvent": {
+    "NAME": "The Trickster Hero",
+    "DESCRIPTIONS": [
+      "As you trudge onward, a @ragged@ coyotle's head pokes over your shoulder with no warning, ~smiling~ at you. A #p~palm~ presses against the small of your back, and you realize too late that you're #rtrapped. When did he get behind you? NL NL \"Didn't expect to see one of the #y~Braves~ here, let alone a poorly trained pup! #gFriend or #rFoe?\"",
+      "As you trudge onward, a @ragged@ canid head pokes over your shoulder with no warning, ~smiling~ at you. Something ~#rsharp~ nudges against your ribs, and you realize too late that you're #rtrapped. When did he get behind you? NL NL \"Hey, stranger! You're different from the ~rabble.~ You've got #r@teeth!@ Are they #gfriendly teeth, or #rnot?\"",
+      "A sudden chill up your spine causes you to spin around, just in time to find #yWindsinger's crooked smile staring at you from within arm's reach. He starts bouncing spryly between his feet when you notice him, openly overjoyed. NL NL \"Good, you're getting better! Wanna rest? I'll keep watch if you do. You've earned it!\"",
+      "A shadow catches your eye and makes you turn to defend yourself, but you find nothing. You can't see any sign of it, but you're certain something's #rhunting you now. NL NL You need to think fast.",
+      "\"Good, not enough of those here! #yWindsinger. You?\" NL NL He finally releases his hold on you, and before you can turn to face him he places ~something~ into your hands. His crooked grin slips sideways out of sight, and when you turn to find him he's already long gone. NL NL \"See if you can't find me before I catch you next time!\"",
+      "\"Well, let's see how long that stays true then! Here, to make up for the scare.\" NL NL You feel something slipped into your pocket, but before you can turn to look your legs are tripped out from under you. You can hear your new 'friend' laughing even though you can't see him anywhere.",
+      "He nods at your answer, and releases you almost as suddenly as he seized you. You turn to watch him retreat, but he's already gone. Try as you might the traces he left, obvious as they are, all lead back to each other in a giant circle.",
+      "\"I #y~know~ you don't know what tree you're barkin' up, so I'll be gentle on you. We'll see if ya can't #y~learn~ something, and I'll give ya #gsomethin' #gneat if you keep up.\"",
+      "\"Not a lot of #yrabbits to go picking off in here, and even fewer rabbits that want to fight head-on. Sure, I'll take you up on it. Hope you know what ~tree~ you're barkin' up though.\"",
+      "When you wake up, you can't see Windsinger anywhere...but you can ~definitely~ feel him staring at you, wherever he is. You start packing your things, only to find things vanishing and appearing as you go. Windsinger's in the mood for a bit of fun before you go, it seems. You'll just have to pack until he gets bored.",
+      "Windsinger's surprisingly warm-natured. He cracks jokes, tells stories, talks about philosophy, and offers you some tokens from his home. You and he spend a good time bantering before you decide you need to get back on your way. Thankfully, he doesn't feel up to mischief this time.",
+      "You offer a kind greeting, but continue on your way without paying him too much mind. He seems to get the point, and vanishes into the Spire without blocking your way.",
+      "You stick your hands up in surrender, and tilt your body in a generic posture of apology. While you hear nothing, the presence looming over you has moved on. You can't shake off an odd feeling that something has changed, though.",
+      "Pain pricks your body as arrows hit you from all directions, and it's all you can do to run as fast as you can. When you finally feel you've gotten far enough away, you collapse on the ground to rest.",
+      "\"Not bad! A little more practice and we can play @rough.@ Here's a gift. It's #y~absolutely~ sabotaged, but I trust you can figure out how to fix my handiwork.\" NL NL Windsinger steps in a lazy circle around you, then kicks the dirt up and breaks out in a sprint past you. The moment he leaves your vision behind a cloud of dust, he's gone and you can't find a trace of him."
+    ],
+    "OPTIONS": [
+      "[Friend] #gGain #gMaster #gof #gthe #gHunt. (Own a Coyotle Card or Relic)",
+      "[Foe] #rFight #rWindsinger. (Recommended Act 3)",
+      "[Stranger] #gGain #gCard.",
+      "[Traveler] (Leave)",
+      "[[Divider into Second Encounter (Friend)]]",
+      "[Rest] #gHeal #g",
+      " #gHP.",
+      "[Chat] #gGain #gCard. (Coyotle card in Deck.)",
+      "[Fight] #rFight #rWindsinger. (Recommended Act 3)",
+      "[Leave]",
+      "[[Divider into Second Encounter (Foe)]]",
+      "[Apologize] #rGain #b2#rCards and #gGain #gCard.",
+      "[Fight] #rFight #rWindsinger. (Recommended Act 3)",
+      "[Flight] #rTake #b",
+      " #rdamage.",
+      "[Leave.]",
+      "[Begin Fight.]",
+      "[Trust] #gGain #gMaster #gof #gthe #gHunt. (Coyotle Card or Relic)"
+    ]
+  },
+
+
+
+
+  "${modID}:EnterTheDreamEvent": {
+    "NAME": "Enter the Dream",
+    "DESCRIPTIONS": [
+      "Enter the Dream",
+      "You step into a small tent, its walls lined with ~esoteric~ symbols in vibrant colors, and the air filled with the soft scent of burning herbs. There's a scraggly old coyotle rocking in a chair in the corner,eyes closed and breathing slow, but his voice rises to meet you. NL NL \"Sure took you a while to get here, huh? I thought I'd be all dust and ashes before you finally showed up. Wouldn't have changed much, but still! Come, come, sit down! Let's chat.\"",
+      "You step into a small tent, its walls lined with ~esoteric~ symbols in vibrant colors, and the air filled with the soft scent of burning herbs. There's a scraggly old canid rocking in a chair in the corner, eyes closed and breathing slow, but his voice rises to meet you. NL NL \"Hum. I dreamed of a Coyotle pup, but you're missin' a few hairs and a tail for that one. I guess it'd make sense it took you this long to find me. I'm impressed! Let's chat.\"",
+      "You listen to the old coyotle talk about his life. About his parents, his children, about the war on Hex, the Ardent, about his friends and his allies. He flawlessly weaves stories with passion and grandeur, and eventually you lose track of time following his words. It feels like you've spent many days listening to him go on and on, but you never feel the tire of exhaustion. NL NL \"Ah, but of course, you're just indulging an old man's love of stories. You already know about all of it, don't you? This deep, I'd be surprised if there's anything we didn't.\"",
+      "You impulsively explain your predicament to the old coyotle and he listens raptly, puffing his pipe any time there's a lull in the story. He asks questions here and there, and draws a few conclusions before you reach them, but never takes his attention from you. When you finish, he tilts his head slowly before speaking. NL NL \"You're in quite the predicament, but I think you can help yourself. Just remember not to get lost too long. #yThe #yDream's rough on you when you're not used to it, especially this deep.\"",
+      "Before you can say another word, a feeling of swallowing numbness overcomes you and you watch with surprising calmness as your body and the world move further and further away, replaced by an endless night sky. The only things that remain still are the old man, and the coiling smoke surrounding you both. You see, feel, everything - and you know without words that, even if just in spirit, you're somewhere sacred.",
+      "You @lurch@ awake in the middle of an empty hallway in the spire, overwhelmed by your experiences. A motley hand grabs your arm and steadies you, and the smell of smoke reaches you once again. NL NL \"Hope you didn't push yourself too hard, pup. You've got a little experience here and there, but it takes a long time to stay grounded that far in. Here, at least let me help you get steady before you go.\" NL NL He takes a deep draw of his pipe and blows the smoke directly into your face. While you briefly @panic@ expecting to be sent spiraling back, you feel your strength and senses return to you, almost all at once. NL NL \"Be safe out there, pup.\"",
+      "\"I get it. The creepy old dog, in a tent that doesn't belong, in the middle of a looping hellscape of things that want you dead, is pretty hard to trust - isn't he? But it's alright, you'll eventually end up back here and we'll get a chance for a proper chat. Be safe out there. My tent's always open to you, and you always know the way.\" NL NL A burning sensation slowly waters your eyes as he speaks. When you finally give in and blink, you find yourself standing in the middle of a hallway somewhere in the spire. Were you just #y~dreaming~ here?",
+      "#yEarth. NL NL You feel her crunch between your toes, slip between your fingers, and feel the grip of life upon it, all relying on her steady stance to offer them safety and guidance. NL NL You feel the earth within you, and without you.",
+      "#pSky. NL NL You feel it gliding across your skin, kissing the earth beneath and combing its fingers through the hair of all creatures below. You feel its breath drive the storms and their life-giving rain. NL NL You feel the sky within you, and without you.",
+      "#bSea. NL NL You hear his call in the distance, the crashing waves ever-pulling and ever-flowing. You feel the fish singing within him, and the fragile symphony he conducts to drive water where it needs be. NL NL You feel the sea within you, and without you.",
+      "#gSilence. NL NL You feel the emptiness, and you hear it with more than your ears. The silence is the song of the universe, of everything from the greatest to the smallest dancing in unison. It is the moment where all is one, and where time is place. What you hear, resounding in your ears, you know, is #yThe #yDream.",
+      "#rValor. NL NL You can feel it, rising in the hearts of the coyotle. You are one. You are unified. The fallen rise again as phantoms, ever driven by will. Each death is yours, each life yours. And no matter how many deaths it takes, you know that you will see it through, as sure as the sun rises each day."
+    ],
+    "OPTIONS": [
+      "[Speak] #gGain #gEnter #gthe #gDream.",
+      "[Listen] #gGain #gDreamsmoke #gMystic.",
+      "[Huh?]",
+      "[Embrace Earth] #gGain #gMemory #gof #gthe #gDream. #rLose #r",
+      " #rMax #rHP.",
+      "[Embrace Sky] #gRemove #g3 #gCards. #rSet #rHP #rto #r1.",
+      "[Embrace Sea] #gHeal #g",
+      " #gHP. #rLose #r1 #rmax [E] #rduring #rnext #rcombat.",
+      "[Embrace Silence] #gUpgrade #g2 #gCards. #rDraw #r1 #rless #rcard #reach #rturn #rnext #rcombat",
+      "[Embrace Valor] #gGain #g3 #gSynergistic #gCards. #rLose #rAll #rGold.",
+      "[Wake Up]",
+      "[Leave]",
+      "Choose 3 Cards to Remove",
+      "Choose 2 Cards to Upgrade"
+    ]
+  },
+
+  "${modID}:TricksterHero": {
+    "NAME": "The Trickster Hero",
+    "DESCRIPTIONS": [
+      "You step into a small tent, its walls lined with ~esoteric~ symbols in vibrant colors, and the air filled with the soft scent of burning herbs. There's a scraggly old coyotle rocking in a chair in the corner,eyes closed and breathing slow, but his voice rises to meet you. NL NL \"Sure took you a while to get here, huh? I thought I'd be all dust and ashes before you finally showed up. Wouldn't have changed much, but still! Come, come, sit down! Let's chat.\"",
+      "The sudden, #p~chilling~ feeling of being watched shoots up your spine, and you turn around expecting a #rfight. What you find, instead, is pieces of your own #yequipment and #ysupplies, including some you had been ~wearing,~ neatly stacked into a neat tower with a small pile of gold coins atop it. With no obvious signs of enemy presence and such clear signs of seeking your attention, you have to contemplate how to approach the situation.",
+      "You take slow and even steps in circles around the tower, making sure to scan your surroundings both in front of and behind. You notice that the coin on top is finely engraved, and right as you drift in for a closer look a canid head pokes over your shoulder with a mirthful smirk, then vanishes. When you turn to look, there's once again nothing there - but this time, a voice mocks you from the shadows. NL NL \"Wow, you're REAL bad at this. I feel like a bully.\"",
+      "Without a clear target, you target the pillar in case it's the actual threat. You wind up to attack, and before you can connect a sharp pain pierces your side. You turn to look for your assailant, but can only find the injury left behind. It's minor, but almost surgically placed to damage your equipment. The gaze you felt fixed on you fades out as suddenly as it came, and you're on your own again. ",
+      "When you turn to leave hoping to avoid whatever was trying to draw your attention, you feel a sharp pang as something bounces off the back of your head. You turn to look where it came from and see nothing out of the ordinary, but when you turn to leave you get pelted again from somewhere else. Looking closely, what's hitting you is decorated coin from the pile. It seems like it's yours now, for better or worse. Maybe you could grab your things, then?",
+      "[First Meet-  Other]",
+      "[Second Meet - Friendly]",
+      "[Second Meet- Hostile]",
+      "[This Meet - Friendly]",
+      "Third Meet - Hostile]"
+    ],
+    "OPTIONS": [
+      "<<<The VERY FIRST ENCOUNTER, doubles up with the first choices>>>",
+      "[Observe] #rGet #rToken #rof #rFrienship. #rGet #rSabotaged #rGear.",
+      "[Attack] #rGet #rSabotaged #rGear. #rTake #r12 #rdamage.",
+      "[Avoid] #rGet #rToken #rof #rFriendship. #rTake #r4 #rdamage.",
+      "<<<The first choices>>>",
+      "[Talk] (Own 1 Curse.)",
+      "[Trick] (Own 2 Curses.)",
+      "[Train] (Own 5+ Curses.)",
+      "[Leave]"
+    ]
+  }
+}

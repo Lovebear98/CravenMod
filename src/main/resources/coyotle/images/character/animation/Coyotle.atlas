@@ -1,0 +1,223 @@
+
+Coyotle.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+CoyotleTemplate3/BackCloakSplash
+  rotate: false
+  xy: 304, 1
+  size: 413, 171
+  orig: 413, 171
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/BackCloak
+  rotate: false
+  xy: 955, 1
+  size: 63, 401
+  orig: 63, 401
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/BackSleeve
+  rotate: false
+  xy: 821, 1
+  size: 132, 223
+  orig: 132, 223
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/LowerArm
+  rotate: false
+  xy: 918, 404
+  size: 94, 55
+  orig: 94, 55
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/Thumb
+  rotate: false
+  xy: 918, 364
+  size: 25, 15
+  orig: 25, 15
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/MoonGlow
+  rotate: false
+  xy: 821, 847
+  size: 83, 83
+  orig: 83, 83
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/Moon
+  rotate: false
+  xy: 955, 927
+  size: 53, 53
+  orig: 53, 53
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/Staff
+  rotate: false
+  xy: 719, 1
+  size: 100, 448
+  orig: 100, 448
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/StaffWrap
+  rotate: false
+  xy: 719, 451
+  size: 100, 403
+  orig: 100, 403
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/Cloth1
+  rotate: false
+  xy: 918, 348
+  size: 35, 14
+  orig: 35, 14
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/Cloth2
+  rotate: false
+  xy: 955, 982
+  size: 42, 18
+  orig: 42, 18
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/Cloth3
+  rotate: false
+  xy: 1, 977
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/Cloth5
+  rotate: false
+  xy: 935, 621
+  size: 77, 66
+  orig: 77, 66
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/Cloth4
+  rotate: false
+  xy: 1, 856
+  size: 111, 64
+  orig: 111, 64
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/Knots
+  rotate: false
+  xy: 821, 226
+  size: 119, 120
+  orig: 119, 120
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/Hand
+  rotate: false
+  xy: 1, 932
+  size: 55, 43
+  orig: 55, 43
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/UpperArm
+  rotate: false
+  xy: 821, 348
+  size: 95, 115
+  orig: 95, 115
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/Sleeve
+  rotate: false
+  xy: 304, 174
+  size: 132, 223
+  orig: 132, 223
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/ChestAlt
+  rotate: false
+  xy: 952, 461
+  size: 28, 149
+  orig: 28, 149
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/BackEar
+  rotate: false
+  xy: 973, 865
+  size: 47, 60
+  orig: 47, 60
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/Neck
+  rotate: false
+  xy: 906, 865
+  size: 65, 56
+  orig: 65, 56
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/Head
+  rotate: false
+  xy: 821, 621
+  size: 112, 78
+  orig: 112, 78
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/FrontEar
+  rotate: false
+  xy: 906, 923
+  size: 47, 60
+  orig: 47, 60
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/Cloak
+  rotate: false
+  xy: 1, 1
+  size: 301, 424
+  orig: 301, 424
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/FeatherCollar1
+  rotate: false
+  xy: 931, 701
+  size: 90, 80
+  orig: 90, 80
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/FeatherCollar2
+  rotate: false
+  xy: 821, 774
+  size: 108, 71
+  orig: 108, 71
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/FeatherCollar3
+  rotate: false
+  xy: 821, 543
+  size: 129, 76
+  orig: 129, 76
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/FeatherCollar4
+  rotate: false
+  xy: 931, 783
+  size: 90, 80
+  orig: 90, 80
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/FeatherCollar5
+  rotate: false
+  xy: 821, 701
+  size: 108, 71
+  orig: 108, 71
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/FeatherCollar6
+  rotate: false
+  xy: 821, 465
+  size: 129, 76
+  orig: 129, 76
+  offset: 0, 0
+  index: -1
+CoyotleTemplate3/FrontCloakSplash
+  rotate: false
+  xy: 1, 427
+  size: 363, 197
+  orig: 363, 197
+  offset: 0, 0
+  index: -1

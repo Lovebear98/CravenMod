@@ -1,0 +1,72 @@
+{
+  "${modID}:RhythmicSpiritualistPower": {
+    "NAME": "Rhythmic Spiritualist",
+    "DESCRIPTIONS": [
+      "At the start of each turn, draw #b",
+      " card",
+      "s",
+      ". NL ",
+      " If you exit #yThe #yDream, lose this and gain",
+      " ."
+    ]
+  },
+  "${modID}:WakunaCrowfeatherPower": {
+    "NAME": "Wakuna Crowfeather",
+    "DESCRIPTIONS": [
+      "If the next card you draw costs ",
+      "#b2, ",
+      "#ban #beven #bamount, ",
+      " #yProphecy ",
+      " and repeat this."
+    ]
+  },
+  "${modID}:DreamsmokeMysticPower": {
+    "NAME": "Dreamsmoke Mystic",
+    "DESCRIPTIONS": [
+      "The next time you #yDream, apply #b",
+      " #yWeak",
+      " and #yVulnerable",
+      " to ALL enemies."
+    ]
+  },
+  "${modID}:BriarHarvesterPower": {
+    "NAME": "Briar Harvester",
+    "DESCRIPTIONS": [
+      "The next time you #yDream, gain",
+      " ."
+    ]
+  },
+  "${modID}:TurnEndDiscardHandPower": {
+    "NAME": "Enter the Dream",
+    "DESCRIPTIONS": [
+      "At the end of the turn, discard your entire hand."
+    ]
+  },
+  "${modID}:DrawDownPower": {
+    "NAME": "Unsteady",
+    "DESCRIPTIONS": [
+      "Draw #b",
+      " less card",
+      "s",
+      " this combat, but no less than #b1."
+    ]
+  },
+  "${modID}:NeutralFastingPower": {
+    "NAME": "Foggy",
+    "DESCRIPTIONS": [
+      "At the start of your turn, lose ",
+      " ."
+    ]
+  },
+  "${modID}:TwoTomahawksPower": {
+    "NAME": "Two Tomahawks",
+    "DESCRIPTIONS": [
+      "When you play a #yStrike,",
+      " #yExhaust it and",
+      " add #b",
+      " #yValor",
+      "s",
+      " to your hand."
+    ]
+  }
+}
