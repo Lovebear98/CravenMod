@@ -1,0 +1,245 @@
+{
+  "${modID}:Rations": {
+    "NAME": "Ration",
+    "DESCRIPTION": "Unplayable. NL ${modID}:Food.",
+    "UPGRADE_DESCRIPTION": "Tasteless, but nutritious and filling; These are perfect emergency rations.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Gore": {
+    "NAME": "Gore",
+    "DESCRIPTION": "Unplayable. NL ${modID}:Food.",
+    "UPGRADE_DESCRIPTION": "Sweet, sweet flesh! You were going mad surviving off crackers and cheese.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:DinnerBell": {
+    "NAME": "Dinner Bell",
+    "DESCRIPTION": "Draw X cards.",
+    "UPGRADE_DESCRIPTION": "Draw X cards.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:MissingPerson": {
+    "NAME": "Missing Person",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust a card.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:MidnightSnack": {
+    "NAME": "Midnight Snack",
+    "DESCRIPTION": "{@@}Ethereal. ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "{@@}Ethereal. ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Casanova": {
+    "NAME": "Casanova",
+    "DESCRIPTION": "Apply !M! Vulnerable. NL When ${modID}:Devoured: Apply !M! Weak to ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL When ${modID}:Devoured: Apply !M! Weak to ALL enemies. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Cookies": {
+    "NAME": "Cookies",
+    "DESCRIPTION": "{@@}Unplayable. NL Ethereal. NL ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
+    "UPGRADE_DESCRIPTION": "{@@}Unplayable. NL Ethereal. NL ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Cleave": {
+    "NAME": "Cleave",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Fatal: Add a *Ration to your *Exhaust pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Fatal: Add a *Ration to your *Exhaust pile.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:FleshyWine": {
+    "NAME": "Fleshy Wine",
+    "DESCRIPTION": "Deal !D! damage. NL If you're *Ravenous, do it again.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If you're *Ravenous, do it again.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Grazing": {
+    "NAME": "Grazing",
+    "DESCRIPTION": "{@@}${modID}:Food. NL Deal !D! damage.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
+    "UPGRADE_DESCRIPTION": "{@@}${modID}:Food. NL Deal !D! damage.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:SweetNothings": {
+    "NAME": "Sweet Nothings",
+    "DESCRIPTION": "Innate. NL Increase ${modID}:Risk cap by !M!.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Increase ${modID}:Risk cap by !M!.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Cravings": {
+    "NAME": "Cravings",
+    "DESCRIPTION": "Increase the cap of *X-Cost cards by !M!.",
+    "UPGRADE_DESCRIPTION": "Increase the cap of *X-Cost cards by !M!.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:ProudVintner": {
+    "NAME": "Proud Vintner",
+    "DESCRIPTION": "Add !M! *Pride to the draw pile.",
+    "UPGRADE_DESCRIPTION": "Add !M! *Pride to your hand.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:ComplexFlavor": {
+    "NAME": "Complex Flavor",
+    "DESCRIPTION": "Draw !M! cards. NL Randomly discard a card. NL Randomly Exhaust a card.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Randomly discard a card. NL Randomly Exhaust a card.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Impatience": {
+    "NAME": "Impatience",
+    "DESCRIPTION": "Deal !D!X damage. NL Exhaust the top X cards of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D!X damage. NL Exhaust the top X cards of the draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Fasting": {
+    "NAME": "Fasting",
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! *Dazed into the draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle !M! *Dazed into the draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:WineTasting": {
+    "NAME": "Wine Tasting",
+    "DESCRIPTION": "Scry !M!. NL Exhaust cards instead of discarding them.",
+    "UPGRADE_DESCRIPTION": "Scry !M!. NL Exhaust cards instead of discarding them.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:ServingTray": {
+    "NAME": "Serving Tray",
+    "DESCRIPTION": "{@@} Gain !B! Block. NL When Exhausted: Gain {!M!|repeat= [E]|>4= !M! [E]} .{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
+    "UPGRADE_DESCRIPTION": "{@@} Gain !B! Block. NL When Exhausted: Gain {!M!|repeat= [E]|>4= !M! [E]} .{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Aftertaste": {
+    "NAME": "Aftertaste",
+    "DESCRIPTION": "Unplayable. NL When ${modID}:Devoured: Add !M! Rations to your *Exhaust pile.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL When ${modID}:Devoured: Add !M! Rations to your *Exhaust pile. NL Retain.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Shuck": {
+    "NAME": "Shuck",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Purge.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Purge.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:HungerPangs": {
+    "NAME": "Hunger Pangs",
+    "DESCRIPTION": "{@@}At the start of the turn, Exhaust !M! random card{!M!|>1,<1=s} to add !M! *Ration to your hand.",
+    "UPGRADE_DESCRIPTION": "{@@}At the start of the turn, Exhaust !M! random card{!M!|>1,<1=s} to add !M! *Ration to your hand.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:WickedWiles": {
+    "NAME": "Wicked Wiles",
+    "DESCRIPTION": "Apply Weak to ALL enemies. NL ALL enemies lose !M! Strength this turn. NL Purge.",
+    "UPGRADE_DESCRIPTION": "Apply Weak to ALL enemies. NL ALL enemies lose !M! Strength this turn. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:CoverTracks": {
+    "NAME": "Cover Tracks",
+    "DESCRIPTION": "Gain !B! Block. NL Purge.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Purge.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Bruteforce": {
+    "NAME": "Bruteforce",
+    "DESCRIPTION": "Deal !D! damage. NL Damage is equal to your *Ravenous.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Damage is equal to your *Ravenous.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Unsuspected": {
+    "NAME": "Unsuspected",
+    "DESCRIPTION": "Gain !B! Block. NL Gain more Block equal to your *Ravenous.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain more Block equal to your *Ravenous.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:PickyEater": {
+    "NAME": "Picky Eater",
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Devour a card in your *Exhaust pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ${modID}:Devour a card in your *Exhaust pile.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+
+
+  "${modID}:Template": {
+    "NAME": "Template",
+    "DESCRIPTION": "Ex",
+    "UPGRADE_DESCRIPTION": "Ex",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Templatex": {
+    "NAME": "Template",
+    "DESCRIPTION": "Ex",
+    "UPGRADE_DESCRIPTION": "Ex",
+    "EXTENDED_DESCRIPTION": [
+      "{!M!|repeat= [E]|>4= !M! [E]}",
+      "{!${modID}:M2!|>1,<1=s}"
+    ]
+  }
+}

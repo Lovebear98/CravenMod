@@ -1,0 +1,41 @@
+{
+  "${modID}:RavenousPower": {
+    "NAME": "Ravenous",
+    "DESCRIPTIONS": [
+      "At the start of the turn, lose #b",
+      " HP and #yDevour up to #b",
+      " card",
+      ". Each card #yDevoured this way reduces this power by #b1.",
+      "s"
+    ]
+  },
+  "No Draw": {
+    "NAME": "Blend In",
+    "DESCRIPTIONS": [
+      "You almost got caught. You can't draw cards right now."
+    ]
+  },
+  "${modID}:CravingPower": {
+    "NAME": "Craving",
+    "DESCRIPTIONS": [
+      "The max #bX of #yX-Cost cards is #b",
+      " more."
+    ]
+  },
+  "${modID}:RiskCapPower": {
+    "NAME": "Allure",
+    "DESCRIPTIONS": [
+      "Maximum #yRisk is increased by #b",
+      "."
+    ]
+  },
+  "${modID}:HungerPangsPower": {
+    "NAME": "Hunger Pangs",
+    "DESCRIPTIONS": [
+      "At the start of the turn, #yExhaust #b",
+      " card",
+      "s",
+      " in your hand, and add that many #yRations to your hand."
+    ]
+  }
+}

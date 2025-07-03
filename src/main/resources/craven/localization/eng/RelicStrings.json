@@ -1,0 +1,27 @@
+{
+  "${modID}:GoldpawVintage": {
+    "NAME": "Goldpaw Vintage",
+    "FLAVOR": "Rich and delicate, a fine wine with a subtle sweetness. Nobody can replicate it, so one has to wonder what the trick is...",
+    "DESCRIPTIONS": [
+      "The first time you #yExhaust a card each combat, draw #b",
+      " card",
+      "s",
+      "."
+    ]
+  },
+  "${modID}:SilverPromise": {
+    "NAME": "Silver Promise",
+    "FLAVOR": "I might be too craven and selfish to change, but I can make sure she doesn't end up like me.",
+    "DESCRIPTIONS": [
+      "At the start of the turn, add #b",
+      " #yRation to your #yExhaust pile."
+    ]
+  },
+  "${modID}:WineCasket": {
+    "NAME": "Wine Casket",
+    "FLAVOR": "A little decoration I fill with spiced cider during the witching season. The guests adore its charm.",
+    "DESCRIPTIONS": [
+      "Gain a #rPERMANENT #yIchor #yBordeaux. NL When a non-minion enemy dies, increase its #yPotency by #b1. NL When you use it, #rreset its #yPotency."
+    ]
+  }
+}

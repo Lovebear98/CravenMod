@@ -1,0 +1,34 @@
+{
+  "${modID}:Chaser": {
+    "NAME": "Chaser",
+    "DESCRIPTIONS": [
+      "Add #b",
+      " random cards to your discard pile with #yExhaust and #yEthereal.",
+      "Exhaust",
+      "Removed until the end of combat.",
+      "Ethereal",
+      "If this card is in your hand at the end of the turn, it is exhausted. Exhausted cards are removed from your deck until the end of combat."
+    ]
+  },
+  "${modID}:SpikedShot": {
+    "NAME": "Spiked Shot",
+    "DESCRIPTIONS": [
+      "Reduce #yRisk by #b",
+      ". NL Gain #b1 #yWeak.",
+      "Risk",
+      "The limit to the number of cards you can draw each turn.",
+      "Weak",
+      "Weakened creatures deal #b25% less damage with Attacks."
+    ]
+  },
+  "${modID}:IchorBordeaux": {
+    "NAME": "Ichor Bordeaux",
+    "DESCRIPTIONS": [
+      "Gain",
+      " . NL When a non-minion enemy dies, increase it by #b",
+      ".",
+      " #b",
+      " [E]"
+    ]
+  }
+}

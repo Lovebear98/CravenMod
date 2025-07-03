@@ -1,0 +1,58 @@
+[
+  {
+    "PROPER_NAME": "Food",
+    "NAMES": [
+      "Food",
+      "food",
+      "foods"
+    ],
+    "DESCRIPTION": "#yFood begins combat #yExhausted."
+  },
+  {
+    "PROPER_NAME": "Seconds",
+    "NAMES": [
+      "Seconds",
+      "seconds"
+    ],
+    "DESCRIPTION": "When this card is #yDevoured, add it to your hand."
+  },
+  {
+    "PROPER_NAME": "Devour",
+    "NAMES": [
+      "Devour",
+      "devour",
+      "devours",
+      "devouring",
+      "devoured"
+    ],
+    "DESCRIPTION": "#yPurge the oldest card in your #yExhaust pile."
+  },
+  {
+    "PROPER_NAME": "Risk",
+    "NAMES": [
+      "Risk",
+      "risk"
+    ],
+    "DESCRIPTION": "The limit to the number of cards you can draw each turn."
+  },
+  {
+    "PROPER_NAME": "Consume",
+    "NAMES": [
+      "Consume",
+      "consume",
+      "consumed",
+      "consuming"
+    ],
+    "DESCRIPTION": "Deal damage equal to your #yRavenous, and heal half that damage."
+  },
+  {
+    "PROPER_NAME": "Crave",
+    "NAMES": [
+      "Crave",
+      "crave",
+      "craving",
+      "cravings"
+    ],
+    "DESCRIPTION": "Increase the #yDevoured card cap for #bX-Cost cards."
+  }
+]

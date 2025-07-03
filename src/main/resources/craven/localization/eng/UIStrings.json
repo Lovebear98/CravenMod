@@ -1,0 +1,71 @@
+{
+  "${modID}:UIText": {
+    "TEXT": [
+      "Enable \"Eye Candy\" animations for The Craven.",
+      "Enable \"Ear Candy\" audio cues for The Craven.",
+      "Display a tip button near the Exhaust Pile.",
+      "Display the Tutorial upon first entering combat.",
+      "Enable events from The Craven for other characters. (N/A)",
+      "Enable the 'Devour' mechanic for ALL characters.",
+      "It's too risky to draw more!"
+    ],
+    "EXTRA_TEXT": [
+      "Risk",
+      "After drawing #b",
+      " cards, you'll need to lay low and won't be able to draw more.",
+      "Discard",
+      "Exhaust",
+      "Recover",
+      "Return",
+      "Add",
+      "Devour",
+      "Choose a card to ",
+      "Choose ",
+      " cards to "
+    ]
+  },
+  "${modID}:Variables": {
+    "TEXT": [
+      " [E]"
+    ]
+  },
+  "${modID}:TipPanel": {
+    "TEXT": [
+      "Info",
+      "Click this to review information at any time."
+    ]
+  },
+  "${modID}:AtlasReminderScreen": {
+    "TEXT": [
+      "The Craven",
+      "Devour",
+      "Ravenous",
+      "X-Cost Cards",
+      "Risk"
+    ],
+    "EXTRA_TEXT": [
+      "NONE",
+      "#yAtlas has no #yEnergy. #yEnergy gains or losses will respectively create or #yDevour cards in the #yExhaust #yPile, such as #yFood cards that begin combat #yExhausted. #yDevouring when you don't have enough cards will cause you to gain #rRavenous equal to what you couldn't pay.",
+      "#rRavenous will cause you to #rlose #rHP at the start of the turn equal to its amount, then attempt to reduce itself by #yDevouring up to that many cards in the #yExhaust #yPile. Other types of #yDevouring won't reduce the amount of #rRavenous you have.",
+      "#yX-Cost Cards have a #yCap on #bX shown on each card. You'll play those cards for #yexactly the amount shown #yevery time. NL NL #yRelics that normally increase #bMaximum #bEnergy will increase the cap for #yX-Cost cards by the same amount.",
+      "#yRisk is the #rhard #rcap on the number of cards beyond your #yStarting #yHand that can be drawn each turn, and is displayed where the #yEnergy #yOrb would be. NL NL While #yRisk is maxed, you become unable to draw cards. It #yresets at the end of each turn."
+    ]
+  },
+  "${modID}:ScavengeButton": {
+    "TEXT": [
+      "Scavenge",
+      "Add ",
+      " Rations to your deck.",
+      "You can't Scavenge right now."
+    ]
+  },
+  "${modID}:PotionRarityPatch": {
+    "TEXT": [
+      "Special:",
+      "Unique odds and ends."
+    ],
+    "EXTRA_TEXT": [
+      "NONE"
+    ]
+  }
+}

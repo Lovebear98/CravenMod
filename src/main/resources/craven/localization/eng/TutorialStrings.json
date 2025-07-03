@@ -1,0 +1,16 @@
+{
+  "${modID}:TutorialPatch": {
+    "TEXT": [
+      "T1",
+      "T2",
+      "T3"
+    ],
+    "LABEL": [
+      "Continue",
+      "Exit",
+      "The Craven",
+      "Page ",
+      " of 3"
+    ]
+  }
+}

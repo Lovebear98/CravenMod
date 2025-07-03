@@ -1,0 +1,153 @@
+
+HungryAtlas.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Model2/BShoe
+  rotate: false
+  xy: 366, 83
+  size: 109, 68
+  orig: 109, 68
+  offset: 0, 0
+  index: -1
+Model2/FShoe
+  rotate: false
+  xy: 281, 355
+  size: 109, 67
+  orig: 109, 67
+  offset: 0, 0
+  index: -1
+Model2/BArm
+  rotate: false
+  xy: 171, 1
+  size: 103, 174
+  orig: 103, 174
+  offset: 0, 0
+  index: -1
+Model2/BLeg
+  rotate: false
+  xy: 93, 196
+  size: 88, 255
+  orig: 88, 255
+  offset: 0, 0
+  index: -1
+Model2/Tail
+  rotate: false
+  xy: 1, 1
+  size: 168, 193
+  orig: 168, 193
+  offset: 0, 0
+  index: -1
+Model2/FLeg
+  rotate: false
+  xy: 1, 196
+  size: 90, 261
+  orig: 90, 261
+  offset: 0, 0
+  index: -1
+Model2/Pelvis
+  rotate: false
+  xy: 281, 215
+  size: 96, 138
+  orig: 96, 138
+  offset: 0, 0
+  index: -1
+Model2/Neck
+  rotate: false
+  xy: 392, 421
+  size: 66, 72
+  orig: 66, 72
+  offset: 0, 0
+  index: -1
+Model2/BEar
+  rotate: false
+  xy: 460, 421
+  size: 42, 59
+  orig: 42, 59
+  offset: 0, 0
+  index: -1
+Model2/Head
+  rotate: false
+  xy: 366, 1
+  size: 121, 80
+  orig: 121, 80
+  offset: 0, 0
+  index: -1
+Model2/FEar
+  rotate: false
+  xy: 460, 153
+  size: 38, 61
+  orig: 38, 61
+  offset: 0, 0
+  index: -1
+Model2/Chest
+  rotate: false
+  xy: 183, 196
+  size: 96, 197
+  orig: 96, 197
+  offset: 0, 0
+  index: -1
+Model2/Pelvis_-_Belt
+  rotate: false
+  xy: 366, 153
+  size: 92, 28
+  orig: 92, 28
+  offset: 0, 0
+  index: -1
+Model2/BPalm
+  rotate: false
+  xy: 477, 83
+  size: 30, 51
+  orig: 30, 51
+  offset: 0, 0
+  index: -1
+Model2/Pinky
+  rotate: false
+  xy: 478, 482
+  size: 20, 10
+  orig: 20, 10
+  offset: 0, 0
+  index: -1
+Model2/Ring
+  rotate: false
+  xy: 477, 136
+  size: 19, 14
+  orig: 19, 14
+  offset: 0, 0
+  index: -1
+Model2/Middle
+  rotate: false
+  xy: 460, 482
+  size: 16, 19
+  orig: 16, 19
+  offset: 0, 0
+  index: -1
+Model2/Pointer
+  rotate: false
+  xy: 489, 1
+  size: 22, 43
+  orig: 22, 43
+  offset: 0, 0
+  index: -1
+Model2/Knife
+  rotate: false
+  xy: 392, 355
+  size: 103, 64
+  orig: 103, 64
+  offset: 0, 0
+  index: -1
+Model2/Thumb
+  rotate: false
+  xy: 489, 46
+  size: 17, 26
+  orig: 17, 26
+  offset: 0, 0
+  index: -1
+Model2/FArm
+  rotate: false
+  xy: 281, 1
+  size: 83, 212
+  orig: 83, 212
+  offset: 0, 0
+  index: -1
