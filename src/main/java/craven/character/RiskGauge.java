@@ -13,7 +13,7 @@ import static craven.util.otherutil.variables.Variables.isInCombat;
 public class RiskGauge extends CustomEnergyOrb {
 
     ///This corrects sizes to scale appropriately, don't ask questions.
-    private static final float SizeCorrect = (1.4f* Settings.scale);
+    public static final float SizeCorrect = (1.4f* Settings.scale);
 
 
 
@@ -103,7 +103,7 @@ public class RiskGauge extends CustomEnergyOrb {
     }
 
 
-    public static void drawSpinning(SpriteBatch sb, Texture texture, float x, float y, float rotation) {
+    private static void drawSpinning(SpriteBatch sb, Texture texture, float x, float y, float rotation) {
         sb.draw(texture, x, y, (texture.getWidth() * SizeCorrect * 0.5f), (texture.getHeight() * SizeCorrect * 0.5f), texture.getWidth()*SizeCorrect, texture.getHeight()*SizeCorrect, 1f, 1f, rotation, 0, 0, texture.getWidth(), texture.getHeight(), false, false);
     }
 

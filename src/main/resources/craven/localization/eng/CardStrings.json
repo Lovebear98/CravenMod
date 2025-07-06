@@ -73,16 +73,16 @@
   },
   "${modID}:Cleave": {
     "NAME": "Cleave",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Fatal: Add a *Ration to your *Exhaust pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Fatal: Add a *Ration to your *Exhaust pile.",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Fatal: Gain [E] .",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Fatal: Gain [E] .",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
   },
   "${modID}:FleshyWine": {
     "NAME": "Fleshy Wine",
-    "DESCRIPTION": "Deal !D! damage. NL If you're *Ravenous, do it again.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If you're *Ravenous, do it again.",
+    "DESCRIPTION": "Deal !D! damage. NL If you're ${modID}:Ravenous, do it again.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If you're ${modID}:Ravenous, do it again.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -113,8 +113,8 @@
   },
   "${modID}:ProudVintner": {
     "NAME": "Proud Vintner",
-    "DESCRIPTION": "Add !M! *Pride to the draw pile.",
-    "UPGRADE_DESCRIPTION": "Add !M! *Pride to your hand.",
+    "DESCRIPTION": "{@@}Add !M! *Pride{!M!|>1,<1=s} to your hand. NL At the start of your turn, draw !M! additional card{!M!|>1,<1=s}.",
+    "UPGRADE_DESCRIPTION": "{@@}Add !M! *Pride{!M!|>1,<1=s} to your hand. NL At the start of your turn, draw !M! additional card{!M!|>1,<1=s}.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -161,8 +161,8 @@
   },
   "${modID}:Aftertaste": {
     "NAME": "Aftertaste",
-    "DESCRIPTION": "Unplayable. NL When ${modID}:Devoured: Add !M! Rations to your *Exhaust pile.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL When ${modID}:Devoured: Add !M! Rations to your *Exhaust pile. NL Retain.",
+    "DESCRIPTION": "{@@}Unplayable. NL When ${modID}:Devoured: {!M!|repeat= [E]|>4= !M! [E]} .",
+    "UPGRADE_DESCRIPTION": "{@@}Unplayable. NL When ${modID}:Devoured: {!M!|repeat= [E]|>4= !M! [E]} . NL Retain.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -201,16 +201,16 @@
   },
   "${modID}:Bruteforce": {
     "NAME": "Bruteforce",
-    "DESCRIPTION": "Deal !D! damage. NL Damage is equal to your *Ravenous.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Damage is equal to your *Ravenous.",
+    "DESCRIPTION": "Deal !D! damage. NL Damage is equal to your ${modID}:Ravenous.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Damage is equal to your ${modID}:Ravenous.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
   },
   "${modID}:Unsuspected": {
     "NAME": "Unsuspected",
-    "DESCRIPTION": "Gain !B! Block. NL Gain more Block equal to your *Ravenous.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain more Block equal to your *Ravenous.",
+    "DESCRIPTION": "Gain !B! Block. NL Gain more Block equal to your ${modID}:Ravenous.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain more Block equal to your ${modID}:Ravenous.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -223,8 +223,63 @@
       ""
     ]
   },
+  "${modID}:Impulse": {
+    "NAME": "Impulse",
+    "DESCRIPTION": "{@@}Gain !M! ${modID}:Ravenous. NL Gain {!M!|repeat= [E]|>4= !M! [E]} .",
+    "UPGRADE_DESCRIPTION": "{@@}Gain !M! ${modID}:Ravenous. NL Gain {!M!|repeat= [E]|>4= !M! [E]} .",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:HideTheEvidence": {
+    "NAME": "Hide the Evidence",
+    "DESCRIPTION": "Lose HP equal to your ${modID}:Ravenous, then remove it. NL Purge.",
+    "UPGRADE_DESCRIPTION": "Lose HP equal to your ${modID}:Ravenous, then remove it. NL Purge. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:CannedFood": {
+    "NAME": "Canned Food",
+    "DESCRIPTION": "{@@}The next time you gain ${modID}:Ravenous, immediately gain {!M!|repeat= [E]|>4= !M! [E]} .",
+    "UPGRADE_DESCRIPTION": "{@@}The next time you gain ${modID}:Ravenous, immediately gain {!M!|repeat= [E]|>4= !M! [E]} .",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Consume": {
+    "NAME": "Consume",
+    "DESCRIPTION": "Deal !D! damage. NL Damage is equal to your ${modID}:Ravenous. NL Fatal: *Heal for !M! HP. NL Purge.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Damage is equal to your ${modID}:Ravenous. NL Fatal: *Heal for !M! HP. NL Purge.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
 
-
+  "${modID}:Savagery": {
+    "NAME": "Savagery",
+    "DESCRIPTION": "*Exhaust your hand. NL Deal X damage for each card exhausted.",
+    "UPGRADE_DESCRIPTION": "*Exhaust your hand. NL Deal X damage for each card exhausted.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:SetTheTable": {
+    "NAME": "Set the Table",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Damage is equal to your ${modID}:Ravenous. NL Fatal: *Heal for !M! HP. NL Purge.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:BrazenMonster": {
+    "NAME": "Brazen Monster",
+    "DESCRIPTION": "You can draw at maximum ${modID}:Risk. When you do, lose !M! HP. and gain !M! ${modID}:Ravenous.",
+    "UPGRADE_DESCRIPTION": "You can draw at maximum ${modID}:Risk. When you do, lose !M! HP. and gain !M! ${modID}:Ravenous.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
   "${modID}:Template": {
     "NAME": "Template",
     "DESCRIPTION": "Ex",

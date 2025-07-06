@@ -26,8 +26,8 @@ public class DinnerBell extends AbstractHungryCard implements CravingInterface {
     private static final int UPG_DAMAGE = 0;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
-    private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = 3;
+    private static final int MAGIC = 1;
+    private static final int UPG_MAGIC = 2;
     private static final int SECOND_MAGIC = 0;
     private static final int UPG_SECOND_MAGIC = 0;
 

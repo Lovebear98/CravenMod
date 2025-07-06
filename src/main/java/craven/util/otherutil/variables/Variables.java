@@ -15,6 +15,7 @@ public class Variables {
     public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID(Variables.class.getSimpleName()));
 
     public static final String SecondMagicKey = makeID("M2");
+    public static final String SpecialVarKey = makeID("SV");
     public static final String SecondsCountKey = makeID("S");
     public static String OrbPath(String text){
         return "craven/images/orbs/" + text + ".png";

@@ -36,11 +36,7 @@ public class MechanicManager {
                 if(abstractCard != null){
                         if(abstractCard instanceof CravingInterface){
                                 i += ((CravingInterface) abstractCard).CravingBonus();
-
-                                ///If we want to set unique card effects that can target other cards up
-                        }///else if(abstractCard.hasTag(ChangeCraving)){
-                               /// i += getExtraDevourCap(abstractCard);
-                        ///}
+                        }
                 }
                 return Math.max(i, 0);
         }

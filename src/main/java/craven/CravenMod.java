@@ -33,6 +33,7 @@ import craven.potions.custompotions.SpikedShot;
 import craven.relics.BaseRelic;
 import craven.ui.TipPanel;
 import craven.util.CustomActions.StartTutorialAction;
+import craven.util.CustomDynamicVariables.SpecialVar;
 import craven.util.CustomDynamicVariables.secondMagicVar;
 import craven.util.CustomDynamicVariables.secondsCountVar;
 import craven.util.GeneralUtils;
@@ -177,6 +178,8 @@ public class CravenMod implements
                 localizationPath(lang, "UIStrings.json"));
         BaseMod.loadCustomStringsFile(TutorialStrings.class,
                 localizationPath(lang, "TutorialStrings.json"));
+        BaseMod.loadCustomStringsFile(StanceStrings.class,
+                localizationPath(lang, "StanceStrings.json"));
     }
 
     @Override
@@ -296,6 +299,7 @@ public class CravenMod implements
 
         BaseMod.addDynamicVariable(new secondMagicVar());
         BaseMod.addDynamicVariable(new secondsCountVar());
+        BaseMod.addDynamicVariable(new SpecialVar());
     }
 
     @Override

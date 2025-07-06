@@ -1,5 +1,6 @@
 package craven.cards.generated.Mechanics;
 
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -10,6 +11,7 @@ import craven.util.CardStats;
 import static craven.util.CustomTags.Food;
 import static craven.util.CustomTags.NoUse;
 
+@NoCompendium
 public class Gore extends AbstractHungryCard {
     public static final String[] EXTENDED_DESCRIPTION = CardStrings.getMockCardString().EXTENDED_DESCRIPTION;
     public static final String ID = makeID(Gore.class.getSimpleName());

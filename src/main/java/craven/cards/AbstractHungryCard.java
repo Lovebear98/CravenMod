@@ -157,4 +157,9 @@ public abstract class AbstractHungryCard extends BaseCard {
     protected int getSecondBlock(){
         return customVar("B2");
     }
+
+
+    public int SpecialVar(){
+        return 0;
+    }
 }

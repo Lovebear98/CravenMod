@@ -1,0 +1,11 @@
+{
+  "${modID}:HungryStance": {
+    "NAME": "Hungry",
+    "DESCRIPTION": [
+      "Substitute the next #b",
+      " card",
+      "s",
+      " you'd #yDevour by gaining #yRavenous."
+    ]
+  }
+}

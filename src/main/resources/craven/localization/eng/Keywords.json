@@ -54,5 +54,21 @@
       "cravings"
     ],
     "DESCRIPTION": "Increase the #yDevoured card cap for #bX-Cost cards."
+  },
+  {
+    "PROPER_NAME": "Ravenous",
+    "NAMES": [
+      "Ravenous",
+      "ravenous"
+    ],
+    "DESCRIPTION": "At the start of your turn, lose #bX HP then #yDevour up to #bX cards to reduce this."
+  },
+  {
+    "PROPER_NAME": "Hungry",
+    "NAMES": [
+      "Hungry",
+      "hungry"
+    ],
+    "DESCRIPTION": "Play your next #bX cards by directly gaining #yRavenous."
   }
 ]

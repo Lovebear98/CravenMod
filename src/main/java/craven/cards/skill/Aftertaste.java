@@ -1,5 +1,6 @@
 package craven.cards.skill;
 
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -59,6 +60,6 @@ public class Aftertaste extends AbstractHungryCard implements OnDevouredInterfac
 
     @Override
     public void PostDevoured() {
-        addToBot(new MakeTempCardInExhaustAction(new Rations(), magicNumber));
+        addToBot(new GainEnergyAction(magicNumber));
     }
 }

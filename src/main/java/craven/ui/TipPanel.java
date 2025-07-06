@@ -19,7 +19,9 @@ import craven.util.TextureLoader;
 
 import static craven.CravenMod.TipUI;
 import static craven.CravenMod.makeID;
+import static craven.character.RiskGauge.SizeCorrect;
 import static craven.util.otherutil.Wiz.DevourEnabled;
+import static craven.util.otherutil.variables.Variables.p;
 
 
 @SuppressWarnings("unused")
@@ -100,6 +102,7 @@ public class TipPanel extends ClickableUIElement{
         if(ClickLock <= 0){
             if(!AbstractDungeon.isScreenUp && ((hitbox.hovered && InputHelper.justReleasedClickLeft) || HoldTimer >= BaseHoldTimer)){
                 HoldTimer = 0;
+                p().hoveredCard = null;
                 ResetClickLock();
                 AbstractDungeon.actionManager.addToBottom(new StartTutorialAction());
             }
@@ -135,8 +138,6 @@ public class TipPanel extends ClickableUIElement{
     }
 
 
-    ///Fixes sizes
-    public static final float SizeCorrect = (1.4f*Settings.scale);
     ///The size of the UI
     private static final float w = TipUITex.getWidth() * SizeCorrect;
     private static final float h = TipUITex.getHeight() * SizeCorrect;

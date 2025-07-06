@@ -21,6 +21,7 @@ import craven.util.TextureLoader;
 
 import static craven.CravenMod.TipUI;
 import static craven.CravenMod.makeID;
+import static craven.character.RiskGauge.SizeCorrect;
 import static craven.util.otherutil.SoundManager.PlaySound;
 import static craven.util.otherutil.variables.UIText.ReturnText;
 
@@ -31,8 +32,6 @@ public class AtlasReminderScreen extends CustomScreen {
     private Hitbox RightArrowHB;
     private Hitbox ExtraHB = new Hitbox(1, 1);
 
-
-    public static final float SizeCorrect = (1.4f*Settings.scale);
 
     private static final float sx = (float) Settings.WIDTH / 2;
     private static float x = (float) Settings.WIDTH / 2;

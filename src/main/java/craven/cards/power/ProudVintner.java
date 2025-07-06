@@ -1,5 +1,6 @@
 package craven.cards.power;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
+import craven.powers.custompowers.ProudPower;
 import craven.util.CardStats;
 
 public class ProudVintner extends AbstractHungryCard {
@@ -42,15 +44,13 @@ public class ProudVintner extends AbstractHungryCard {
 
         this.cardsToPreview = new Pride();
         this.UpgradePreviewCard = false;
+        setCostUpgrade(1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(upgraded){
-            addToBot(new MakeTempCardInHandAction(new Pride(), magicNumber));
-        }else{
-            addToBot(new MakeTempCardInDrawPileAction(new Pride(), magicNumber, true, true));
-        }
+        addToBot(new MakeTempCardInHandAction(new Pride(), magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new ProudPower(p, p, magicNumber)));
     }
 
 
