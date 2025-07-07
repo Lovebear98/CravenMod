@@ -27,7 +27,7 @@ public class HungerPangs extends AbstractHungryCard {
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
     private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 0;
+    private static final int UPG_MAGIC = 1;
     private static final int SECOND_MAGIC = 0;
     private static final int UPG_SECOND_MAGIC = 0;
 
@@ -43,7 +43,7 @@ public class HungerPangs extends AbstractHungryCard {
         this.cardsToPreview = new Rations();
         this.UpgradePreviewCard = false;
 
-        setSelfRetain(false, true);
+        setCostUpgrade(1);
     }
 
     @Override

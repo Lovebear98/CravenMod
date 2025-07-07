@@ -161,8 +161,8 @@
   },
   "${modID}:Aftertaste": {
     "NAME": "Aftertaste",
-    "DESCRIPTION": "{@@}Unplayable. NL When ${modID}:Devoured: {!M!|repeat= [E]|>4= !M! [E]} .",
-    "UPGRADE_DESCRIPTION": "{@@}Unplayable. NL When ${modID}:Devoured: {!M!|repeat= [E]|>4= !M! [E]} . NL Retain.",
+    "DESCRIPTION": "{@@}Unplayable. NL When ${modID}:Devoured: Gain {!M!|repeat= [E]|>4= !M! [E]} .",
+    "UPGRADE_DESCRIPTION": "{@@}Unplayable. NL When ${modID}:Devoured: Gain {!M!|repeat= [E]|>4= !M! [E]} . NL Retain.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -177,8 +177,8 @@
   },
   "${modID}:HungerPangs": {
     "NAME": "Hunger Pangs",
-    "DESCRIPTION": "{@@}At the start of the turn, Exhaust !M! random card{!M!|>1,<1=s} to add !M! *Ration to your hand.",
-    "UPGRADE_DESCRIPTION": "{@@}At the start of the turn, Exhaust !M! random card{!M!|>1,<1=s} to add !M! *Ration to your hand.",
+    "DESCRIPTION": "{@@}At the start of the turn add !M! *Ration{!M!|>1,<1=s} to your hand.",
+    "UPGRADE_DESCRIPTION": "{@@}At the start of the turn add !M! *Ration{!M!|>1,<1=s} to your hand.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -234,7 +234,7 @@
   "${modID}:HideTheEvidence": {
     "NAME": "Hide the Evidence",
     "DESCRIPTION": "Lose HP equal to your ${modID}:Ravenous, then remove it. NL Purge.",
-    "UPGRADE_DESCRIPTION": "Lose HP equal to your ${modID}:Ravenous, then remove it. NL Purge. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Lose HP equal to your ${modID}:Ravenous, then remove it. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -249,8 +249,8 @@
   },
   "${modID}:Consume": {
     "NAME": "Consume",
-    "DESCRIPTION": "Deal !D! damage. NL Damage is equal to your ${modID}:Ravenous. NL Fatal: *Heal for !M! HP. NL Purge.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Damage is equal to your ${modID}:Ravenous. NL Fatal: *Heal for !M! HP. NL Purge.",
+    "DESCRIPTION": "Deal !D! damage. NL Damage is equal to your ${modID}:Ravenous. NL Fatal: Heal !M! HP. NL Purge.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Damage is equal to your ${modID}:Ravenous. NL Fatal: Heal !M! HP. NL Purge.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]

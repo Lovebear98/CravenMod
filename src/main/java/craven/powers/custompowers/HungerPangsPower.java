@@ -29,11 +29,7 @@ public class HungerPangsPower extends BasePower implements CloneablePowerInterfa
     public void atStartOfTurnPostDraw() {
         super.atStartOfTurnPostDraw();
         this.flash();
-        addToBot(new HungerPangsAction());
-    }
-
-    private int cappedamount(int i){
-        return Math.min(amount, p().hand.size());
+        addToBot(new MakeTempCardInHandAction(new Rations(), amount));
     }
 
     public void updateDescription() {
@@ -49,15 +45,5 @@ public class HungerPangsPower extends BasePower implements CloneablePowerInterfa
     @Override
     public AbstractPower makeCopy() {
         return new HungerPangsPower(owner, amount);
-    }
-
-    private class HungerPangsAction extends AbstractGameAction {
-        @Override
-        public void update() {
-            int i = cappedamount(amount);
-            addToTop(new MakeTempCardInHandAction(new Rations(), i));
-            addToTop(new ExhaustAction(p(), p(), i, true));
-            isDone = true;
-        }
     }
 }

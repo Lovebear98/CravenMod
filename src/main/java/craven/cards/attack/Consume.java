@@ -7,14 +7,17 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import craven.cards.AbstractHungryCard;
 import craven.cardsmods.RavenousDamageMod;
 import craven.character.CravenCharacter;
 import craven.patches.interfaces.CravingInterface;
 import craven.util.CardStats;
+import craven.util.CustomActions.ConsumeAction;
 import craven.util.CustomActions.CustomGameEffects.vfx.SavageryEffect;
 
 public class Consume extends AbstractHungryCard implements CravingInterface {
@@ -46,13 +49,21 @@ public class Consume extends AbstractHungryCard implements CravingInterface {
         setMagic(MAGIC, UPG_MAGIC);
         setSecondMagic(SECOND_MAGIC, UPG_SECOND_MAGIC);
 
+        tags.add(CardTags.HEALING);
+
         CardModifierManager.addModifier(this, new RavenousDamageMod());
+        setPurge(true);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageType), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SavageryEffect(m), 0.1f));
+        ///         AbstractDungeon.actionManager.addToBottom(new VFXAction(new SavageryEffect(m), 0.1f));
+        if (Settings.FAST_MODE) {
+            this.addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Settings.RED_TEXT_COLOR.cpy()), 0.1F));
+        } else {
+            this.addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Settings.RED_TEXT_COLOR.cpy()), 0.2F));
+        }
+        addToBot(new ConsumeAction(m, new DamageInfo(p, damage, damageType), magicNumber));
     }
 
     @Override

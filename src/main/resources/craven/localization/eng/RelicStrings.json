@@ -13,8 +13,9 @@
     "NAME": "Silver Promise",
     "FLAVOR": "I might be too craven and selfish to change, but I can make sure she doesn't end up like me.",
     "DESCRIPTIONS": [
-      "At the start of the turn, add #b",
-      " #yRation to your #yExhaust pile."
+      "Gain",
+      " at the start of your turn. Decreases by #b",
+      " each turn, and resets after combat."
     ]
   },
   "${modID}:WineCasket": {

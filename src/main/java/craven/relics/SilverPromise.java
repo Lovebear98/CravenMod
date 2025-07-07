@@ -1,20 +1,19 @@
 package craven.relics;
 
-import basemod.helpers.CardPowerTip;
 import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import craven.cards.generated.Mechanics.Rations;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import craven.character.CravenCharacter;
-import craven.util.CustomActions.cardmanip.MakeTempCardInExhaustAction;
 
 import static craven.CravenMod.makeID;
+import static craven.util.otherutil.variables.Variables.PrintEnergy;
 import static craven.util.otherutil.variables.Variables.p;
 
 public class SilverPromise extends AtlasRelic {
     ///This relic's RiskBonus is checked for in the MechanicsManager.
 
-    public static final int FreeRations = 1;
+    public static final int StartingEnergy = 3;
 
     private static final String NAME = SilverPromise.class.getSimpleName();
     public static final String ID = makeID(NAME);
@@ -22,28 +21,35 @@ public class SilverPromise extends AtlasRelic {
     private static final LandingSound SOUND = LandingSound.SOLID;
     public SilverPromise() {
         super(ID, NAME, CravenCharacter.Meta.CARD_COLOR, RARITY, SOUND);
-
-        AbstractCard c = new Rations();
-        this.tips.add(new CardPowerTip(c));
+        this.counter = StartingEnergy;
+        fixDescription();
     }
 
 
     @Override
     public void atTurnStart() {
-        if(GameActionManager.turn != 1){
+        if(GameActionManager.turn != 0 && this.counter > 0){
             addToBot(new RelicAboveCreatureAction(p(), this));
-            addToBot(new MakeTempCardInExhaustAction(new Rations(), 1));
+            addToBot(new GainEnergyAction(this.counter));
+            this.counter -= 1;
+            fixDescription();
+            if(counter <= 0){
+                this.usedUp();
+            }
         }
     }
+
 
     @Override
     public void atBattleStart() {
         super.atBattleStart();
+        this.unusedUp();
     }
 
     @Override
     public void onVictory() {
         super.onVictory();
+        this.unusedUp();
     }
 
 
@@ -51,15 +57,22 @@ public class SilverPromise extends AtlasRelic {
     public void usedUp() {
         this.grayscale = true;
         this.usedUp = true;
+
+        this.description = MSG[2];
+        this.tips.clear();
+        this.tips.add(new PowerTip(this.name, this.description));
+        this.initializeTips();
     }
 
     public void unusedUp() {
         this.grayscale = false;
         this.usedUp = false;
+        this.counter = StartingEnergy;
+        fixDescription();
     }
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0] + FreeRations + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0] + PrintEnergy(counter) + DESCRIPTIONS[1] + 1 + DESCRIPTIONS[2];
     }
 }

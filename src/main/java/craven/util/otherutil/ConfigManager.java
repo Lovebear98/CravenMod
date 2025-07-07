@@ -23,9 +23,9 @@ public class ConfigManager {
     public static final String SHOW_TIP_BUTTON = "ShowTipButton";
     public static boolean ShowTipButton = true;
     public static final String ENABLE_EVENTS = "EnableEvents";
-    public static boolean EnableEvents = true;
+    public static boolean EnableEvents = false;
     public static final String ALL_DEVOUR = "AllDevour";
-    public static boolean AllDevour = true;
+    public static boolean AllDevour = false;
     public static int StarterRations = 10;
     public static final String STARTER_RATIONS = "StarterRations";
 

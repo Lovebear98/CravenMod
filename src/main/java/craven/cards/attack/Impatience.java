@@ -46,9 +46,7 @@ public class Impatience extends AbstractHungryCard implements CravingInterface {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int e = GetXEnergy();
-        for(int i = e; i > 0; i -= 1){
-            addToBot(new DamageAction(m, new DamageInfo(p, damage, damageType), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        }
+        addToBot(new DamageAction(m, new DamageInfo(p, damage * e, damageType), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         addToBot(new ExhaustTopCardAction(e));
     }
 
