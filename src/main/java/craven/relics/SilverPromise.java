@@ -17,8 +17,8 @@ public class SilverPromise extends AtlasRelic {
 
     private static final String NAME = SilverPromise.class.getSimpleName();
     public static final String ID = makeID(NAME);
-    private static final RelicTier RARITY = RelicTier.UNCOMMON;
-    private static final LandingSound SOUND = LandingSound.SOLID;
+    private static final RelicTier RARITY = RelicTier.COMMON;
+    private static final LandingSound SOUND = LandingSound.CLINK;
     public SilverPromise() {
         super(ID, NAME, CravenCharacter.Meta.CARD_COLOR, RARITY, SOUND);
         this.counter = StartingEnergy;

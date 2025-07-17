@@ -121,7 +121,7 @@ public class CravenCharacter extends CustomPlayer {
         super(getNames()[0], Meta.CRAVEN_CHARACTER,
                 new RiskGauge(), //Energy Orb
                 new SpineAnimation(characterPath("animation/HungryAtlas.atlas"), characterPath("animation/HungryAtlas.json"), 1.0f)); //Animation
-        AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
+        AnimationState.TrackEntry e = state.setAnimation(0, "IDLE", true);
 
         initializeClass(null,
                 SHOULDER_2,
@@ -201,7 +201,7 @@ public class CravenCharacter extends CustomPlayer {
     public AbstractCard getStartCardForEvent() {
         //This card is used for the Gremlin card matching game.
         //It should be a non-strike non-defend starter card, but it doesn't have to be.
-        return new Strike();
+        return new MissingPerson();
     }
 
     /*- Below this is methods that you should *probably* adjust, but don't have to. -*/

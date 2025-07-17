@@ -24,5 +24,78 @@
     "DESCRIPTIONS": [
       "Gain a #rPERMANENT #yIchor #yBordeaux. NL When a non-minion enemy dies, increase its #yPotency by #b1. NL When you use it, #rreset its #yPotency."
     ]
+  },
+  "${modID}:DinnerMenu": {
+    "NAME": "Dinner Menu",
+    "FLAVOR": "A good menu is twice as charming and thrice as appealing as the food on it, but nowhere near as satisfying.",
+    "DESCRIPTIONS": [
+      "In #b",
+      " turn",
+      "s",
+      "Y",
+      " y",
+      "our next #y",
+      "Attack ",
+      "Skill ",
+      "Power ",
+      "card of a certain type ",
+      "is played twice, then change the type and reset the counter.",
+      "Every #b4 turns your next #ycard of a certain type is played twice, then change the type and reset the counter."
+    ]
+  },
+  "${modID}:GiggleJuice": {
+    "NAME": "Giggle Juice",
+    "FLAVOR": "Fruit juice. Nena wanted to try the wine I make. The flavor's not exact, but her and her friends love feeling grown up.",
+    "DESCRIPTIONS": [
+      "Replaces #rGoldpaw #rVintage. Whenever you #yExhaust #y${modID}:Food, draw #b",
+      " card",
+      "s",
+      "."
+    ]
+  },
+  "${modID}:Ribbon": {
+    "NAME": "Ribbon",
+    "FLAVOR": "She caught me. She forgave me. She lied for me. And that guilt broke me.",
+    "DESCRIPTIONS": [
+      "Increase maximum #y${modID}:Risk by #b",
+      " while you don't have #y${modID}:Ravenous."
+    ]
+  },
+  "${modID}:VoiceOfReason": {
+    "NAME": "Voice of Reason",
+    "FLAVOR": "You tell her to be kind, to love, not to harm others, but look at you. Hypocrite. Failure. Craven.",
+    "DESCRIPTIONS": [
+      "The HP loss from #y${modID}:Ravenous becomes twice as much #yBlockable damage at the end of your turn."
+    ]
+  },
+  "${modID}:PrimeFrostruffle": {
+    "NAME": "Prime Frostruffle",
+    "FLAVOR": "Cold and bitter until the liquor hits, then it's sweet and warm. Who thought chocolate would make me into a vintner?",
+    "DESCRIPTIONS": [
+      "Whenever you play an #yX-Cost card, gain",
+      " #b",
+      " [E]",
+      " ."
+    ]
+  },
+  "${modID}:OliveBranch": {
+    "NAME": "Olive Branch",
+    "FLAVOR": "I can't imagine why my neighbors keep those dead branches they call trees if they wouldn't take care of them while they were alive.",
+    "DESCRIPTIONS": [
+      "After exhausting #b",
+      " card",
+      "s",
+      ", shuffle a random card into your discard pile."
+    ]
+  },
+  "${modID}:DracoTail": {
+    "NAME": "Draco Tail",
+    "FLAVOR": "Quick to grow back and nearly painless to lose, Draconid Tail is is an odd but acceptable delicacy even for the morally sound.",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose a #yPower. When you #y${modID}:Devour it, play that power for free.",
+      "When you #y${modID}:Devour ",
+      " , play it.",
+      "???"
+    ]
   }
 }

@@ -14,7 +14,7 @@
       "Seconds",
       "seconds"
     ],
-    "DESCRIPTION": "When this card is #yDevoured, add it to your hand."
+    "DESCRIPTION": "When this card is #yDevoured, add it to your hand up to #bX times."
   },
   {
     "PROPER_NAME": "Devour",

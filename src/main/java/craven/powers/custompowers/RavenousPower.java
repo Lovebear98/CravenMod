@@ -2,14 +2,17 @@ package craven.powers.custompowers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import com.evacipated.cardcrawl.mod.stslib.patches.NeutralPowertypePatch;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import craven.powers.BasePower;
+import craven.relics.VoiceOfReason;
 
 import static craven.CravenMod.makeID;
 import static craven.util.otherutil.Wiz.DevourCards;
@@ -31,7 +34,14 @@ public class RavenousPower extends BasePower implements CloneablePowerInterface 
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2] + ConditionalS() + DESCRIPTIONS[3];
+        String s;
+        if(p() != null && p().hasRelic(VoiceOfReason.ID)){
+            s = DESCRIPTIONS[5] + (amount * 2) + DESCRIPTIONS[6];
+        }else{
+            s = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        }
+        s += amount + DESCRIPTIONS[2] + ConditionalS() + DESCRIPTIONS[3];
+        this.description =  s;
     }
 
     private String ConditionalS() {
@@ -43,13 +53,30 @@ public class RavenousPower extends BasePower implements CloneablePowerInterface 
 
     @Override
     public void atStartOfTurn() {
-        int e = Math.min(p().exhaustPile.size(), amount);
-        if(e > 0){
-            AbstractDungeon.actionManager.addToTop(new ReducePowerAction(owner, owner, this, e));
-            DevourCards(e);
+        if(!p().hasRelic(VoiceOfReason.ID)){
+            this.flash();
+            int e = Math.min(p().exhaustPile.size(), amount);
+            if(e > 0){
+                AbstractDungeon.actionManager.addToTop(new ReducePowerAction(owner, owner, this, e));
+                DevourCards(e);
+            }
+            addToTop(new LoseHPAction(owner, owner, amount));
         }
-        addToTop(new LoseHPAction(owner, owner, amount));
         super.atStartOfTurn();
+    }
+
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        if(p().hasRelic(VoiceOfReason.ID)){
+            this.flash();
+            int e = Math.min(p().exhaustPile.size(), amount);
+            if(e > 0){
+                AbstractDungeon.actionManager.addToTop(new ReducePowerAction(owner, owner, this, e));
+                DevourCards(e);
+            }
+            addToTop(new DamageAction(owner, new DamageInfo(owner, amount * 2, DamageInfo.DamageType.NORMAL)));
+        }
+        super.atEndOfTurn(isPlayer);
     }
 
     @Override

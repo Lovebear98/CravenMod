@@ -27,6 +27,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import craven.cards.BaseCard;
 import craven.cards.generated.Mechanics.Rations;
 import craven.character.CravenCharacter;
+import craven.potions.custompotions.BloodyMary;
 import craven.potions.custompotions.Chaser;
 import craven.potions.custompotions.IchorBordeaux;
 import craven.potions.custompotions.SpikedShot;
@@ -123,6 +124,7 @@ public class CravenMod implements
 
         BaseMod.addPotion(Chaser.class, Color.GOLDENROD.cpy(), Color.OLIVE.cpy(), null, Chaser.POTION_ID, CravenCharacter.Meta.CRAVEN_CHARACTER);
         BaseMod.addPotion(SpikedShot.class, Color.RED.cpy(), null, Color.FIREBRICK.cpy(), SpikedShot.POTION_ID, CravenCharacter.Meta.CRAVEN_CHARACTER);
+        BaseMod.addPotion(BloodyMary.class, Color.RED.cpy(), Color.SCARLET.cpy(), Color.FIREBRICK.cpy(), BloodyMary.POTION_ID, CravenCharacter.Meta.CRAVEN_CHARACTER);
 
         BaseMod.addPotion(IchorBordeaux.class, Color.GOLDENROD.cpy(), Color.YELLOW.cpy(), Color.FIREBRICK.cpy(), IchorBordeaux.POTION_ID, CravenCharacter.Meta.CRAVEN_CHARACTER);
     }

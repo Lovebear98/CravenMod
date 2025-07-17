@@ -7,7 +7,9 @@
       "Display the Tutorial upon first entering combat.",
       "Enable events from The Craven for other characters. (N/A)",
       "Enable the 'Devour' mechanic for ALL characters.",
-      "It's too risky to draw more!"
+      "It's too risky to draw more!",
+      "Deck Rations",
+      "Replace Dead Branch with Olive Branch."
     ],
     "EXTRA_TEXT": [
       "Risk",

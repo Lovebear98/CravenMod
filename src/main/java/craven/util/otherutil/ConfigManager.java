@@ -1,8 +1,7 @@
 package craven.util.otherutil;
 
-import basemod.ModLabeledToggleButton;
-import basemod.ModPanel;
-import basemod.ModToggleButton;
+import basemod.*;
+import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -26,6 +25,10 @@ public class ConfigManager {
     public static boolean EnableEvents = false;
     public static final String ALL_DEVOUR = "AllDevour";
     public static boolean AllDevour = false;
+
+    public static final String BRANCH_NERF = "BranchNerf";
+    public static boolean BranchNerf = true;
+
     public static int StarterRations = 10;
     public static final String STARTER_RATIONS = "StarterRations";
 
@@ -46,7 +49,10 @@ public class ConfigManager {
         CravenDefaults.setProperty(SHOW_TIP_BUTTON, Boolean.toString(ShowTipButton));
         CravenDefaults.setProperty(ENABLE_EVENTS, Boolean.toString(EnableEvents));
         CravenDefaults.setProperty(ALL_DEVOUR, Boolean.toString(AllDevour));
+        CravenDefaults.setProperty(BRANCH_NERF, Boolean.toString(BranchNerf));
         CravenDefaults.setProperty(SHOW_TUTORIAL, Boolean.toString(ShowTutorial));
+
+        CravenDefaults.setProperty(STARTER_RATIONS, Integer.toString(StarterRations));
         try {
             SpireConfig config = new SpireConfig("Craven Mod", "CravenConfig", CravenDefaults);
             config.load();
@@ -55,7 +61,9 @@ public class ConfigManager {
             ShowTipButton = config.getBool(SHOW_TIP_BUTTON);
             EnableEvents = config.getBool(ENABLE_EVENTS);
             AllDevour = config.getBool(ALL_DEVOUR);
+            BranchNerf = config.getBool(BRANCH_NERF);
             ShowTutorial = config.getBool(SHOW_TUTORIAL);
+            StarterRations = config.getInt(STARTER_RATIONS);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -65,7 +73,7 @@ public class ConfigManager {
     public static void AddConfigButtons(ModPanel settingsPanel){
 
         ModLabeledToggleButton EyeCandyButton = new ModLabeledToggleButton(EYECANDYTEXT(),
-                350.0f, 750.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                350.0f, yPos(1), Settings.CREAM_COLOR, FontHelper.charDescFont,
                 EnableEyeCandy, settingsPanel, (label) -> {
         }, (button) -> {
             EnableEyeCandy = button.enabled;
@@ -81,7 +89,7 @@ public class ConfigManager {
 
 
         ModLabeledToggleButton EarCandyButton = new ModLabeledToggleButton(EARCANDYTEXT(),
-                350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                350.0f, yPos(2), Settings.CREAM_COLOR, FontHelper.charDescFont,
                 EnableEarCandy, settingsPanel, (label) -> {
         }, (button) -> {
             EnableEarCandy = button.enabled;
@@ -96,8 +104,25 @@ public class ConfigManager {
         settingsPanel.addUIElement(EarCandyButton);
 
 
+        ModLabeledToggleButton ShowTutorialButton = new ModLabeledToggleButton(SHOWTUTORIALTEXT(),
+                350.0f, yPos(4), Settings.CREAM_COLOR, FontHelper.charDescFont,
+                ShowTutorial, settingsPanel, (label) -> {
+        }, (button) -> {
+            ShowTutorial = button.enabled;
+            StoredTutorialButton = button;
+            try {
+                SpireConfig config = new SpireConfig("Craven Mod", "CravenConfig", CravenDefaults);
+                config.setBool(SHOW_TUTORIAL, ShowTutorial);
+                config.save();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        settingsPanel.addUIElement(ShowTutorialButton);
+
+
         ModLabeledToggleButton ShowTipButton = new ModLabeledToggleButton(SHOWTIPTEXT(),
-                350.0f, 650.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                350.0f, yPos(5), Settings.CREAM_COLOR, FontHelper.charDescFont,
                 ConfigManager.ShowTipButton, settingsPanel, (label) -> {
         }, (button) -> {
             ConfigManager.ShowTipButton = button.enabled;
@@ -112,8 +137,9 @@ public class ConfigManager {
         settingsPanel.addUIElement(ShowTipButton);
 
 
+
         ModLabeledToggleButton EnableEventButton = new ModLabeledToggleButton(ENNABLEEVENTSTEXT(),
-                350.0f, 600.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                350.0f, yPos(7), Color.GRAY.cpy(), FontHelper.charDescFont,
                 EnableEvents, settingsPanel, (label) -> {
         }, (button) -> {
             EnableEvents = button.enabled;
@@ -128,23 +154,8 @@ public class ConfigManager {
         settingsPanel.addUIElement(EnableEventButton);
 
 
-        ModLabeledToggleButton ShowTutorialButton = new ModLabeledToggleButton(SHOWTUTORIALTEXT(),
-                350.0f, 400.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                ShowTutorial, settingsPanel, (label) -> {
-        }, (button) -> {
-            ShowTutorial = button.enabled;
-            StoredTutorialButton = button;
-            try {
-                SpireConfig config = new SpireConfig("Craven Mod", "CravenConfig", CravenDefaults);
-                config.setBool(SHOW_TUTORIAL, ShowTutorial);
-                config.save();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
-        settingsPanel.addUIElement(ShowTutorialButton);
         ModLabeledToggleButton AllDevourButton = new ModLabeledToggleButton(ALLDEVOURTEXT(),
-                350.0f, 350.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                350.0f, yPos(8), Settings.CREAM_COLOR, FontHelper.charDescFont,
                 AllDevour, settingsPanel, (label) -> {
         }, (button) -> {
             AllDevour = button.enabled;
@@ -158,5 +169,40 @@ public class ConfigManager {
         });
         settingsPanel.addUIElement(AllDevourButton);
 
+
+
+        ModMinMaxSlider RationsSlider = new ModMinMaxSlider(STARTERRATIONSTEXT(), 500f, yPos(9)+ 15, 0, 20, StarterRations, "x%.0f", settingsPanel, slider -> {
+            try {
+                SpireConfig config = new SpireConfig("Craven Mod", "CravenConfig", CravenDefaults);
+                int i = Math.round(slider.getValue());
+                config.setInt(STARTER_RATIONS, i);
+                StarterRations = i;
+                config.save();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        settingsPanel.addUIElement(RationsSlider);
+
+
+        ModLabeledToggleButton BranchNerfButton = new ModLabeledToggleButton(BRANCHNERFTEXT(),
+                350.0f, yPos(11), Settings.CREAM_COLOR, FontHelper.charDescFont,
+                BranchNerf, settingsPanel, (label) -> {
+        }, (button) -> {
+            BranchNerf = button.enabled;
+            try {
+                SpireConfig config = new SpireConfig("Craven Mod", "CravenConfig", CravenDefaults);
+                config.setBool(BRANCH_NERF, BranchNerf);
+                config.save();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        settingsPanel.addUIElement(BranchNerfButton);
+    }
+
+
+    public static float yPos(int i){
+        return 750.0f - (50.0f * (i - 1));
     }
 }

@@ -42,8 +42,6 @@ public class Cleave extends AbstractHungryCard {
 
         setCostUpgrade(2);
         this.isMultiDamage = true;
-        this.cardsToPreview = new Rations();
-        this.UpgradePreviewCard = false;
     }
 
     @Override

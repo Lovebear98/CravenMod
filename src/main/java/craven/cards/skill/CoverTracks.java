@@ -23,7 +23,7 @@ public class CoverTracks extends AbstractHungryCard {
     private static final int DAMAGE = 0;
     private static final int UPG_DAMAGE = 0;
     private static final int BLOCK = 18;
-    private static final int UPG_BLOCK = 6;
+    private static final int UPG_BLOCK = 2;
     private static final int MAGIC = 0;
     private static final int UPG_MAGIC = 0;
     private static final int SECOND_MAGIC = 0;
@@ -39,6 +39,7 @@ public class CoverTracks extends AbstractHungryCard {
         setSecondMagic(SECOND_MAGIC, UPG_SECOND_MAGIC);
 
         setPurge(true);
+        setSelfRetain(false, true);
     }
 
     @Override

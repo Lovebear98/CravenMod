@@ -6,13 +6,9 @@
       " HP and #yDevour up to #b",
       " card",
       ". Each card #yDevoured this way reduces this power by #b1.",
-      "s"
-    ]
-  },
-  "No Draw": {
-    "NAME": "Blend In",
-    "DESCRIPTIONS": [
-      "You almost got caught. You can't draw cards right now."
+      "s",
+      "At the end of the turn, take #b",
+      " damage and #yDevour up to #b"
     ]
   },
   "${modID}:CravingPower": {
@@ -26,7 +22,16 @@
     "NAME": "Allure",
     "DESCRIPTIONS": [
       "Maximum #yRisk is increased by #b",
+      ".",
+      "Maximum #yRisk is decreased by #b",
       "."
+    ]
+  },
+  "${modID}:LoseRiskCapPower": {
+    "NAME": "Risk Taker",
+    "DESCRIPTIONS": [
+      "Maximum #yRisk will decrease by #b",
+      " at the end of the turn."
     ]
   },
   "${modID}:HungerPangsPower": {
@@ -52,6 +57,37 @@
     "DESCRIPTIONS": [
       "The next time you gain #yRavenous, gain",
       " ."
+    ]
+  },
+  "${modID}:PalateCleanserPower": {
+    "NAME": "Palate Cleanser",
+    "DESCRIPTIONS": [
+      "Risk cannot be reduced",
+      " for #b",
+      " turn",
+      "s",
+      "."
+    ]
+  },
+  "${modID}:GnashingFangsPower": {
+    "NAME": "Gnashing Fangs",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yTemp. #yHP and #b",
+      " #yRavenous."
+    ]
+  },
+  "${modID}:MealPrepPower": {
+    "NAME": "Meal Prep",
+    "DESCRIPTIONS": [
+      "When you max out your #yRisk, #yUpgrade your hand."
+    ]
+  },
+  "${modID}:PlanningPower": {
+    "NAME": "Planning",
+    "DESCRIPTIONS": [
+      "Maximum #yRisk will increase by #b",
+      " during the next turn."
     ]
   }
 }

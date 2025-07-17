@@ -1,21 +1,15 @@
 package craven.potions.custompotions;
 
 import basemod.abstracts.CustomPotion;
-import basemod.cardmods.EtherealMod;
-import basemod.cardmods.ExhaustMod;
-import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import craven.util.CustomActions.AdjustRiskAction;
+import craven.util.CustomActions.ReduceRiskAction;
 
 import static craven.CravenMod.makeID;
 import static craven.util.otherutil.variables.Variables.p;
@@ -51,7 +45,7 @@ public class SpikedShot extends CustomPotion {
 
     @Override
     public void use(AbstractCreature abstractCreature) {
-        addToBot(new AdjustRiskAction(potency));
+        addToBot(new ReduceRiskAction(potency));
         addToBot(new ApplyPowerAction(p(), p(), new WeakPower(p(), 1, false)));
     }
 

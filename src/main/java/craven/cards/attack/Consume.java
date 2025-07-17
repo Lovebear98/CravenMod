@@ -37,7 +37,7 @@ public class Consume extends AbstractHungryCard implements CravingInterface {
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
     private static final int MAGIC = 9;
-    private static final int UPG_MAGIC = 7;
+    private static final int UPG_MAGIC = 5;
     private static final int SECOND_MAGIC = 0;
     private static final int UPG_SECOND_MAGIC = 0;
 

@@ -3,7 +3,7 @@
     "NAME": "Chaser",
     "DESCRIPTIONS": [
       "Add #b",
-      " random cards to your discard pile with #yExhaust and #yEthereal.",
+      " random cards to your discard pile. They gain #yExhaust and #yEthereal.",
       "Exhaust",
       "Removed until the end of combat.",
       "Ethereal",
@@ -29,6 +29,17 @@
       ".",
       " #b",
       " [E]"
+    ]
+  },
+  "${modID}:BloodyMary": {
+    "NAME": "Bloody Mary",
+    "DESCRIPTIONS": [
+      "Heal #b",
+      " HP. NL Gain #b",
+      " [E] . NL Gain #b",
+      " #yRavenous.",
+      "Ravenous",
+      "At the start of your turn, lose #bX HP then #yDevour up to #bX cards to reduce this."
     ]
   }
 }

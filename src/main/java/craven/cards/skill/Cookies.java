@@ -60,7 +60,7 @@ public class Cookies extends AbstractSecondsCard {
 
     @Override
     public int SecondsCount() {
-        return Math.max(magicNumber - SecondsUsed, 0);
+        return Math.max(BaseSecondsCount() - SecondsUsed, 0);
     }
 
 

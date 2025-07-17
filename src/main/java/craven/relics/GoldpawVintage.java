@@ -11,7 +11,7 @@ import static craven.util.otherutil.variables.Variables.p;
 public class GoldpawVintage extends AtlasRelic {
     ///This relic's RiskBonus is checked for in the MechanicsManager.
 
-    public static final int DrawOnExhaust = 1;
+    public static final int DrawOnExhaust = 2;
 
     private static final String NAME = GoldpawVintage.class.getSimpleName();
     public static final String ID = makeID(NAME);

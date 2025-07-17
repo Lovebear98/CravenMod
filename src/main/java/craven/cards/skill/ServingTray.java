@@ -57,7 +57,7 @@ public class ServingTray extends AbstractSecondsCard {
 
     @Override
     public int SecondsCount() {
-        return Math.max(secondMagic - SecondsUsed, 0);
+        return Math.max(BaseSecondsCount() - SecondsUsed, 0);
     }
 
 

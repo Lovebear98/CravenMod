@@ -31,6 +31,12 @@ public class UIText {
     public static String CantDrawText(){
         return UIText.TEXT[6];
     }
+    public static String STARTERRATIONSTEXT(){
+        return UIText.TEXT[7];
+    }
+    public static String BRANCHNERFTEXT(){
+        return UIText.TEXT[8];
+    }
 
 
 
