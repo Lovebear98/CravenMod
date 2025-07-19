@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractHungryCard;
+import craven.cardsmods.BruteforceMod;
 import craven.cardsmods.RavenousDamageMod;
 import craven.character.CravenCharacter;
 import craven.patches.interfaces.CravingInterface;
@@ -32,8 +33,8 @@ public class Bruteforce extends AbstractHungryCard implements CravingInterface {
     private static final int UPG_BLOCK = 0;
     private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 3;
-    private static final int SECOND_MAGIC = 0;
-    private static final int UPG_SECOND_MAGIC = 0;
+    private static final int SECOND_MAGIC = 2;
+    private static final int UPG_SECOND_MAGIC = 1;
 
     public Bruteforce() {
         super(ID, info);
@@ -43,7 +44,7 @@ public class Bruteforce extends AbstractHungryCard implements CravingInterface {
         setMagic(MAGIC, UPG_MAGIC);
         setSecondMagic(SECOND_MAGIC, UPG_SECOND_MAGIC);
 
-        CardModifierManager.addModifier(this, new RavenousDamageMod());
+        CardModifierManager.addModifier(this, new BruteforceMod());
     }
 
     @Override

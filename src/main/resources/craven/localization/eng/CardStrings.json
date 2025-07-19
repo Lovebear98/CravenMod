@@ -57,8 +57,8 @@
   },
   "${modID}:Casanova": {
     "NAME": "Casanova",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL When ${modID}:Devoured: Apply !M! Weak to ALL enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL When ${modID}:Devoured: Apply !M! Weak to ALL enemies. NL Exhaust.",
+    "DESCRIPTION": "Apply !M! Vulnerable. NL When ${modID}:Devoured: Apply !${modID}:M2! Weak to ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL When ${modID}:Devoured: Apply !${modID}:M2! Weak to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -201,8 +201,8 @@
   },
   "${modID}:Bruteforce": {
     "NAME": "Bruteforce",
-    "DESCRIPTION": "Deal !D! damage. NL Damage is equal to your ${modID}:Ravenous.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Damage is equal to your ${modID}:Ravenous.",
+    "DESCRIPTION": "Deal !D! damage. NL Damage is equal to !${modID}:M2!x your ${modID}:Ravenous.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Damage is equal to !${modID}:M2!x your ${modID}:Ravenous.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -233,8 +233,8 @@
   },
   "${modID}:HideTheEvidence": {
     "NAME": "Hide the Evidence",
-    "DESCRIPTION": "Lose HP equal to your ${modID}:Ravenous, then remove it. NL Purge.",
-    "UPGRADE_DESCRIPTION": "Lose HP equal to your ${modID}:Ravenous, then remove it. NL Exhaust.",
+    "DESCRIPTION": "Lose HP equal to your ${modID}:Ravenous, then lose ALL of it. NL Purge.",
+    "UPGRADE_DESCRIPTION": "Lose HP equal to your ${modID}:Ravenous, then lose ALL of it. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -273,8 +273,8 @@
   },
   "${modID}:Ambush": {
     "NAME": "Ambush",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Exhaust{!M!|>1,<1= up to} !M! card{!M!|>1,<1=s} to gain Block equal to the unblocked damage dealt{!M!|>1,<1= for each}.",
-    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL Exhaust{!M!|>1,<1= up to} !M! card{!M!|>1,<1=s} to gain Block equal to the unblocked damage dealt{!M!|>1,<1= for each}.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL You can Exhaust{!M!|>1,<1= up to} !M! card{!M!|>1,<1=s} to gain Block equal to the unblocked damage dealt{!M!|>1,<1= for each}.",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL You can Exhaust{!M!|>1,<1= up to} !M! card{!M!|>1,<1=s} to gain Block equal to the unblocked damage dealt{!M!|>1,<1= for each}.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -377,8 +377,8 @@
   },
   "${modID}:SavorIt": {
     "NAME": "Savor It",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
-    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw !${modID}:M2! card{!${modID}:M2!|>1,<1=s}. NL ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL Draw !${modID}:M2! card{!${modID}:M2!|>1,<1=s}. NL ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -399,20 +399,90 @@
       ""
     ]
   },
-
-
+  "${modID}:Presentation": {
+    "NAME": "Presentation",
+    "DESCRIPTION": "Convert up to !M! ${modID}:Risk into Strength until the end of this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Convert up to !M! ${modID}:Risk into Strength until the end of this turn. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Sharpen": {
+    "NAME": "Sharpen",
+    "DESCRIPTION": "Gain !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Dexterity and Strength.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Sedation": {
+    "NAME": "Sedation",
+    "DESCRIPTION": "{@@}Apply !M! Weak.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}Apply !M! Weak.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:ForcedSedation": {
+    "NAME": "Forced Sedation",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Brazen": {
+    "NAME": "Brazen",
+    "DESCRIPTION": "{@@}{!${modID}:HasBrazen!|1=Trigger your ${modID}:Ravenous without taking damage.|@=Your ${modID}:Ravenous damage is also dealt to a random enemy.}",
+    "UPGRADE_DESCRIPTION": "{@@}Retain. NL {!${modID}:HasBrazen!|1=Trigger your ${modID}:Ravenous without taking damage.|@=Your ${modID}:Ravenous damage is also dealt to a random enemy.}",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Snack": {
+    "NAME": "Snack",
+    "DESCRIPTION": "{@@}Draw !${modID}:SV! card{!${modID}:SV!|>1,<1=s}. NL When ${modID}:Devoured: Draw increases by 1.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
+    "UPGRADE_DESCRIPTION": "{@@}Draw !${modID}:SV! card{!${modID}:SV!|>1,<1=s}. NL When ${modID}:Devoured: Draw increases by 1.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
   "${modID}:SingleOut": {
     "NAME": "Single Out",
-    "DESCRIPTION": "Deal !D! damage. NL Choose one of the top !M! cards of your draw pile to add to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Choose one of the top !M! cards of your draw pile to add to your hand.",
+    "DESCRIPTION": "Deal !D! damage. NL Scry !M! and add one of those cards to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Scry !M! and add one of those cards to your hand.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
   },
   "${modID}:ImportedGoods": {
     "NAME": "Imported Goods",
-    "DESCRIPTION": "Add a random *X-Cost card of any color to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a random Upgraded *X-Cost card of any color to your hand. NL Exhaust.",
+    "DESCRIPTION": "Add a random *X-Cost card of any color to your hand. Its maximum *X is increased by !M!. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a random *X-Cost card of any color to your hand. Its maximum *X is increased by !M!. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Starter": {
+    "NAME": "Starter",
+    "DESCRIPTION": "Gain !B! Block X times.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block X times. NL If your ${modID}:Risk is at 0, draw X cards.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Dessert": {
+    "NAME": "Dessert",
+    "DESCRIPTION": "{@@}Deal !D! damage.{!${modID}:S!|>0= NL If ${modID}:Seconds is at 0, deal triple damage instead.|<1=} NL ${modID}:Food.{!${modID}:S!|>0= NL *Seconds !${modID}:S!.|<1=}",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage.{!${modID}:S!|>0= NL If ${modID}:Seconds is at 0, deal triple damage instead.|<1=} NL ${modID}:Food.{!${modID}:S!|>0= NL *Seconds !${modID}:S!.|<1=}",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:HungeringStrike": {
+    "NAME": "Hungering Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ${modID}:Ravenous.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !M! ${modID}:Ravenous.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -452,14 +522,7 @@
       ""
     ]
   },
-  "${modID}:Brazen": {
-    "NAME": "Brazen",
-    "DESCRIPTION": "",
-    "UPGRADE_DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
-  },
+
   "${modID}:Template": {
     "NAME": "Template",
     "DESCRIPTION": "Ex",

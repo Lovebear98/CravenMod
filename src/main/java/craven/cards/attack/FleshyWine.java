@@ -1,5 +1,6 @@
 package craven.cards.attack;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -52,6 +53,19 @@ public class FleshyWine extends AbstractHungryCard {
         if(p().hasPower(RavenousPower.POWER_ID)){
             addToBot(new DamageAction(m, new DamageInfo(p, damage, damageType), AbstractGameAction.AttackEffect.POISON));
         }
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        if(p()!=null && p().hasPower(RavenousPower.POWER_ID)){
+            this.glowColor = GlowColor();
+        }
+    }
+
+    @Override
+    public Color GlowColor() {
+        return Color.RED.cpy();
     }
 
     @Override

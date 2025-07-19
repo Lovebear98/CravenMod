@@ -37,6 +37,9 @@ public class UIText {
     public static String BRANCHNERFTEXT(){
         return UIText.TEXT[8];
     }
+    public static String SCAVENGERATIONSTEXT(){
+        return UIText.TEXT[9];
+    }
 
 
 

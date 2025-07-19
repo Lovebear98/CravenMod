@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import craven.powers.BasePower;
 import craven.relics.VoiceOfReason;
@@ -54,29 +55,50 @@ public class RavenousPower extends BasePower implements CloneablePowerInterface 
     @Override
     public void atStartOfTurn() {
         if(!p().hasRelic(VoiceOfReason.ID)){
-            this.flash();
-            int e = Math.min(p().exhaustPile.size(), amount);
-            if(e > 0){
-                AbstractDungeon.actionManager.addToTop(new ReducePowerAction(owner, owner, this, e));
-                DevourCards(e);
-            }
-            addToTop(new LoseHPAction(owner, owner, amount));
+        Trigger(true);
         }
         super.atStartOfTurn();
     }
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        if(p().hasRelic(VoiceOfReason.ID)){
+        if(p().hasRelic(VoiceOfReason.ID)) {
+            Trigger(true);
+        }
+        super.atEndOfTurn(isPlayer);
+    }
+
+
+    public void Trigger(boolean DealDamage) {
+        if(!p().hasRelic(VoiceOfReason.ID)){
             this.flash();
             int e = Math.min(p().exhaustPile.size(), amount);
             if(e > 0){
                 AbstractDungeon.actionManager.addToTop(new ReducePowerAction(owner, owner, this, e));
                 DevourCards(e);
             }
-            addToTop(new DamageAction(owner, new DamageInfo(owner, amount * 2, DamageInfo.DamageType.NORMAL)));
+            if(DealDamage){
+                addToTop(new LoseHPAction(owner, owner, amount));
+            }
+            if(p().hasPower(BrazenPower.POWER_ID)){
+                AbstractMonster m = AbstractDungeon.getRandomMonster();
+                addToBot(new LoseHPAction(m, owner, amount));
+            }
+        }else if(p().hasRelic(VoiceOfReason.ID)){
+            this.flash();
+            int e = Math.min(p().exhaustPile.size(), amount);
+            if(e > 0){
+                AbstractDungeon.actionManager.addToTop(new ReducePowerAction(owner, owner, this, e));
+                DevourCards(e);
+            }
+            if(DealDamage){
+                addToTop(new DamageAction(owner, new DamageInfo(owner, amount * 2, DamageInfo.DamageType.NORMAL)));
+            }
+            if(p().hasPower(BrazenPower.POWER_ID)){
+                AbstractMonster m = AbstractDungeon.getRandomMonster();
+                addToTop(new DamageAction(m, new DamageInfo(owner, amount * 2, DamageInfo.DamageType.NORMAL)));
+            }
         }
-        super.atEndOfTurn(isPlayer);
     }
 
     @Override

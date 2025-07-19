@@ -1,4 +1,4 @@
-package craven.util.CustomActions;
+package craven.util.CustomActions.cardmanip;
 
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;

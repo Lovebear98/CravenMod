@@ -89,5 +89,12 @@
       "Maximum #yRisk will increase by #b",
       " during the next turn."
     ]
+  },
+  "${modID}:BrazenPower": {
+    "NAME": "Brazen",
+    "DESCRIPTIONS": [
+      "Damage from #yRavenous will also damage a random enemy. NL Triggers your #yRavenous without damaging you instead of stacking.",
+      " during the next turn."
+    ]
   }
 }

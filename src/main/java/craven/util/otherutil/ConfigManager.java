@@ -32,6 +32,9 @@ public class ConfigManager {
     public static int StarterRations = 10;
     public static final String STARTER_RATIONS = "StarterRations";
 
+    public static int ScavengeCount = 5;
+    public static final String SCAVENGE_COUNT = "ScavengeCount";
+
     public static final String SHOW_TUTORIAL = "ShowTutorial";
     public static boolean ShowTutorial = true;
 
@@ -53,6 +56,7 @@ public class ConfigManager {
         CravenDefaults.setProperty(SHOW_TUTORIAL, Boolean.toString(ShowTutorial));
 
         CravenDefaults.setProperty(STARTER_RATIONS, Integer.toString(StarterRations));
+        CravenDefaults.setProperty(SCAVENGE_COUNT, Integer.toString(ScavengeCount));
         try {
             SpireConfig config = new SpireConfig("Craven Mod", "CravenConfig", CravenDefaults);
             config.load();
@@ -64,6 +68,7 @@ public class ConfigManager {
             BranchNerf = config.getBool(BRANCH_NERF);
             ShowTutorial = config.getBool(SHOW_TUTORIAL);
             StarterRations = config.getInt(STARTER_RATIONS);
+            ScavengeCount = config.getInt(SCAVENGE_COUNT);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -185,8 +190,22 @@ public class ConfigManager {
         settingsPanel.addUIElement(RationsSlider);
 
 
+        ModMinMaxSlider ScavengeSlider = new ModMinMaxSlider(SCAVENGERATIONSTEXT(), 500f, yPos(10)+ 15, 0, 10, ScavengeCount, "x%.0f", settingsPanel, slider -> {
+            try {
+                SpireConfig config = new SpireConfig("Craven Mod", "CravenConfig", CravenDefaults);
+                int i = Math.round(slider.getValue());
+                config.setInt(SCAVENGE_COUNT, i);
+                ScavengeCount = i;
+                config.save();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        settingsPanel.addUIElement(ScavengeSlider);
+
+
         ModLabeledToggleButton BranchNerfButton = new ModLabeledToggleButton(BRANCHNERFTEXT(),
-                350.0f, yPos(11), Settings.CREAM_COLOR, FontHelper.charDescFont,
+                350.0f, yPos(12), Settings.CREAM_COLOR, FontHelper.charDescFont,
                 BranchNerf, settingsPanel, (label) -> {
         }, (button) -> {
             BranchNerf = button.enabled;

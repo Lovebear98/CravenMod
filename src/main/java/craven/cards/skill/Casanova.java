@@ -30,9 +30,9 @@ public class Casanova extends AbstractHungryCard implements OnDevouredInterface 
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
     private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 1;
-    private static final int SECOND_MAGIC = 0;
-    private static final int UPG_SECOND_MAGIC = 0;
+    private static final int UPG_MAGIC = 0;
+    private static final int SECOND_MAGIC = 1;
+    private static final int UPG_SECOND_MAGIC = 1;
 
 
     public Casanova() {
@@ -43,7 +43,7 @@ public class Casanova extends AbstractHungryCard implements OnDevouredInterface 
         setMagic(MAGIC, UPG_MAGIC);
         setSecondMagic(SECOND_MAGIC, UPG_SECOND_MAGIC);
 
-        setExhaust(true);
+        setExhaust(true, false);
     }
 
     @Override
@@ -61,6 +61,6 @@ public class Casanova extends AbstractHungryCard implements OnDevouredInterface 
 
     @Override
     public void PostDevoured() {
-        addToBot(new WeakAllAction(p(), magicNumber));
+        addToBot(new WeakAllAction(p(), secondMagic));
     }
 }

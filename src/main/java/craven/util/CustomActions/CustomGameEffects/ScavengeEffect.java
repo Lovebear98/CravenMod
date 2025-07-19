@@ -9,6 +9,9 @@ import com.megacrit.cardcrawl.rooms.CampfireUI;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import craven.cards.generated.Mechanics.Rations;
+import craven.relics.FoundFood;
+
+import static craven.util.otherutil.variables.Variables.p;
 
 public class ScavengeEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
     private int amount;
@@ -29,6 +32,14 @@ public class ScavengeEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffec
 
     @Override
     public void update() {
+        if(this.duration == this.startingDuration){
+            if(p() != null && p().hasRelic(FoundFood.ID)){
+                FoundFood r = (FoundFood) p().getRelic(FoundFood.ID);
+                r.flash();
+                r.counter = 0;
+                r.fixDescription();
+            }
+        }
         if(amount > 0){
             amount -= 1;
             AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(new Rations(), (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));

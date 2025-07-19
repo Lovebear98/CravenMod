@@ -11,7 +11,7 @@ import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
 import craven.patches.interfaces.CravingInterface;
 import craven.util.CardStats;
-import craven.util.CustomActions.ExhaustTopCardAction;
+import craven.util.CustomActions.cardmanip.ExhaustTopCardAction;
 
 public class Impatience extends AbstractHungryCard implements CravingInterface {
     public static final String[] EXTENDED_DESCRIPTION = CardStrings.getMockCardString().EXTENDED_DESCRIPTION;

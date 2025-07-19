@@ -7,14 +7,17 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
+import craven.relics.FoundFood;
 import craven.util.CustomActions.CustomGameEffects.ScavengeEffect;
 import craven.util.TextureLoader;
 
 import static craven.CravenMod.makeID;
+import static craven.util.otherutil.MechanicManager.ScavengeCount;
+import static craven.util.otherutil.variables.Variables.p;
 
 
 public class ScavengeButton extends AbstractCampfireOption {
-    private static final int CardCount = 5;
+
     public static final String[] TEXT;
     private static final UIStrings UI_STRINGS;
     private float WaitTimer = 0.3f;
@@ -33,7 +36,7 @@ public class ScavengeButton extends AbstractCampfireOption {
 
         this.usable = active;
         if (active) {
-            this.description = TEXT[1]+CardCount+TEXT[2];
+            this.description = TEXT[1]+ ScavengeCount() +TEXT[2];
             this.img = TextureLoader.getTexture("craven/images/ui/ScavengeButton.png");
         } else {
             this.description = TEXT[3];
@@ -41,12 +44,13 @@ public class ScavengeButton extends AbstractCampfireOption {
         }
     }
 
-///When we click the button
+    ///When we click the button
     @Override
     public void useOption() {
         if (this.usable) {
             Used = true;
-            AbstractDungeon.effectsQueue.add(new ScavengeEffect(CardCount));
+            AbstractDungeon.effectsQueue.add(new ScavengeEffect(ScavengeCount()));
+
         }
     }
 

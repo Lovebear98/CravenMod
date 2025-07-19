@@ -4,6 +4,7 @@ import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.ModPanel;
 import basemod.interfaces.*;
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.DynamicTextBlocks;
 import com.badlogic.gdx.Files;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.lwjgl.LwjglFileHandle;
@@ -31,6 +32,7 @@ import craven.potions.custompotions.BloodyMary;
 import craven.potions.custompotions.Chaser;
 import craven.potions.custompotions.IchorBordeaux;
 import craven.potions.custompotions.SpikedShot;
+import craven.powers.custompowers.BrazenPower;
 import craven.relics.BaseRelic;
 import craven.ui.TipPanel;
 import craven.util.CustomActions.StartTutorialAction;
@@ -127,6 +129,14 @@ public class CravenMod implements
         BaseMod.addPotion(BloodyMary.class, Color.RED.cpy(), Color.SCARLET.cpy(), Color.FIREBRICK.cpy(), BloodyMary.POTION_ID, CravenCharacter.Meta.CRAVEN_CHARACTER);
 
         BaseMod.addPotion(IchorBordeaux.class, Color.GOLDENROD.cpy(), Color.YELLOW.cpy(), Color.FIREBRICK.cpy(), IchorBordeaux.POTION_ID, CravenCharacter.Meta.CRAVEN_CHARACTER);
+
+
+        DynamicTextBlocks.registerCustomCheck(makeID("HasBrazen"), card -> {
+            if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(BrazenPower.POWER_ID)) {
+                return 1;
+            }
+            return 0;
+        });
     }
 
     /*----------Localization----------*/

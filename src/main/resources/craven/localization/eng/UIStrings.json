@@ -1,15 +1,16 @@
 {
   "${modID}:UIText": {
     "TEXT": [
-      "Enable \"Eye Candy\" animations for The Craven.",
-      "Enable \"Ear Candy\" audio cues for The Craven.",
+      "Enable extra vfx for The Craven.",
+      "Enable audio cues for The Craven.",
       "Display a tip button near the Exhaust Pile.",
       "Display the Tutorial upon first entering combat.",
       "Enable events from The Craven for other characters. (N/A)",
       "Enable the 'Devour' mechanic for ALL characters.",
       "It's too risky to draw more!",
       "Deck Rations",
-      "Replace Dead Branch with Olive Branch."
+      "Replace Dead Branch with Olive Branch.",
+      "Rest Rations"
     ],
     "EXTRA_TEXT": [
       "Risk",

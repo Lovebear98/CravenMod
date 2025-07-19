@@ -1,4 +1,4 @@
-package craven.util.CustomActions;
+package craven.util.CustomActions.cardmanip;
 
 import basemod.BaseMod;
 import com.badlogic.gdx.Gdx;

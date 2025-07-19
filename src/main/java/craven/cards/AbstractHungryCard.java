@@ -1,11 +1,14 @@
 package craven.cards;
 
+import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.PurgeField;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import craven.util.CardStats;
+
+import java.awt.*;
 
 import static craven.util.otherutil.variables.Variables.p;
 
@@ -161,5 +164,9 @@ public abstract class AbstractHungryCard extends BaseCard {
 
     public int SpecialVar(){
         return 0;
+    }
+
+    public Color GlowColor(){
+        return AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
     }
 }

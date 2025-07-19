@@ -16,7 +16,7 @@ public class Rations extends AbstractHungryCard {
     private static final CardStats info = new CardStats(
             CardColor.COLORLESS,
             CardType.STATUS,
-            CardRarity.BASIC,
+            CardRarity.SPECIAL,
             CardTarget.NONE,
             -2
     );

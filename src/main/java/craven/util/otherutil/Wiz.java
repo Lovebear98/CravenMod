@@ -118,9 +118,6 @@ public class Wiz {
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p(), p(), new RavenousPower(p(), i)));
     }
 
-    ///AbstractCard c = GetTotallyRandomXCostCard(false);
-    ///addToBot(new MakeTempCardInHandAction(c));
-
     private static int MaxTries = 300;
     public static AbstractCard GetTotallyRandomXCostCard(boolean inCombat){
         return GetTotallyRandomXCostCard(inCombat, false);

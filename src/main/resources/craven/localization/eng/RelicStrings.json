@@ -97,5 +97,16 @@
       " , play it.",
       "???"
     ]
+  },
+  "${modID}:FoundFood": {
+    "NAME": "Found Food",
+    "FLAVOR": "I came here for a reason, and it's the one right thing I've ever done. A little dirt won't hurt.",
+    "DESCRIPTIONS": [
+      "When you skip card rewards, increase the counter by #b",
+      ". NL When you #yScavenge at #pRest #pSites, add ",
+      "that many",
+      "#b",
+      " extra #yRations to your deck and reset the counter."
+    ]
   }
 }

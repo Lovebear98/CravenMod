@@ -1,5 +1,7 @@
 package craven.util.otherutil;
 
+import basemod.abstracts.AbstractCardModifier;
+import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
@@ -11,6 +13,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import craven.CravenMod;
+import craven.cardsmods.BonusCravingMod;
 import craven.patches.interfaces.CravingInterface;
 import craven.patches.interfaces.OnDevouredInterface;
 import craven.patches.interfaces.PostDevourInterface;
@@ -19,16 +23,34 @@ import craven.powers.custompowers.CravingPower;
 import craven.powers.custompowers.MealPrepPower;
 import craven.powers.custompowers.PalateCleanserPower;
 import craven.powers.custompowers.RiskCapPower;
+import craven.relics.FoundFood;
 import craven.relics.PrimeFrostruffle;
 import craven.relics.Ribbon;
 import craven.util.CustomActions.imported.PhantomPlayCardAction;
 
+import java.util.List;
+
 import static craven.patches.DracoTailField.inDracoTailField;
+import static craven.util.otherutil.ConfigManager.ScavengeCount;
 import static craven.util.otherutil.variables.UIText.CantDrawText;
 import static craven.util.otherutil.variables.Variables.isInCombat;
 import static craven.util.otherutil.variables.Variables.p;
 
 public class MechanicManager {
+
+
+
+
+        public static int ScavengeCount() {
+                int i = ScavengeCount;
+                if(p() != null && p().hasRelic(FoundFood.ID)){
+                        FoundFood r = (FoundFood) p().getRelic(FoundFood.ID);
+                        i += r.counter;
+                }
+                return i;
+        }
+
+
         public static final int BaseCravingCap = 3;
         public static int CravingCap(AbstractCard abstractCard){
                 int i;
@@ -45,6 +67,12 @@ public class MechanicManager {
                 if(abstractCard != null){
                         if(abstractCard instanceof CravingInterface){
                                 i += ((CravingInterface) abstractCard).CravingBonus();
+                        }
+                        if(CardModifierManager.hasModifier(abstractCard, BonusCravingMod.ID)){
+                                List<AbstractCardModifier> sameMod = CardModifierManager.getModifiers(abstractCard, BonusCravingMod.ID);
+                                BonusCravingMod mod = (BonusCravingMod) sameMod.get(0);
+                                i += mod.bonus;
+
                         }
                 }
                 return Math.max(i, 0);

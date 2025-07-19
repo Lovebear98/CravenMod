@@ -3,6 +3,7 @@ package craven.cardsmods;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
 import basemod.interfaces.AlternateCardCostModifier;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.stslib.util.extraicons.ExtraIcons;
@@ -125,7 +126,11 @@ public class DevourCostMod extends AbstractCardModifier implements AlternateCard
 
     private void RenderIcon(AbstractCard card) {
         if(DevourEnabled()){
-            ExtraIcons.icon(FangsIcon).text(String.valueOf(CravingCap(card))).render(card);
+            if(CardModifierManager.hasModifier(card, BonusCravingMod.ID)){
+                ExtraIcons.icon(FangsIcon).text(String.valueOf(CravingCap(card))).textColor(Color.LIME.cpy()).render(card);
+            }else{
+                ExtraIcons.icon(FangsIcon).text(String.valueOf(CravingCap(card))).render(card);
+            }
         }
     }
 

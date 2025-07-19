@@ -10,8 +10,6 @@ import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
 import craven.util.CardStats;
 
-import static craven.util.otherutil.Wiz.GetTotallyRandomXCostCard;
-
 public class Defend extends AbstractHungryCard {
     public static final String[] EXTENDED_DESCRIPTION = CardStrings.getMockCardString().EXTENDED_DESCRIPTION;
     public static final String ID = makeID(Defend.class.getSimpleName());
