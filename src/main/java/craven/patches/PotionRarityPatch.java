@@ -15,7 +15,7 @@ import javassist.CtBehavior;
 import java.util.ArrayList;
 
 import static craven.CravenMod.makeID;
-import static craven.util.otherutil.MechanicManager.SPECIAL;
+import static craven.util.otherutil.MechanicManager.CURATED;
 
 
 ///Thank you Bryan
@@ -37,7 +37,7 @@ public class PotionRarityPatch {
         @SpirePostfixPatch
         public static void Postfix() {
             eventPotionList = new ArrayList<>();
-            eventPotionList = PotionHelper.getPotionsByRarity(SPECIAL);
+            eventPotionList = PotionHelper.getPotionsByRarity(CURATED);
         }
     }
 
@@ -69,8 +69,8 @@ public class PotionRarityPatch {
         public static void Prefix() {
             tempList = new ArrayList<>();
             tempList.addAll(PotionHelper.potions);
-            tempList.removeIf(str -> (PotionHelper.getPotion(str).rarity != SPECIAL));
-            PotionHelper.potions.removeIf(str -> (PotionHelper.getPotion(str).rarity == SPECIAL));
+            tempList.removeIf(str -> (PotionHelper.getPotion(str).rarity != CURATED));
+            PotionHelper.potions.removeIf(str -> (PotionHelper.getPotion(str).rarity == CURATED));
         }
 
         @SpirePostfixPatch

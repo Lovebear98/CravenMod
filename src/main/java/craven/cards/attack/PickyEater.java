@@ -1,6 +1,5 @@
 package craven.cards.attack;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -9,6 +8,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
+import craven.patches.visual.AttackEffectEnum;
 import craven.util.CardStats;
 import craven.util.CustomActions.SelectDevourAction;
 
@@ -44,7 +44,7 @@ public class PickyEater extends AbstractHungryCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageType), AbstractGameAction.AttackEffect.POISON));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageType), AttackEffectEnum.GILDED));
         addToBot(new SelectDevourAction(magicNumber));
     }
 

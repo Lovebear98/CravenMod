@@ -1,6 +1,5 @@
 package craven.cards.attack;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,6 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
+import craven.patches.visual.AttackEffectEnum;
 import craven.powers.custompowers.HysteriaPower;
 import craven.util.CardStats;
 
@@ -45,7 +45,7 @@ public class Hysteria extends AbstractHungryCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AttackEffectEnum.SHADY));
         addToBot(new ApplyPowerAction(m, p, new HysteriaPower(m, damage)));
     }
 

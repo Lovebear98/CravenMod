@@ -17,6 +17,7 @@ public class WineCasket extends AtlasRelic {
     public static final String ID = makeID(NAME);
     private static final RelicTier RARITY = RelicTier.SHOP;
     private static final LandingSound SOUND = LandingSound.FLAT;
+
     public WineCasket() {
         super(ID, NAME, CravenCharacter.Meta.CARD_COLOR, RARITY, SOUND);
 
@@ -60,7 +61,7 @@ public class WineCasket extends AtlasRelic {
 
     public void onMonsterDeath(AbstractMonster m) {
         if (m.currentHealth == 0 && !m.hasPower(MinionPower.POWER_ID)) {
-            ///this.flash();
+            this.flash();
             ///this.addToBot(new RelicAboveCreatureAction(m, this));
             BuffPotion();
         }
@@ -78,11 +79,13 @@ public class WineCasket extends AtlasRelic {
 
     IchorBordeaux PermPot = null;
     private void CheckForPotion() {
-        if(PermPot == null){
-            for(AbstractPotion p : p().potions){
-                if(p instanceof IchorBordeaux){
-                    PermPot = (IchorBordeaux) p;
-                    break;
+        if(p() != null){
+            if(PermPot == null){
+                for(AbstractPotion p : p().potions){
+                    if(p instanceof IchorBordeaux){
+                        PermPot = (IchorBordeaux) p;
+                        break;
+                    }
                 }
             }
         }
@@ -108,6 +111,6 @@ public class WineCasket extends AtlasRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+                return DESCRIPTIONS[0];
     }
 }

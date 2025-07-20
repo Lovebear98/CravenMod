@@ -53,7 +53,6 @@ public class Consume extends AbstractHungryCard implements CravingInterface {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ///         AbstractDungeon.actionManager.addToBottom(new VFXAction(new SavageryEffect(m), 0.1f));
         if (Settings.FAST_MODE) {
             this.addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Settings.RED_TEXT_COLOR.cpy()), 0.1F));
         } else {

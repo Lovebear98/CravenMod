@@ -1,7 +1,6 @@
 package craven.cards.attack;
 
 import basemod.helpers.CardModifierManager;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractSecondsCard;
 import craven.cardsmods.DessertDamageMod;
 import craven.character.CravenCharacter;
+import craven.patches.visual.AttackEffectEnum;
 import craven.util.CardStats;
 
 import static craven.util.CustomTags.Food;
@@ -51,7 +51,7 @@ public class Dessert extends AbstractSecondsCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageType), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageType), AttackEffectEnum.GILDED));
     }
 
     @Override

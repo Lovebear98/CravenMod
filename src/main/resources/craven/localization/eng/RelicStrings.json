@@ -1,7 +1,7 @@
 {
   "${modID}:GoldpawVintage": {
     "NAME": "Goldpaw Vintage",
-    "FLAVOR": "Rich and delicate, a fine wine with a subtle sweetness. Nobody can replicate it, so one has to wonder what the trick is...",
+    "FLAVOR": "A rich, delicate wine with a subtle sweetness and novel color that nobody can replicate. I put my heart and soul into this.",
     "DESCRIPTIONS": [
       "The first time you #yExhaust a card each combat, draw #b",
       " card",
@@ -11,7 +11,7 @@
   },
   "${modID}:SilverPromise": {
     "NAME": "Silver Promise",
-    "FLAVOR": "I might be too craven and selfish to change, but I can make sure she doesn't end up like me.",
+    "FLAVOR": "You might be too craven and selfish to change, but you owe it to her that she doesn't end up like you.",
     "DESCRIPTIONS": [
       "Gain",
       " at the start of your turn. Decreases by #b",
@@ -20,14 +20,14 @@
   },
   "${modID}:WineCasket": {
     "NAME": "Wine Casket",
-    "FLAVOR": "A little decoration I fill with spiced cider during the witching season. The guests adore its charm.",
+    "FLAVOR": "Is it a cute decoration, or some sick humor at all the people you've put in the real deal? Disgusting.",
     "DESCRIPTIONS": [
-      "Gain a #rPERMANENT #yIchor #yBordeaux. NL When a non-minion enemy dies, increase its #yPotency by #b1. NL When you use it, #rreset its #yPotency."
+      "Gain a #rPERMANENT #yIchor #yBordeaux. NL When you use it, #rreset its #yPotency."
     ]
   },
   "${modID}:DinnerMenu": {
     "NAME": "Dinner Menu",
-    "FLAVOR": "A good menu is twice as charming and thrice as appealing as the food on it, but nowhere near as satisfying.",
+    "FLAVOR": "A good menu leaves the diner squirming in anticipation for that first taste, even if it's different from what they expect.",
     "DESCRIPTIONS": [
       "In #b",
       " turn",
@@ -45,7 +45,7 @@
   },
   "${modID}:GiggleJuice": {
     "NAME": "Giggle Juice",
-    "FLAVOR": "Fruit juice. Nena wanted to try the wine I make. The flavor's not exact, but her and her friends love feeling grown up.",
+    "FLAVOR": "Fruit juice. Nena wanted to try the wine I make. The flavor's not exact, but her and her friends love joining the parties.",
     "DESCRIPTIONS": [
       "Replaces #rGoldpaw #rVintage. Whenever you #yExhaust #y${modID}:Food, draw #b",
       " card",
@@ -55,7 +55,7 @@
   },
   "${modID}:Ribbon": {
     "NAME": "Ribbon",
-    "FLAVOR": "She caught me. She forgave me. She lied for me. And that guilt broke me.",
+    "FLAVOR": "She lied to them about what she saw to protect me. At this rate, she'll get even more caught up in all this...",
     "DESCRIPTIONS": [
       "Increase maximum #y${modID}:Risk by #b",
       " while you don't have #y${modID}:Ravenous."
@@ -65,12 +65,12 @@
     "NAME": "Voice of Reason",
     "FLAVOR": "You tell her to be kind, to love, not to harm others, but look at you. Hypocrite. Failure. Craven.",
     "DESCRIPTIONS": [
-      "The HP loss from #y${modID}:Ravenous becomes twice as much #yBlockable damage at the end of your turn."
+      "The HP loss from #y${modID}:Ravenous becomes twice as much #yBlockable damage. NL #yRavenous triggers at the end of your turn."
     ]
   },
   "${modID}:PrimeFrostruffle": {
     "NAME": "Prime Frostruffle",
-    "FLAVOR": "Cold and bitter until the liquor hits, then it's sweet and warm. Who thought chocolate would make me into a vintner?",
+    "FLAVOR": "A popular treat in the sandy towns of the Northern Primeld. Cold and bitter until the liquor hits, then it's sweet and warm.",
     "DESCRIPTIONS": [
       "Whenever you play an #yX-Cost card, gain",
       " #b",
@@ -90,7 +90,7 @@
   },
   "${modID}:DracoTail": {
     "NAME": "Draco Tail",
-    "FLAVOR": "Quick to grow back and nearly painless to lose, Draconid Tail is is an odd but acceptable delicacy even for the morally sound.",
+    "FLAVOR": "Quick to grow back and nearly painless to lose, Draconids sell their tails as if they were any other meat.",
     "DESCRIPTIONS": [
       "Upon pickup, choose a #yPower. When you #y${modID}:Devour it, play that power for free.",
       "When you #y${modID}:Devour ",
@@ -102,8 +102,8 @@
     "NAME": "Found Food",
     "FLAVOR": "I came here for a reason, and it's the one right thing I've ever done. A little dirt won't hurt.",
     "DESCRIPTIONS": [
-      "When you skip card rewards, increase the counter by #b",
-      ". NL When you #yScavenge at #pRest #pSites, add ",
+      "Skipping card rewards, increases the counter by #b",
+      ". NL #yScavenging adds ",
       "that many",
       "#b",
       " extra #yRations to your deck and reset the counter."

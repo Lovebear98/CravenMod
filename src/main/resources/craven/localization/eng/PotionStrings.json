@@ -25,7 +25,7 @@
     "NAME": "Ichor Bordeaux",
     "DESCRIPTIONS": [
       "Gain",
-      " . NL When a non-minion enemy dies, increase it by #b",
+      " . NL When a non-minion enemy dies, increase the [E] by #b",
       ".",
       " #b",
       " [E]"

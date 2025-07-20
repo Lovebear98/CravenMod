@@ -1,7 +1,6 @@
 package craven.cards.attack;
 
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -10,6 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
+import craven.patches.visual.AttackEffectEnum;
 import craven.powers.custompowers.RavenousPower;
 import craven.util.CardStats;
 
@@ -49,9 +49,9 @@ public class FleshyWine extends AbstractHungryCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageType), AbstractGameAction.AttackEffect.POISON));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageType), AttackEffectEnum.WINE));
         if(p().hasPower(RavenousPower.POWER_ID)){
-            addToBot(new DamageAction(m, new DamageInfo(p, damage, damageType), AbstractGameAction.AttackEffect.POISON));
+            addToBot(new DamageAction(m, new DamageInfo(p, damage, damageType), AttackEffectEnum.WINE));
         }
     }
 

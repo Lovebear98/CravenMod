@@ -67,8 +67,8 @@
   },
   "${modID}:PotionRarityPatch": {
     "TEXT": [
-      "Special:",
-      "Unique odds and ends."
+      "Curated:",
+      "Special brews."
     ],
     "EXTRA_TEXT": [
       "NONE"

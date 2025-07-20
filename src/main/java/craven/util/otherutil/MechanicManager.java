@@ -230,5 +230,5 @@ public class MechanicManager {
 
         ///For some reason this has to be separate
         @SpireEnum
-        public static AbstractPotion.PotionRarity SPECIAL;
+        public static AbstractPotion.PotionRarity CURATED;
 }

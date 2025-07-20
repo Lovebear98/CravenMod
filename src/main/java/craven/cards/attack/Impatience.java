@@ -1,12 +1,16 @@
 package craven.cards.attack;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
 import craven.patches.interfaces.CravingInterface;
@@ -46,7 +50,11 @@ public class Impatience extends AbstractHungryCard implements CravingInterface {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int e = GetXEnergy();
-        addToBot(new DamageAction(m, new DamageInfo(p, damage * e, damageType), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        if (m != null) {
+            this.addToBot(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY, Color.GOLD.cpy())));
+            this.addToBot(new WaitAction(0.8F));
+        }
+        addToBot(new DamageAction(m, new DamageInfo(p, damage * e, damageType), AbstractGameAction.AttackEffect.NONE));
         addToBot(new ExhaustTopCardAction(e));
     }
 

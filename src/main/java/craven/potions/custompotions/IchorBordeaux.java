@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.potions.AbstractPotion;
 import craven.relics.WineCasket;
 
 import static craven.CravenMod.makeID;
-import static craven.util.otherutil.MechanicManager.SPECIAL;
+import static craven.util.otherutil.MechanicManager.CURATED;
 import static craven.util.otherutil.variables.Variables.PrintEnergy;
 import static craven.util.otherutil.variables.Variables.p;
 
@@ -27,8 +27,10 @@ public class IchorBordeaux extends CustomPotion implements CustomSavable<Integer
     public boolean UsedThisTurn = false;
     private int Stacks = 0;
 
+    public static final int IchorGrowth = 2;
+
     public IchorBordeaux() {
-        super(NAME, POTION_ID, SPECIAL, PotionSize.S, PotionColor.WHITE);
+        super(NAME, POTION_ID, CURATED, PotionSize.S, PotionColor.WHITE);
         this.isThrown = false;
         this.targetRequired = false;
         this.labOutlineColor = Color.WHITE.cpy();
@@ -86,7 +88,7 @@ public class IchorBordeaux extends CustomPotion implements CustomSavable<Integer
     }
     @Override
     public int getPotency(int i) {
-        return 1;
+        return IchorGrowth;
     }
 
     @Override
@@ -111,5 +113,8 @@ public class IchorBordeaux extends CustomPotion implements CustomSavable<Integer
         this.Stacks += potency;
         this.flash();
         this.initializeData();
+    }
+    public int ExternalizePotency(){
+        return this.potency;
     }
 }

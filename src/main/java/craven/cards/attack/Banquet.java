@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
+import craven.patches.visual.AttackEffectEnum;
 import craven.util.CardStats;
 import craven.util.CustomActions.generic.BulkDevourAction;
 
@@ -69,7 +70,7 @@ public class Banquet extends AbstractHungryCard {
                 }
                 addToTop(new BulkDevourAction(tmp));
                 for(int e = i; e > 0; e -= 1){
-                    addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+                    addToBot(new AttackDamageRandomEnemyAction(this, AttackEffectEnum.WINE));
                 }
             }
         }));
