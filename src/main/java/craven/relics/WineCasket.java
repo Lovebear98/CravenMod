@@ -1,23 +1,12 @@
 package craven.relics;
 
-import basemod.devcommands.unlock.Unlock;
-import basemod.helpers.CardPowerTip;
-import com.megacrit.cardcrawl.actions.GameActionManager;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.PotionSlot;
 import com.megacrit.cardcrawl.powers.MinionPower;
-import craven.cards.generated.Mechanics.Rations;
 import craven.character.CravenCharacter;
 import craven.potions.custompotions.IchorBordeaux;
-import craven.util.CustomActions.cardmanip.MakeTempCardInExhaustAction;
 
 import static craven.CravenMod.makeID;
 import static craven.util.otherutil.variables.Variables.p;

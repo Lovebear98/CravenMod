@@ -11,10 +11,6 @@ import craven.character.CravenCharacter;
 import craven.patches.interfaces.OnDevouredInterface;
 import craven.powers.custompowers.PlanningPower;
 import craven.util.CardStats;
-import craven.util.CustomActions.IncreaseRiskAction;
-
-import static craven.util.otherutil.MechanicManager.Risk;
-import static craven.util.otherutil.MechanicManager.TrueRiskCap;
 
 public class LieInWait extends AbstractHungryCard implements OnDevouredInterface {
     public static final String[] EXTENDED_DESCRIPTION = CardStrings.getMockCardString().EXTENDED_DESCRIPTION;

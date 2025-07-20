@@ -1,15 +1,12 @@
 package craven.cards.skill;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import craven.cards.AbstractHungryCard;
 import craven.cards.AbstractSecondsCard;
 import craven.character.CravenCharacter;
-import craven.patches.interfaces.OnDevouredInterface;
 import craven.powers.custompowers.LoseRiskCapPower;
 import craven.powers.custompowers.RiskCapPower;
 import craven.util.CardStats;

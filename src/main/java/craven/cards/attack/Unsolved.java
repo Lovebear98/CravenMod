@@ -5,16 +5,12 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
 import craven.util.CardStats;
-import craven.util.CustomActions.AppetizerAction;
-import craven.util.CustomActions.CustomGameEffects.DelayActionEffect;
 import craven.util.CustomActions.ReduceRiskAction;
-import craven.util.CustomActions.imported.PhantomPlayCardAction;
 
 public class Unsolved extends AbstractHungryCard {
     public static final String[] EXTENDED_DESCRIPTION = CardStrings.getMockCardString().EXTENDED_DESCRIPTION;

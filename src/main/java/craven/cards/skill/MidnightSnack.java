@@ -60,10 +60,6 @@ public class MidnightSnack extends AbstractSecondsCard {
         return Math.max(BaseSecondsCount() - SecondsUsed, 0);
     }
 
-    @Override
-    public boolean SecondsUpgraded() {
-        return false;
-    }
 
     @Override
     public AbstractCard makeCopy() {

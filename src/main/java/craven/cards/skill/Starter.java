@@ -1,7 +1,5 @@
 package craven.cards.skill;
 
-import com.badlogic.gdx.graphics.Color;
-import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,11 +9,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
 import craven.patches.interfaces.CravingInterface;
-import craven.powers.custompowers.RavenousPower;
 import craven.util.CardStats;
 
 import static craven.util.otherutil.MechanicManager.Risk;
-import static craven.util.otherutil.variables.Variables.p;
 
 public class Starter extends AbstractHungryCard implements CravingInterface {
     public static final String[] EXTENDED_DESCRIPTION = CardStrings.getMockCardString().EXTENDED_DESCRIPTION;

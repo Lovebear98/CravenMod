@@ -13,8 +13,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import craven.CravenMod;
 import craven.cardsmods.BonusCravingMod;
+import craven.cardsmods.RecipeCardMod;
 import craven.patches.interfaces.CravingInterface;
 import craven.patches.interfaces.OnDevouredInterface;
 import craven.patches.interfaces.PostDevourInterface;
@@ -24,7 +24,6 @@ import craven.powers.custompowers.MealPrepPower;
 import craven.powers.custompowers.PalateCleanserPower;
 import craven.powers.custompowers.RiskCapPower;
 import craven.relics.FoundFood;
-import craven.relics.PrimeFrostruffle;
 import craven.relics.Ribbon;
 import craven.util.CustomActions.imported.PhantomPlayCardAction;
 
@@ -160,17 +159,13 @@ public class MechanicManager {
                 return 0;
         }
         public static void AttemptNoDrawText(){
-                boolean MakeEffect = true;
                 for(AbstractGameAction action : AbstractDungeon.actionManager.actions){
                         if (action instanceof TalkAction) {
-                                MakeEffect = false;
-                                break;
+                                return;
                         }
                 }
 
-                if(MakeEffect){
-                        AbstractDungeon.actionManager.addToTop(new TalkAction(true, CantDrawText(), 1.5f, 1.5f));
-                }
+            AbstractDungeon.actionManager.addToTop(new TalkAction(true, CantDrawText(), 1.5f, 1.5f));
         }
 
         public static void DevourCallback(int i){
@@ -218,6 +213,13 @@ public class MechanicManager {
                 }
                 if(c instanceof OnDevouredInterface){
                         ((OnDevouredInterface) c).PostDevoured();
+                }
+                if(CardModifierManager.hasModifier(c, RecipeCardMod.ID)){
+                        List<AbstractCardModifier> sameMod = CardModifierManager.getModifiers(c, RecipeCardMod.ID);
+                        if(!sameMod.isEmpty()){
+                                RecipeCardMod mod = (RecipeCardMod) sameMod.get(0);
+                                mod.DevouredRecipe();
+                        }
                 }
                 if (inDracoTailField.get(c)) {
                         AbstractMonster m = AbstractDungeon.getRandomMonster();

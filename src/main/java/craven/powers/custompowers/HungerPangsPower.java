@@ -1,8 +1,6 @@
 package craven.powers.custompowers;
 
 import basemod.interfaces.CloneablePowerInterface;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,7 +10,6 @@ import craven.cards.generated.Mechanics.Rations;
 import craven.powers.BasePower;
 
 import static craven.CravenMod.makeID;
-import static craven.util.otherutil.variables.Variables.p;
 
 public class HungerPangsPower extends BasePower implements CloneablePowerInterface {
     public static final String POWER_ID = makeID(HungerPangsPower.class.getSimpleName());

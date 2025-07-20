@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
 import craven.util.CardStats;
-import craven.util.CustomActions.AmbushAction;
 
 public class ForcedSedation extends AbstractHungryCard {
     public static final String[] EXTENDED_DESCRIPTION = CardStrings.getMockCardString().EXTENDED_DESCRIPTION;

@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
-import craven.powers.custompowers.CannedFoodPower;
 import craven.util.CardStats;
 
 public class Sharpen extends AbstractHungryCard {

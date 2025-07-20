@@ -1,18 +1,15 @@
 package craven.util.CustomActions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.defect.SeekAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 
 import static com.megacrit.cardcrawl.actions.defect.SeekAction.TEXT;
-import static craven.util.otherutil.variables.Variables.p;
 
 public class SingleOutAction extends AbstractGameAction {
     private final float startingDuration;

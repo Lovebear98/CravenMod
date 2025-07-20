@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
 import craven.powers.custompowers.CannedFoodPower;
-import craven.powers.custompowers.CravingPower;
 import craven.util.CardStats;
 
 public class CannedFood extends AbstractHungryCard {

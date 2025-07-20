@@ -7,11 +7,9 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import craven.powers.BasePower;
 
 import static craven.CravenMod.makeID;
-import static craven.util.otherutil.MechanicManager.CheckRisk;
 
 public class LoseRiskCapPower extends BasePower implements CloneablePowerInterface {
     public static final String POWER_ID = makeID(LoseRiskCapPower.class.getSimpleName());

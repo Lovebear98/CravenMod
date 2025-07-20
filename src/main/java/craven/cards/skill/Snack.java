@@ -1,19 +1,13 @@
 package craven.cards.skill;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractSecondsCard;
 import craven.character.CravenCharacter;
-import craven.patches.interfaces.OnDevouredInterface;
 import craven.util.CardStats;
-
-import static craven.util.CustomTags.Food;
 
 public class Snack extends AbstractSecondsCard {
     public static final String[] EXTENDED_DESCRIPTION = CardStrings.getMockCardString().EXTENDED_DESCRIPTION;

@@ -1,17 +1,17 @@
 package craven.powers.custompowers;
 
 import basemod.interfaces.CloneablePowerInterface;
-import com.evacipated.cardcrawl.mod.stslib.patches.NeutralPowertypePatch;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.BetterOnApplyPowerPower;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import craven.powers.BasePower;
 
-;import static craven.CravenMod.makeID;
+import static craven.CravenMod.makeID;
+
+;
 
 ///Hidden 'smoothing' synergy, you will ALWAYS generate a Howling Bluegrass while you have this power
 

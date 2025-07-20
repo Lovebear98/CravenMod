@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
 import craven.patches.interfaces.OnDevouredInterface;
-import craven.powers.custompowers.PlanningPower;
 import craven.util.CardStats;
 import craven.util.CustomActions.IncreaseRiskAction;
 

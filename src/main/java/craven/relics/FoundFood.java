@@ -1,16 +1,10 @@
 package craven.relics;
 
 import com.evacipated.cardcrawl.mod.stslib.relics.OnSkipCardRelic;
-import com.megacrit.cardcrawl.actions.GameActionManager;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import craven.character.CravenCharacter;
 
 import static craven.CravenMod.makeID;
-import static craven.util.otherutil.variables.Variables.PrintEnergy;
-import static craven.util.otherutil.variables.Variables.p;
 
 public class FoundFood extends AtlasRelic implements OnSkipCardRelic {
 

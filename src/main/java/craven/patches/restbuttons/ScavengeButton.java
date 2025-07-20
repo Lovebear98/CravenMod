@@ -7,13 +7,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
-import craven.relics.FoundFood;
 import craven.util.CustomActions.CustomGameEffects.ScavengeEffect;
 import craven.util.TextureLoader;
 
 import static craven.CravenMod.makeID;
 import static craven.util.otherutil.MechanicManager.ScavengeCount;
-import static craven.util.otherutil.variables.Variables.p;
 
 
 public class ScavengeButton extends AbstractCampfireOption {

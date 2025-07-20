@@ -28,10 +28,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import craven.cards.BaseCard;
 import craven.cards.generated.Mechanics.Rations;
 import craven.character.CravenCharacter;
-import craven.potions.custompotions.BloodyMary;
-import craven.potions.custompotions.Chaser;
-import craven.potions.custompotions.IchorBordeaux;
-import craven.potions.custompotions.SpikedShot;
+import craven.potions.custompotions.*;
 import craven.powers.custompowers.BrazenPower;
 import craven.relics.BaseRelic;
 import craven.ui.TipPanel;
@@ -127,6 +124,10 @@ public class CravenMod implements
         BaseMod.addPotion(Chaser.class, Color.GOLDENROD.cpy(), Color.OLIVE.cpy(), null, Chaser.POTION_ID, CravenCharacter.Meta.CRAVEN_CHARACTER);
         BaseMod.addPotion(SpikedShot.class, Color.RED.cpy(), null, Color.FIREBRICK.cpy(), SpikedShot.POTION_ID, CravenCharacter.Meta.CRAVEN_CHARACTER);
         BaseMod.addPotion(BloodyMary.class, Color.RED.cpy(), Color.SCARLET.cpy(), Color.FIREBRICK.cpy(), BloodyMary.POTION_ID, CravenCharacter.Meta.CRAVEN_CHARACTER);
+        BaseMod.addPotion(HighProofSpirit.class, new Color(198/255f, 255/255f, 255/255f, 100/255f), null, new Color(169/255f, 216/255f, 170/255f, 47/255f), HighProofSpirit.POTION_ID, CravenCharacter.Meta.CRAVEN_CHARACTER);
+        BaseMod.addPotion(PinotEcarlate.class, new Color(180/255f, 70/255f, 70/255f, 150/255f), new Color(220/255f, 110/255f, 110/255f, 175/255f), new Color(150/255f, 40/255f, 40/255f, 120/255f), PinotEcarlate.POTION_ID, CravenCharacter.Meta.CRAVEN_CHARACTER);
+        BaseMod.addPotion(Moonshine.class, new Color(180/255f, 180/255f, 255/255f, 255/255f), Color.SKY.cpy(), null, Moonshine.POTION_ID, CravenCharacter.Meta.CRAVEN_CHARACTER);
+
 
         BaseMod.addPotion(IchorBordeaux.class, Color.GOLDENROD.cpy(), Color.YELLOW.cpy(), Color.FIREBRICK.cpy(), IchorBordeaux.POTION_ID, CravenCharacter.Meta.CRAVEN_CHARACTER);
 

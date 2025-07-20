@@ -10,8 +10,6 @@ import craven.cards.AbstractSecondsCard;
 import craven.character.CravenCharacter;
 import craven.util.CardStats;
 
-import static craven.util.CustomTags.Food;
-
 public class Sedation extends AbstractSecondsCard {
     public static final String[] EXTENDED_DESCRIPTION = CardStrings.getMockCardString().EXTENDED_DESCRIPTION;
     public static final String ID = makeID(Sedation.class.getSimpleName());

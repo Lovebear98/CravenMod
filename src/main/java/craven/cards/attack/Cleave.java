@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractHungryCard;
-import craven.cards.generated.Mechanics.Rations;
 import craven.character.CravenCharacter;
 import craven.util.CardStats;
 import craven.util.CustomActions.CleaveAction;

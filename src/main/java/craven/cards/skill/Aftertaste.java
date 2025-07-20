@@ -6,11 +6,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractHungryCard;
-import craven.cards.generated.Mechanics.Rations;
 import craven.character.CravenCharacter;
 import craven.patches.interfaces.OnDevouredInterface;
 import craven.util.CardStats;
-import craven.util.CustomActions.cardmanip.MakeTempCardInExhaustAction;
 
 public class Aftertaste extends AbstractHungryCard implements OnDevouredInterface {
     public static final String[] EXTENDED_DESCRIPTION = CardStrings.getMockCardString().EXTENDED_DESCRIPTION;

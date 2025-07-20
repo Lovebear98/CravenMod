@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractHungryCard;
 import craven.cardsmods.BruteforceMod;
-import craven.cardsmods.RavenousDamageMod;
 import craven.character.CravenCharacter;
 import craven.patches.interfaces.CravingInterface;
 import craven.util.CardStats;

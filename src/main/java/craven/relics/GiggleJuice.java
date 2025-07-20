@@ -1,18 +1,13 @@
 package craven.relics;
 
-import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.PowerTip;
 import craven.character.CravenCharacter;
 
 import static craven.CravenMod.makeID;
 import static craven.util.CustomTags.Food;
-import static craven.util.otherutil.variables.Variables.PrintEnergy;
 import static craven.util.otherutil.variables.Variables.p;
 
 public class GiggleJuice extends AtlasRelic {

@@ -1,35 +1,27 @@
 package craven.util.otherutil;
 
-import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.purple.Blasphemy;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.cardManip.CardFlashVfx;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import craven.cards.starter.DinnerBell;
-import craven.cards.starter.Strike;
 import craven.character.CravenCharacter;
 import craven.powers.custompowers.RavenousPower;
-import craven.util.CustomActions.cardmanip.DelayedDevourBottom;
+import craven.util.CustomActions.generic.BulkDevourAction;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
 
 import static craven.util.CustomActions.CustomGameEffects.vfx.ShowCardAndAddToExhaustEffect.ModEXHAUST_PILE_X;
 import static craven.util.otherutil.ConfigManager.AllDevour;
+import static craven.util.otherutil.ConfigManager.EnableEyeCandy;
 import static craven.util.otherutil.MechanicManager.DevourCallback;
 import static craven.util.otherutil.MechanicManager.ResetRisk;
 import static craven.util.otherutil.variables.Variables.p;
@@ -72,10 +64,10 @@ public class Wiz {
         if (AllDevour) {
             return true;
         }
-        if (p() != null) {
-            return p() instanceof CravenCharacter;
+        if(p() == null){
+            return true;
         }
-        return false;
+        return p() instanceof CravenCharacter;
     }
 
     /**
@@ -104,12 +96,17 @@ public class Wiz {
      * Section for common, multi-use methods
      */
     public static void DevourCards(int e) {
+        ArrayList<AbstractCard> tmp = new ArrayList<>();
         int z = Math.min(p().exhaustPile.size(), e);
         if (z > 0) {
-            for (int i = z; i > 0; i -= 1) {
-                AbstractDungeon.actionManager.addToTop(new DelayedDevourBottom());
+            for (int i = 0; i < Math.min(z, p().exhaustPile.size()); i += 1) {
+                tmp.add(AbstractDungeon.player.exhaustPile.group.get(i));
             }
-            AbstractDungeon.actionManager.addToTop(new VFXAction(new BiteEffect(ModEXHAUST_PILE_X, BITE_Y, Settings.RED_TEXT_COLOR.cpy()), 0.01F));
+
+            AbstractDungeon.actionManager.addToTop(new BulkDevourAction(tmp, p().exhaustPile));
+            if(EnableEyeCandy){
+                AbstractDungeon.actionManager.addToTop(new VFXAction(new BiteEffect(ModEXHAUST_PILE_X, BITE_Y, Settings.RED_TEXT_COLOR.cpy()), 0.01F));
+            }
             DevourCallback(z);
         }
     }

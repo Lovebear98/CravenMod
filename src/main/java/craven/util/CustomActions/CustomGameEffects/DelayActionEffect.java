@@ -6,7 +6,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import craven.util.CustomActions.AppetizerAction;
 
 public class DelayActionEffect extends AbstractGameEffect {
     private final AbstractGameAction Action;

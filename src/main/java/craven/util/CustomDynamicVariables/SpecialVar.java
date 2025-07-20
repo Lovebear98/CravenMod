@@ -4,7 +4,6 @@ import basemod.abstracts.DynamicVariable;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import craven.cards.AbstractHungryCard;
 
-import static craven.util.otherutil.variables.Variables.SecondMagicKey;
 import static craven.util.otherutil.variables.Variables.SpecialVarKey;
 
 public class SpecialVar extends DynamicVariable {

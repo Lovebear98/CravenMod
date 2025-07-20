@@ -1,6 +1,9 @@
 package craven.util.otherutil;
 
-import basemod.*;
+import basemod.ModLabeledToggleButton;
+import basemod.ModMinMaxSlider;
+import basemod.ModPanel;
+import basemod.ModToggleButton;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.megacrit.cardcrawl.core.Settings;

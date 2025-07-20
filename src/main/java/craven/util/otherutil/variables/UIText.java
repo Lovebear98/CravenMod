@@ -79,4 +79,7 @@ public class UIText {
         }
         return UIText.EXTRA_TEXT[10] + i + UIText.EXTRA_TEXT[11];
     }
+    public static String BoostText(){
+        return UIText.EXTRA_TEXT[12];
+    }
 }

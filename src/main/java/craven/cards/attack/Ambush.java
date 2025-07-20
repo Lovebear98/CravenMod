@@ -1,18 +1,14 @@
 package craven.cards.attack;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.watcher.WallopAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractHungryCard;
-import craven.cards.generated.Mechanics.Rations;
 import craven.character.CravenCharacter;
 import craven.util.CardStats;
 import craven.util.CustomActions.AmbushAction;
-import craven.util.CustomActions.CleaveAction;
 
 public class Ambush extends AbstractHungryCard {
     public static final String[] EXTENDED_DESCRIPTION = CardStrings.getMockCardString().EXTENDED_DESCRIPTION;

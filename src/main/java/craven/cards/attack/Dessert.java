@@ -3,7 +3,6 @@ package craven.cards.attack;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,7 +14,6 @@ import craven.character.CravenCharacter;
 import craven.util.CardStats;
 
 import static craven.util.CustomTags.Food;
-import static craven.util.otherutil.MechanicManager.Risk;
 
 public class Dessert extends AbstractSecondsCard {
     public static final String[] EXTENDED_DESCRIPTION = CardStrings.getMockCardString().EXTENDED_DESCRIPTION;

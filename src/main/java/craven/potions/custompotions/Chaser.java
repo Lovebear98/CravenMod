@@ -5,7 +5,8 @@ import basemod.cardmods.EtherealMod;
 import basemod.cardmods.ExhaustMod;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,8 +14,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 
 import static craven.CravenMod.makeID;
+import static craven.util.otherutil.variables.Variables.p;
 
 public class Chaser extends CustomPotion {
 
@@ -23,7 +26,7 @@ public class Chaser extends CustomPotion {
     public static final String NAME = potionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
     public Chaser() {
-        super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.BOTTLE, PotionColor.WHITE);
+        super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.BOTTLE, PotionColor.WHITE);
         this.isThrown = false;
         this.targetRequired = false;
         this.labOutlineColor = Color.WHITE.cpy();
@@ -55,13 +58,14 @@ public class Chaser extends CustomPotion {
             if(!c.exhaust && !(c.type == AbstractCard.CardType.POWER)){
                 CardModifierManager.addModifier(c, new ExhaustMod());
             }
-            addToBot(new MakeTempCardInDiscardAction(c, 1));
+            addToBot(new MakeTempCardInDrawPileAction(c, 1, true, true));
         }
+        addToBot(new ApplyPowerAction(p(), p(), new DrawCardNextTurnPower(p(), potency)));
     }
 
     @Override
     public int getPotency(int i) {
-        return 5;
+        return 4;
     }
 
     @Override

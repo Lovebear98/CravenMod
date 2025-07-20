@@ -8,8 +8,6 @@ import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import craven.util.CardStats;
 
-import java.awt.*;
-
 import static craven.util.otherutil.variables.Variables.p;
 
 public abstract class AbstractHungryCard extends BaseCard {

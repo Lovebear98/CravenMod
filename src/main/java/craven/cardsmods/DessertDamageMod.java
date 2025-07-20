@@ -5,10 +5,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.patches.interfaces.SecondsInterface;
-import craven.powers.custompowers.RavenousPower;
 
 import static craven.CravenMod.makeID;
-import static craven.util.otherutil.variables.Variables.p;
 
 
 public class DessertDamageMod extends AbstractCardModifier {

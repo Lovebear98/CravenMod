@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
-import craven.powers.custompowers.GnashingFangsPower;
 import craven.powers.custompowers.MealPrepPower;
 import craven.util.CardStats;
 

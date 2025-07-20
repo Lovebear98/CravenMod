@@ -1,4 +1,13 @@
 {
+  "${modID}:CardMods": {
+    "NAME": "CardMods",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [
+      " NL When ${modID}:Devoured: Shuffle a random power into your draw pile.",
+      " NL When ${modID}:Devoured: Shuffle a random power into your draw pile with this effect."
+    ]
+  },
   "${modID}:Rations": {
     "NAME": "Ration",
     "DESCRIPTION": "Unplayable. NL ${modID}:Food.",
@@ -49,8 +58,8 @@
   },
   "${modID}:MidnightSnack": {
     "NAME": "Midnight Snack",
-    "DESCRIPTION": "{@@}Ethereal. ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Gain !B! Block.",
-    "UPGRADE_DESCRIPTION": "{@@}Ethereal. ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Gain !B! Block.",
+    "DESCRIPTION": "{@@}Ethereal. NL Gain !B! Block. NL ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
+    "UPGRADE_DESCRIPTION": "{@@}Ethereal. NL Gain !B! Block. NL ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -89,8 +98,8 @@
   },
   "${modID}:Grazing": {
     "NAME": "Grazing",
-    "DESCRIPTION": "{@@}${modID}:Food. NL Deal !D! damage.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
-    "UPGRADE_DESCRIPTION": "{@@}${modID}:Food. NL Deal !D! damage.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -135,8 +144,8 @@
       ""
     ]
   },
-  "${modID}:Fasting": {
-    "NAME": "Fasting",
+  "${modID}:FastingStrike": {
+    "NAME": "Fasting Strike",
     "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! *Dazed into the draw pile.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Shuffle !M! *Dazed into the draw pile.",
     "EXTENDED_DESCRIPTION": [
@@ -201,8 +210,8 @@
   },
   "${modID}:Bruteforce": {
     "NAME": "Bruteforce",
-    "DESCRIPTION": "Deal !D! damage. NL Damage is equal to !${modID}:M2!x your ${modID}:Ravenous.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Damage is equal to !${modID}:M2!x your ${modID}:Ravenous.",
+    "DESCRIPTION": "Deal !D! damage. NL Damage is equal to !${modID}:M2! times your ${modID}:Ravenous.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Damage is equal to !${modID}:M2! times your ${modID}:Ravenous.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -313,8 +322,8 @@
   },
   "${modID}:SetTheTable": {
     "NAME": "Set the Table",
-    "DESCRIPTION": "Add a random *Skill and *Attack to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a random Upgraded *Skill and *Attack to your hand. NL Exhaust.",
+    "DESCRIPTION": "Add a *Craven *Skill and *Attack to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded *Craven *Skill and *Attack to your hand. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -369,8 +378,8 @@
   },
   "${modID}:Unsolved": {
     "NAME": "Unsolved",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce ${modID}:Risk by !M!. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce ${modID}:Risk by !M!. NL Exhaust.",
+    "DESCRIPTION": "Deal !D! damage. NL Lose !M! ${modID}:Risk. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Lose !M! ${modID}:Risk. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -457,8 +466,8 @@
   },
   "${modID}:ImportedGoods": {
     "NAME": "Imported Goods",
-    "DESCRIPTION": "Add a random *X-Cost card of any color to your hand. Its maximum *X is increased by !M!. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a random *X-Cost card of any color to your hand. Its maximum *X is increased by !M!. NL Exhaust.",
+    "DESCRIPTION": "Add a random *X-Cost card to your hand. Its maximum X is increased by !M!. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a random *X-Cost card to your hand. Its maximum X is increased by !M!. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -487,42 +496,135 @@
       ""
     ]
   },
-
-
-
-
-
-
-
-
-
-
-
-  "${modID}:Murder": {
-    "NAME": "Murder",
-    "DESCRIPTION": "Deal 3X damage. NL Lose X Energy.",
-    "UPGRADE_DESCRIPTION": " ",
+  "${modID}:Banquet": {
+    "NAME": "Banquet",
+    "DESCRIPTION": "${modID}:Devour your hand. NL Deal !D! damage to a random enemy for each card *Devoured.",
+    "UPGRADE_DESCRIPTION": "${modID}:Devour your hand. NL Deal !D! damage to a random enemy for each card *Devoured.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Peppers": {
+    "NAME": "Peppers",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL When ${modID}:Devoured, your next attack deals !${modID}:M2! more damage. NL ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL When ${modID}:Devoured, your next attack deals !${modID}:M2! more damage. NL ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Fattening": {
+    "NAME": "Fattening",
+    "DESCRIPTION": "Deal !D! damage. NL The next time you debuff the target, draw X cards.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL The next time you debuff the target, draw X cards.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Exploitation": {
+    "NAME": "Exploitation",
+    "DESCRIPTION": "Deal !D! damage. NL Steal !M! Strength this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Steal !M! Strength this turn.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Hysteria": {
+    "NAME": "Hysteria",
+    "DESCRIPTION": "Deal !D! damage. NL If that enemy dies this turn, deal the same damage to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If that enemy dies this turn, deal the same damage to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
   },
   "${modID}:Restraint": {
     "NAME": "Restraint",
-    "DESCRIPTION": " ",
-    "UPGRADE_DESCRIPTION": " ",
+    "DESCRIPTION": "Deal !D! damage. NL Damage is equal to the size of your *Exhaust pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Damage is equal to the size of your *Exhaust pile.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Therian": {
+    "NAME": "Therian",
+    "DESCRIPTION": "Gain X *Plated *Armor.",
+    "UPGRADE_DESCRIPTION": "Gain X *Plated *Armor.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:RecipeCard": {
+    "NAME": "Recipe Card",
+    "DESCRIPTION": "Unplayable.",
+    "UPGRADE_DESCRIPTION": "Unplayable.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:ChitChat": {
+    "NAME": "Chit-Chat",
+    "DESCRIPTION": "{@@}Gain !B! Block.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Patience": {
+    "NAME": "Patience",
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! cards.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Draw !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:BoneBroth": {
+    "NAME": "Bone Broth",
+    "DESCRIPTION": "{@@}Draw !${modID}:M2! cards.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}Draw !${modID}:M2! cards.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
   },
   "${modID}:Salivate": {
     "NAME": "Salivate",
-    "DESCRIPTION": "",
-    "UPGRADE_DESCRIPTION": "",
+    "DESCRIPTION": "Gain !${modID}:M2! *Temp. *HP. NL Gain !M! ${modID}:Ravenous.",
+    "UPGRADE_DESCRIPTION": "Gain !${modID}:M2! *Temp. *HP. NL Gain !M! ${modID}:Ravenous.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Hearty": {
+    "NAME": "Hearty",
+    "DESCRIPTION": "Gain !B! Block. NL When Devoured: Gain !B! *Temp. *HP, scaling with Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL When Devoured: Gain !B! *Temp. *HP, scaling with Dexterity.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Craven": {
+    "NAME": "Craven",
+    "DESCRIPTION": "Add X *Shame to your hand. NL Gain !${modID}:M2!X [E] .",
+    "UPGRADE_DESCRIPTION": "Shuffle X *Shame into your draw pile. NL Gain !${modID}:M2!X [E] .",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
   },
 
+
+
+
+
+
+
+
+
+  "${modID}:PreciousTreasure": {
+    "NAME": "Precious Treasure",
+    "DESCRIPTION": "Infinite ${modID}:Seconds.",
+    "UPGRADE_DESCRIPTION": "She's one thing I ever did right. I'm beyond saving, but I owe it to her to see it through.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
   "${modID}:Template": {
     "NAME": "Template",
     "DESCRIPTION": "Ex",

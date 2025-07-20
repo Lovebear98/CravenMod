@@ -39,7 +39,7 @@ public class AtlasReminderScreen extends CustomScreen {
 
     private static final int PageFloor = -1;
     private static int PageNum = 0;
-    private static final int PageCap = 2;
+    private static final int PageCap = 3;
 
 
     private static final Texture TipBorder = TextureLoader.getTexture("craven/images/tutorialimgs/TipBorder.png");
@@ -47,6 +47,7 @@ public class AtlasReminderScreen extends CustomScreen {
     private static final Texture Tip2 = TextureLoader.getTexture("craven/images/tutorialimgs/Tip2.png");
     private static final Texture Tip3 = TextureLoader.getTexture("craven/images/tutorialimgs/Tip3.png");
     private static final Texture Tip4 = TextureLoader.getTexture("craven/images/tutorialimgs/Tip4.png");
+    private static final Texture Tip5 = TextureLoader.getTexture("craven/images/tutorialimgs/Tip5.png");
 
     private static final float ImageHeightOffset = Settings.HEIGHT * 0.05f;
     private static final float TextHeightOffset = Settings.HEIGHT * 0.25f;
@@ -261,6 +262,15 @@ public class AtlasReminderScreen extends CustomScreen {
         renderTipImage(sb, Tip4, pagetoshow);
         ///End Page
 
+        ///Start Page
+        pagetoshow = 3;
+        text = Page5Text();
+
+        FontHelper.renderFontCentered(sb, FontHelper.bannerNameFont, Page5Header(), Pagex(pagetoshow), Settings.HEIGHT * 0.775f, Color.WHITE.cpy());
+        FontHelper.renderSmartText(sb, FontHelper.panelNameFont, text, Pagex(pagetoshow)-(500f * Settings.scale), Settings.HEIGHT / 2f - TextHeightOffset - FontHelper.getSmartHeight(FontHelper.panelNameFont, text, LineWidth, 40f * Settings.scale) / 2f + offsetY, LineWidth, 40f * Settings.scale, Settings.CREAM_COLOR);
+        renderTipImage(sb, Tip5, pagetoshow);
+        ///End Page
+
         FontHelper.bannerNameFont.getData().setScale(1.0F);
 
 
@@ -268,9 +278,6 @@ public class AtlasReminderScreen extends CustomScreen {
         renderPageNumbers(sb);
         renderExitButton(sb);
 
-        ///if(ExtraHB.hovered){
-        ///    TipHelper.renderTipForCard(DisplayCard, sb, DisplayCard.keywords);
-        ///}
 
         LeftArrowHB.render(sb);
         ExitHB.render(sb);
@@ -465,5 +472,12 @@ public class AtlasReminderScreen extends CustomScreen {
     }
     private String Page4Text(){
         return UIText.EXTRA_TEXT[4];
+    }
+    ///
+    private String Page5Header(){
+        return UIText.TEXT[5];
+    }
+    private String Page5Text(){
+        return UIText.EXTRA_TEXT[5];
     }
 }

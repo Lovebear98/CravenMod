@@ -96,5 +96,21 @@
       "Damage from #yRavenous will also damage a random enemy. NL Triggers your #yRavenous without damaging you instead of stacking.",
       " during the next turn."
     ]
+  },
+  "${modID}:FattenedPower": {
+    "NAME": "Fattened ",
+    "DESCRIPTIONS": [
+      "When you #ydebuff this enemy, draw #b",
+      " card",
+      "s",
+      "."
+    ]
+  },
+  "${modID}:HysteriaPower": {
+    "NAME": "Hysteria",
+    "DESCRIPTIONS": [
+      "If this enemy dies this turn, deal #b",
+      " damage to ALL enemies."
+    ]
   }
 }

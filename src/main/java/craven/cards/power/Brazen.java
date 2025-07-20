@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
 import craven.powers.custompowers.BrazenPower;
-import craven.powers.custompowers.MealPrepPower;
 import craven.powers.custompowers.RavenousPower;
 import craven.util.CardStats;
 

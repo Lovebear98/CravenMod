@@ -3,7 +3,7 @@
     "NAME": "Chaser",
     "DESCRIPTIONS": [
       "Add #b",
-      " random cards to your discard pile. They gain #yExhaust and #yEthereal.",
+      " random cards to your draw pile, and draw that many extra cards next turn. They gain #yExhaust and #yEthereal.",
       "Exhaust",
       "Removed until the end of combat.",
       "Ethereal",
@@ -13,8 +13,8 @@
   "${modID}:SpikedShot": {
     "NAME": "Spiked Shot",
     "DESCRIPTIONS": [
-      "Reduce #yRisk by #b",
-      ". NL Gain #b1 #yWeak.",
+      "Lose #b",
+      " #yRisk. NL Gain #b1 #yWeak.",
       "Risk",
       "The limit to the number of cards you can draw each turn.",
       "Weak",
@@ -38,6 +38,31 @@
       " HP. NL Gain #b",
       " [E] . NL Gain #b",
       " #yRavenous.",
+      "Ravenous",
+      "At the start of your turn, lose #bX HP then #yDevour up to #bX cards to reduce this."
+    ]
+  },
+  "${modID}:HighProofSpirit": {
+    "NAME": "High Proof Spirit",
+    "DESCRIPTIONS": [
+      "Raise the #yCap of an #yX-Cost card in your hand by #b",
+      " this combat."
+    ]
+  },
+  "${modID}:Moonshine": {
+    "NAME": "Moonshine",
+    "DESCRIPTIONS": [
+      "Add #b",
+      " card",
+      "s",
+      " from your draw pile to your hand."
+    ]
+  },
+  "${modID}:PinotEcarlate": {
+    "NAME": "Pinot Écarlate",
+    "DESCRIPTIONS": [
+      "Reduce your #yRavenous by #b",
+      ". If you don't have #yRavenous, gain it instead.",
       "Ravenous",
       "At the start of your turn, lose #bX HP then #yDevour up to #bX cards to reduce this."
     ]

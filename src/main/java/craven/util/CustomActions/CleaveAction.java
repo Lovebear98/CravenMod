@@ -16,8 +16,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
-import craven.cards.generated.Mechanics.Rations;
-import craven.util.CustomActions.cardmanip.MakeTempCardInExhaustAction;
 
 public class CleaveAction extends AbstractGameAction {
     public int[] damage;

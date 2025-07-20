@@ -13,10 +13,10 @@ import craven.cardsmods.xDamageMod;
 import craven.character.CravenCharacter;
 import craven.patches.interfaces.CravingInterface;
 import craven.util.CardStats;
-import craven.util.CustomActions.IncreaseRiskAction;
-import craven.util.CustomActions.ReduceRiskAction;
 import craven.util.CustomActions.CustomGameEffects.vfx.SavageryEffect;
+import craven.util.CustomActions.IncreaseRiskAction;
 
+import static craven.util.otherutil.ConfigManager.EnableEyeCandy;
 import static craven.util.otherutil.MechanicManager.Risk;
 import static craven.util.otherutil.MechanicManager.TrueRiskCap;
 
@@ -59,7 +59,9 @@ public class Savagery extends AbstractHungryCard implements CravingInterface {
         addToBot(new IncreaseRiskAction(Remainder));
         if(Remainder >= 0){
             for(int i = Remainder; i > 0; i -= 1){
-                addToBot(new VFXAction(new SavageryEffect(m)));
+                if(EnableEyeCandy){
+                    addToBot(new VFXAction(new SavageryEffect(m)));
+                }
                 addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
             }
         }

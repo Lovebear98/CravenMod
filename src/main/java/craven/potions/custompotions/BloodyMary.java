@@ -7,12 +7,16 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.events.shrines.WeMeetAgain;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import craven.powers.custompowers.RavenousPower;
 
 import static craven.CravenMod.makeID;
+import static craven.util.otherutil.variables.Variables.isInCombat;
 import static craven.util.otherutil.variables.Variables.p;
 
 public class BloodyMary extends CustomPotion {
@@ -31,11 +35,19 @@ public class BloodyMary extends CustomPotion {
         this.tips.add(new PowerTip(potionStrings.DESCRIPTIONS[4], potionStrings.DESCRIPTIONS[5]));
     }
 
+    public boolean canUse() {
+        if (AbstractDungeon.actionManager.turnHasEnded && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+            return false;
+        } else {
+            return AbstractDungeon.getCurrRoom().event == null || !(AbstractDungeon.getCurrRoom().event instanceof WeMeetAgain);
+        }
+    }
+
     public void initializeData() {
         this.potency = getPotency();
 
         this.description =
-                potionStrings.DESCRIPTIONS[0] + potency +
+                potionStrings.DESCRIPTIONS[0] + (2 * potency) +
                 potionStrings.DESCRIPTIONS[1] + potency +
                 potionStrings.DESCRIPTIONS[2] + potency +
                 potionStrings.DESCRIPTIONS[3];
@@ -48,9 +60,11 @@ public class BloodyMary extends CustomPotion {
 
     @Override
     public void use(AbstractCreature abstractCreature) {
-        addToBot(new HealAction(p(), p(), potency));
-        addToBot(new GainEnergyAction(potency));
-        addToBot(new ApplyPowerAction(p(), p(), new RavenousPower(p(), potency)));
+        addToBot(new HealAction(p(), p(), (2 * potency)));
+        if(isInCombat()){
+            addToBot(new GainEnergyAction(potency));
+            addToBot(new ApplyPowerAction(p(), p(), new RavenousPower(p(), potency)));
+        }
     }
 
     @Override

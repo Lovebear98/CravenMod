@@ -3,15 +3,10 @@ package craven.cardsmods;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import craven.cards.AbstractHungryCard;
-import craven.powers.custompowers.RavenousPower;
 
 import java.util.List;
 
 import static craven.CravenMod.makeID;
-import static craven.util.otherutil.variables.Variables.p;
 
 
 public class BonusCravingMod extends AbstractCardModifier {

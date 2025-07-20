@@ -24,7 +24,8 @@
       "Devour",
       "Choose a card to ",
       "Choose ",
-      " cards to "
+      " cards to ",
+      "Boost"
     ]
   },
   "${modID}:Variables": {
@@ -41,17 +42,19 @@
   "${modID}:AtlasReminderScreen": {
     "TEXT": [
       "The Craven",
-      "Devour",
+      "Energy and Devour",
+      "Food and Seconds",
       "Ravenous",
       "X-Cost Cards",
       "Risk"
     ],
     "EXTRA_TEXT": [
       "NONE",
-      "#yAtlas has no #yEnergy. #yEnergy gains or losses will respectively create or #yDevour cards in the #yExhaust #yPile, such as #yFood cards that begin combat #yExhausted. #yDevouring when you don't have enough cards will cause you to gain #rRavenous equal to what you couldn't pay.",
-      "#rRavenous will cause you to #rlose #rHP at the start of the turn equal to its amount, then attempt to reduce itself by #yDevouring up to that many cards in the #yExhaust #yPile. Other types of #yDevouring won't reduce the amount of #rRavenous you have.",
-      "#yX-Cost Cards have a #yCap on #bX shown on each card. You'll play those cards for #yexactly the amount shown #yevery time. NL NL #yRelics that normally increase #bMaximum #bEnergy will increase the cap for #yX-Cost cards by the same amount.",
-      "#yRisk is the #rhard #rcap on the number of cards beyond your #yStarting #yHand that can be drawn each turn, and is displayed where the #yEnergy #yOrb would be. NL NL While #yRisk is maxed, you become unable to draw cards. It #yresets at the end of each turn."
+      "#yAtlas has no #yEnergy - changes to #yEnergy will create or #yDevour cards in the #yExhaust #yPile instead. If you don't have enough cards to #yDevour, gain #rRavenous equal to what you couldn't pay.",
+      "#yFood cards begin combat #yExhausted, and #ySeconds cards will be added back to the hand a limited number of times when they're #yDevoured. NL NL Your deck starts with #b10 #yRations with the #yFood tag.",
+      "At the start of the turn #rRavenous will cause you to #rlose #rHP, then attempt to #yDevour cards in the #yExhaust #yPile to reduce itself.",
+      "#yX-Cost Cards have a displayed #yCap on #bX that shows how much they'll play for. NL NL #yRelics that normally change #bMaximum #bEnergy will change the cap for #yX-Cost cards by the same amount.",
+      "#yRisk is the limit to the number of cards you can draw beyond your #yStarting #yHand each turn, displayed where the #yEnergy #yOrb would be. NL NL It #yresets at the end of each turn."
     ]
   },
   "${modID}:ScavengeButton": {

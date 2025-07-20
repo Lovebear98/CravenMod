@@ -2,28 +2,15 @@ package craven.relics;
 
 import basemod.abstracts.CustomBottleRelic;
 import basemod.abstracts.CustomSavable;
-import com.evacipated.cardcrawl.mod.stslib.relics.OnApplyPowerRelic;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.BottledTornado;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import craven.character.CravenCharacter;
-import craven.patches.DracoTailField;
-import craven.powers.custompowers.RavenousPower;
-import craven.util.CustomActions.imported.PhantomPlayCardAction;
 
-import java.util.Iterator;
-import java.util.Objects;
 import java.util.function.Predicate;
 
 import static craven.CravenMod.makeID;

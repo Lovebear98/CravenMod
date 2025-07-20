@@ -17,10 +17,8 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import craven.util.CustomActions.StartTutorialAction;
 import craven.util.TextureLoader;
 
-import static craven.CravenMod.TipUI;
 import static craven.CravenMod.makeID;
 import static craven.character.RiskGauge.SizeCorrect;
-import static craven.util.otherutil.Wiz.DevourEnabled;
 import static craven.util.otherutil.variables.Variables.p;
 
 
@@ -103,6 +101,7 @@ public class TipPanel extends ClickableUIElement{
             if(!AbstractDungeon.isScreenUp && ((hitbox.hovered && InputHelper.justReleasedClickLeft) || HoldTimer >= BaseHoldTimer)){
                 HoldTimer = 0;
                 p().hoveredCard = null;
+                CardCrawlGame.tips.initialize();
                 ResetClickLock();
                 AbstractDungeon.actionManager.addToBottom(new StartTutorialAction());
             }
