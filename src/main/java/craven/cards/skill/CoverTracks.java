@@ -17,7 +17,7 @@ public class CoverTracks extends AbstractHungryCard {
             CardType.SKILL,
             CardRarity.COMMON,
             CardTarget.SELF,
-            2
+            1
     );
 
     private static final int DAMAGE = 0;

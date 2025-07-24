@@ -37,8 +37,6 @@ public class WineTasting extends AbstractHungryCard {
         setBlock(BLOCK, UPG_BLOCK);
         setMagic(MAGIC, UPG_MAGIC);
         setSecondMagic(SECOND_MAGIC, UPG_SECOND_MAGIC);
-
-        setCostUpgrade(1);
     }
 
     @Override

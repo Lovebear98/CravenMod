@@ -46,6 +46,7 @@ public class Restraint extends AbstractHungryCard {
         setSecondMagic(SECOND_MAGIC, UPG_SECOND_MAGIC);
 
         CardModifierManager.addModifier(this, new RestraintMod());
+        setInnate(false, true);
     }
 
     @Override

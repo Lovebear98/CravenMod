@@ -55,7 +55,8 @@
       "Add #b",
       " card",
       "s",
-      " from your draw pile to your hand."
+      " from your draw pile to your hand. NL #yExhaust #b",
+      "."
     ]
   },
   "${modID}:PinotEcarlate": {

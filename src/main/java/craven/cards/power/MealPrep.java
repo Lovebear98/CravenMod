@@ -18,7 +18,7 @@ public class MealPrep extends AbstractHungryCard {
             CardType.POWER,
             CardRarity.RARE,
             CardTarget.SELF,
-            5
+            3
     );
 
     private static final int DAMAGE = 0;
@@ -39,7 +39,6 @@ public class MealPrep extends AbstractHungryCard {
         setMagic(MAGIC, UPG_MAGIC);
         setSecondMagic(SECOND_MAGIC, UPG_SECOND_MAGIC);
 
-        setCostUpgrade(3);
         setInnate(true);
     }
 

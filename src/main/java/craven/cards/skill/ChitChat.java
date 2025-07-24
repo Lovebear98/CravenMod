@@ -22,7 +22,7 @@ public class ChitChat extends AbstractSecondsCard {
 
     private static final int DAMAGE = 0;
     private static final int UPG_DAMAGE = 0;
-    private static final int BLOCK = 8;
+    private static final int BLOCK = 11;
     private static final int UPG_BLOCK = 3;
     private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;

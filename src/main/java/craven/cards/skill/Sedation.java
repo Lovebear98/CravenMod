@@ -41,6 +41,7 @@ public class Sedation extends AbstractSecondsCard {
         setSecondMagic(SECOND_MAGIC, UPG_SECOND_MAGIC);
 
         setExhaust(true);
+        setSelfRetain(true);
     }
 
     @Override

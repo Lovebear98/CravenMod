@@ -22,7 +22,7 @@ public class Appetizer extends AbstractHungryCard {
     private static final CardStats info = new CardStats(
             CravenCharacter.Meta.CARD_COLOR,
             CardType.ATTACK,
-            CardRarity.RARE,
+            CardRarity.UNCOMMON,
             CardTarget.ENEMY,
             4
     );

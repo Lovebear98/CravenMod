@@ -26,7 +26,7 @@ public class ComplexFlavor extends AbstractHungryCard {
     private static final int UPG_DAMAGE = 0;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 4;
     private static final int UPG_MAGIC = 1;
     private static final int SECOND_MAGIC = 0;
     private static final int UPG_SECOND_MAGIC = 0;
@@ -47,7 +47,7 @@ public class ComplexFlavor extends AbstractHungryCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DrawCardAction(magicNumber));
         addToBot(new DiscardAction(p, p, 1, true));
-        addToBot(new ExhaustAction(p, p, 1, true));
+        addToBot(new ExhaustAction(p, p, 1, false));
     }
 
 

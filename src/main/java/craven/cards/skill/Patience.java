@@ -16,16 +16,16 @@ public class Patience extends AbstractHungryCard {
     private static final CardStats info = new CardStats(
             CravenCharacter.Meta.CARD_COLOR,
             CardType.SKILL,
-            CardRarity.UNCOMMON,
+            CardRarity.RARE,
             CardTarget.SELF,
-            3
+            2
     );
 
     private static final int DAMAGE = 0;
     private static final int UPG_DAMAGE = 0;
-    private static final int BLOCK = 8;
-    private static final int UPG_BLOCK = 4;
-    private static final int MAGIC = 2;
+    private static final int BLOCK = 11;
+    private static final int UPG_BLOCK = 5;
+    private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 0;
     private static final int SECOND_MAGIC = 0;
     private static final int UPG_SECOND_MAGIC = 0;

@@ -26,10 +26,10 @@ public class PlayVictim extends AbstractHungryCard implements CravingInterface {
     private static final int UPG_DAMAGE = 0;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
-    private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 2;
-    private static final int SECOND_MAGIC = 0;
-    private static final int UPG_SECOND_MAGIC = 0;
+    private static final int MAGIC = 2;
+    private static final int UPG_MAGIC = 1;
+    private static final int SECOND_MAGIC = 2;
+    private static final int UPG_SECOND_MAGIC = 1;
 
     public PlayVictim() {
         super(ID, info);
@@ -43,7 +43,7 @@ public class PlayVictim extends AbstractHungryCard implements CravingInterface {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int e = GetXEnergy();
-        addToBot(new AddTemporaryHPAction(p, p, e * 2));
+        addToBot(new AddTemporaryHPAction(p, p, e * secondMagic));
     }
 
 

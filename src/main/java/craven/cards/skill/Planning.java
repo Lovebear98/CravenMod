@@ -53,7 +53,7 @@ public class Planning extends AbstractHungryCard implements OnDevouredInterface 
         int Remainder = Math.min(TrueRiskCap() - Risk, magicNumber);
         if(Remainder != 0){
             addToBot(new IncreaseRiskAction(Remainder));
-            addToBot(new ApplyPowerAction(p, p, new PlanningPower(p, magicNumber)));
+            addToBot(new ApplyPowerAction(p, p, new PlanningPower(p, Remainder)));
         }
     }
 

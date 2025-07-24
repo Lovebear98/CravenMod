@@ -14,6 +14,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.ArrayList;
 
 import static craven.util.otherutil.MechanicManager.DevourInternal;
+import static craven.util.otherutil.Wiz.FlashCard;
+import static craven.util.otherutil.variables.Variables.p;
 
 public class BulkDevourAction extends AbstractGameAction {
     private ArrayList<AbstractCard> targetCards;
@@ -39,8 +41,10 @@ public class BulkDevourAction extends AbstractGameAction {
         if(!targetCards.isEmpty()){
             AbstractCard c = targetCards.get(0);
             if(this.group.contains(c)){
+                if(group == p().hand){
+                    FlashCard(c, Settings.RED_TEXT_COLOR.cpy());
+                }
                 DevourInternal(c, group);
-
                 targetCards.remove(c);
             }
         }else{

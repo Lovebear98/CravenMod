@@ -31,8 +31,8 @@ public class Banquet extends AbstractHungryCard {
             0
     );
 
-    private static final int DAMAGE = 4;
-    private static final int UPG_DAMAGE = 2;
+    private static final int DAMAGE = 6;
+    private static final int UPG_DAMAGE = 9;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
     private static final int MAGIC = 0;

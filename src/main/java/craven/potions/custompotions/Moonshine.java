@@ -3,6 +3,7 @@ package craven.potions.custompotions;
 import basemod.abstracts.CustomPotion;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.BetterDrawPileToHandAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.PowerTip;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 
 import static craven.CravenMod.makeID;
+import static craven.util.otherutil.variables.Variables.p;
 
 public class Moonshine extends CustomPotion {
 
@@ -30,10 +32,19 @@ public class Moonshine extends CustomPotion {
         this.potency = getPotency();
 
         String s = potionStrings.DESCRIPTIONS[0] + potency + potionStrings.DESCRIPTIONS[1];
+
         if(potency != 1){
             s += DESCRIPTIONS[2];
         }
         s += DESCRIPTIONS[3];
+
+        s += potency + DESCRIPTIONS[1];
+        if(potency != 1){
+            s += DESCRIPTIONS[2];
+        }
+
+        s += DESCRIPTIONS[4];
+
         this.description = s;
 
         this.tips.clear();
@@ -44,6 +55,7 @@ public class Moonshine extends CustomPotion {
     @Override
     public void use(AbstractCreature abstractCreature) {
         addToBot(new BetterDrawPileToHandAction(potency));
+        addToBot(new ExhaustAction(p(), p(), potency, false));
     }
 
     @Override

@@ -28,7 +28,7 @@ public class Charity extends AbstractHungryCard implements OnDevouredInterface {
     private static final int DAMAGE = 0;
     private static final int UPG_DAMAGE = 0;
     private static final int BLOCK = 4;
-    private static final int UPG_BLOCK = 0;
+    private static final int UPG_BLOCK = 2;
     private static final int MAGIC = 4;
     private static final int UPG_MAGIC = 2;
     private static final int SECOND_MAGIC = 0;
@@ -50,7 +50,9 @@ public class Charity extends AbstractHungryCard implements OnDevouredInterface {
         int Remainder = Math.min(TrueRiskCap() - Risk, magicNumber);
         if(Remainder != 0){
             addToBot(new IncreaseRiskAction(Remainder));
-            addToBot(new GainBlockAction(p, block * Remainder));
+            for(int i = Remainder; i > 0; i -= 1){
+                addToBot(new GainBlockAction(p, block));
+            }
         }
     }
 

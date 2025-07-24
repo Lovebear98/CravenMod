@@ -98,8 +98,8 @@
   },
   "${modID}:Grazing": {
     "NAME": "Grazing",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
-    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
+    "DESCRIPTION": "{@@}Deal !D! damage !${modID}:M2! times. NL ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage !${modID}:M2! times. NL ${modID}:Food.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=}",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -123,7 +123,7 @@
   "${modID}:ProudVintner": {
     "NAME": "Proud Vintner",
     "DESCRIPTION": "{@@}Add !M! *Pride{!M!|>1,<1=s} to your hand. NL At the start of your turn, draw !M! additional card{!M!|>1,<1=s}.",
-    "UPGRADE_DESCRIPTION": "{@@}Add !M! *Pride{!M!|>1,<1=s} to your hand. NL At the start of your turn, draw !M! additional card{!M!|>1,<1=s}.",
+    "UPGRADE_DESCRIPTION": "{@@}Innate. NL Add !M! *Pride{!M!|>1,<1=s} to your hand. NL At the start of your turn, draw !M! additional card{!M!|>1,<1=s}.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -131,7 +131,7 @@
   "${modID}:ComplexFlavor": {
     "NAME": "Complex Flavor",
     "DESCRIPTION": "Draw !M! cards. NL Randomly discard a card. NL Randomly Exhaust a card.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Randomly discard a card. NL Randomly Exhaust a card.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Randomly discard a card. NL Exhaust a card.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -170,8 +170,8 @@
   },
   "${modID}:Aftertaste": {
     "NAME": "Aftertaste",
-    "DESCRIPTION": "{@@}Unplayable. NL When ${modID}:Devoured: Gain {!M!|repeat= [E]|>4= !M! [E]} .",
-    "UPGRADE_DESCRIPTION": "{@@}Unplayable. NL When ${modID}:Devoured: Gain {!M!|repeat= [E]|>4= !M! [E]} . NL Retain.",
+    "DESCRIPTION": "{@@}Unplayable. NL When ${modID}:Devoured: Gain {!M!|repeat= [E]|>4= !M! [E]} and lose !M! ${modID}:Ravenous.",
+    "UPGRADE_DESCRIPTION": "{@@}Unplayable. NL When ${modID}:Devoured: Gain {!M!|repeat= [E]|>4= !M! [E]} and lose !M! ${modID}:Ravenous.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -242,8 +242,8 @@
   },
   "${modID}:HideTheEvidence": {
     "NAME": "Hide the Evidence",
-    "DESCRIPTION": "Lose HP equal to your ${modID}:Ravenous, then lose ALL of it. NL Purge.",
-    "UPGRADE_DESCRIPTION": "Lose HP equal to your ${modID}:Ravenous, then lose ALL of it. NL Exhaust.",
+    "DESCRIPTION": "Lose HP equal to your ${modID}:Ravenous, then lose ALL of it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Lose HP equal to your ${modID}:Ravenous, then lose ALL of it. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -274,8 +274,8 @@
   },
   "${modID}:PalateCleanser": {
     "NAME": "Palate Cleanser",
-    "DESCRIPTION": "Reset ${modID}:Risk to 0. NL You cannot reduce *Risk for !${modID}:M2! turns.",
-    "UPGRADE_DESCRIPTION": "Reset ${modID}:Risk to 0. NL Increase maximum *Risk by !M!. NL You cannot reduce *Risk for the rest of combat.",
+    "DESCRIPTION": "Reset ${modID}:Risk. NL You cannot reduce *Risk for !${modID}:M2! turns.",
+    "UPGRADE_DESCRIPTION": "Reset ${modID}:Risk and increase maximum *Risk by !M!. NL You cannot reduce *Risk for the rest of combat.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -362,16 +362,16 @@
   },
   "${modID}:Planning": {
     "NAME": "Planning",
-    "DESCRIPTION": "Gain up to !M! ${modID}:Risk this turn, and gain that much *Risk cap during the next turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain up to !M! ${modID}:Risk this turn, and gain that much *Risk cap during the next turn.",
+    "DESCRIPTION": "Gain up to !M! ${modID}:Risk this turn, and gain that much maximum *Risk during the next turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain up to !M! ${modID}:Risk this turn, and gain that much maximum *Risk during the next turn.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
   },
   "${modID}:LieInWait": {
     "NAME": "Lie in Wait",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! ${modID}:Risk cap next turn.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! ${modID}:Risk cap next turn.",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! maximum ${modID}:Risk next turn.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! maximum ${modID}:Risk next turn.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -402,8 +402,8 @@
   },
   "${modID}:PlayVictim": {
     "NAME": "Play Victim",
-    "DESCRIPTION": "Gain 2X *Temp. *HP.",
-    "UPGRADE_DESCRIPTION": "Gain 2X *Temp. *HP.",
+    "DESCRIPTION": "Gain !${modID}:M2!X *Temp. *HP.",
+    "UPGRADE_DESCRIPTION": "Gain !${modID}:M2!X *Temp. *HP.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -426,8 +426,8 @@
   },
   "${modID}:Sedation": {
     "NAME": "Sedation",
-    "DESCRIPTION": "{@@}Apply !M! Weak.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Apply !M! Weak.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
+    "DESCRIPTION": "{@@}Retain. NL Apply !M! Weak.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}Retain. NL Apply !M! Weak.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -539,7 +539,7 @@
   "${modID}:Restraint": {
     "NAME": "Restraint",
     "DESCRIPTION": "Deal !D! damage. NL Damage is equal to the size of your *Exhaust pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Damage is equal to the size of your *Exhaust pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL Damage is equal to the size of your *Exhaust pile.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -554,8 +554,8 @@
   },
   "${modID}:RecipeCard": {
     "NAME": "Recipe Card",
-    "DESCRIPTION": "Unplayable.",
-    "UPGRADE_DESCRIPTION": "Unplayable.",
+    "DESCRIPTION": "Unplayable. NL When ${modID}:Devoured: Shuffle a random power into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL When ${modID}:Devoured: Shuffle a random power into your draw pile with this effect.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -594,8 +594,8 @@
   },
   "${modID}:Hearty": {
     "NAME": "Hearty",
-    "DESCRIPTION": "Gain !B! Block. NL When Devoured: Gain !B! *Temp. *HP, scaling with Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL When Devoured: Gain !B! *Temp. *HP, scaling with Dexterity.",
+    "DESCRIPTION": "Gain !B! Block. NL When ${modID}:Devoured: Gain !B! *Temp. *HP, scaling with Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL When ${modID}:Devoured: Gain !B! *Temp. *HP, scaling with Dexterity.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -611,6 +611,55 @@
 
 
 
+  "${modID}:Caffeine": {
+    "NAME": "Caffeine",
+    "DESCRIPTION": "${modID}:Devour up to !M! cards and heal !${modID}:M2! HP for each. NL Purge.",
+    "UPGRADE_DESCRIPTION": "${modID}:Devour up to !M! cards and gain !${modID}:M2! Regen for each. NL Purge.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Shot": {
+    "NAME": "Shot",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Exhaust !M! card{!M!|>1,<1=s}. NL Gain !B! Block for each card Exhausted.",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL Exhaust !M! card{!M!|>1,<1=s}. NL Gain !B! Block for each card Exhausted.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Ferment": {
+    "NAME": "Ferment",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust X cards. NL Draw X cards.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust X cards. NL Draw X cards.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Nibble": {
+    "NAME": "Nibble",
+    "DESCRIPTION": "{@@}Choose !M! card{!M!|>1,<1=s}. NL Exhaust {!M!|>1,<1=them|@=it} and ${modID}:Devour a copy of {!M!|>1,<1=them|@=it}. NL Draw !M! card{!M!|>1,<1=s}.",
+    "UPGRADE_DESCRIPTION": "{@@}Choose !M! card{!M!|>1,<1=s}. NL Exhaust {!M!|>1,<1=them|@=it} and ${modID}:Devour a copy of {!M!|>1,<1=them|@=it}. NL Draw !M! card{!M!|>1,<1=s}.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:FlavorPairing": {
+    "NAME": "Flavor Pairing",
+    "DESCRIPTION": "Exhaust !M! cards. NL Gain !${modID}:M2! Strength this turn per Attack and !${modID}:M2! Dexterity this turn per Skill.",
+    "UPGRADE_DESCRIPTION": "Exhaust !M! cards. NL Gain !${modID}:M2! Strength per Attack and !${modID}:M2! Dexterity per Skill. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Silverware": {
+    "NAME": "Silverware",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust any number of cards, and add that many *Shivs to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust any number of cards, and add that many Upgraded *Shivs to your hand.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+
 
 
 
@@ -621,14 +670,6 @@
     "NAME": "Precious Treasure",
     "DESCRIPTION": "Infinite ${modID}:Seconds.",
     "UPGRADE_DESCRIPTION": "She's one thing I ever did right. I'm beyond saving, but I owe it to her to see it through.",
-    "EXTENDED_DESCRIPTION": [
-      ""
-    ]
-  },
-  "${modID}:Template": {
-    "NAME": "Template",
-    "DESCRIPTION": "Ex",
-    "UPGRADE_DESCRIPTION": "Ex",
     "EXTENDED_DESCRIPTION": [
       ""
     ]

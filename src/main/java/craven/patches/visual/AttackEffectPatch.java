@@ -8,6 +8,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.DamageHeartEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
@@ -100,7 +101,16 @@ public class AttackEffectPatch {
         @SpirePrefixPatch
         public static SpireReturn tryPlaySound(AbstractGameEffect __instance, AbstractGameAction.AttackEffect effect)
         {
-            return SpireReturn.Return();
+            if(effect == AttackEffectEnum.WINE){
+                CardCrawlGame.sound.play("ATTACK_POISON", 0.15f);
+            }
+            if(effect == AttackEffectEnum.GILDED){
+                CardCrawlGame.sound.play("ATTACK_FAST", 0.15f);
+            }
+            if(effect == AttackEffectEnum.SHADY){
+                CardCrawlGame.sound.play("ORB_EVOKE_DARK", 0.15f);
+            }
+            return SpireReturn.Continue();
 
         }
     }

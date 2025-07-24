@@ -18,7 +18,7 @@ public class AmbrosiaSalad extends AbstractHungryCard implements OnDevouredInter
     private static final CardStats info = new CardStats(
             CravenCharacter.Meta.CARD_COLOR,
             CardType.SKILL,
-            CardRarity.RARE,
+            CardRarity.UNCOMMON,
             CardTarget.NONE,
             -2
     );

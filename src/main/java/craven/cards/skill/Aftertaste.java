@@ -1,6 +1,7 @@
 package craven.cards.skill;
 
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -8,7 +9,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
 import craven.patches.interfaces.OnDevouredInterface;
+import craven.powers.custompowers.RavenousPower;
 import craven.util.CardStats;
+
+import static craven.util.otherutil.variables.Variables.p;
 
 public class Aftertaste extends AbstractHungryCard implements OnDevouredInterface {
     public static final String[] EXTENDED_DESCRIPTION = CardStrings.getMockCardString().EXTENDED_DESCRIPTION;
@@ -59,5 +63,6 @@ public class Aftertaste extends AbstractHungryCard implements OnDevouredInterfac
     @Override
     public void PostDevoured() {
         addToBot(new GainEnergyAction(magicNumber));
+        addToBot(new ReducePowerAction(p(), p(), RavenousPower.POWER_ID, magicNumber));
     }
 }

@@ -27,7 +27,7 @@ public class Fattening extends AbstractHungryCard implements CravingInterface {
     );
 
     private static final int DAMAGE = 8;
-    private static final int UPG_DAMAGE = 0;
+    private static final int UPG_DAMAGE = 3;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
     private static final int MAGIC = -1;

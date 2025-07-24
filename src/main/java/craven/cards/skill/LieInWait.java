@@ -25,8 +25,8 @@ public class LieInWait extends AbstractHungryCard implements OnDevouredInterface
 
     private static final int DAMAGE = 0;
     private static final int UPG_DAMAGE = 0;
-    private static final int BLOCK = 9;
-    private static final int UPG_BLOCK = 1;
+    private static final int BLOCK = 10;
+    private static final int UPG_BLOCK = 2;
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
     private static final int SECOND_MAGIC = 0;

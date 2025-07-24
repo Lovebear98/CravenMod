@@ -23,7 +23,7 @@ public class Cleave extends AbstractHungryCard {
     );
 
     private static final int DAMAGE = 12;
-    private static final int UPG_DAMAGE = 0;
+    private static final int UPG_DAMAGE = 1;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
     private static final int MAGIC = 0;

@@ -25,7 +25,7 @@ public class HungeringStrike extends AbstractHungryCard {
             CardType.ATTACK,
             CardRarity.COMMON,
             CardTarget.ENEMY,
-            1
+            0
     );
 
     private static final int DAMAGE = 8;

@@ -17,7 +17,7 @@ public class BoneBroth extends AbstractSecondsCard {
             CardType.SKILL,
             CardRarity.UNCOMMON,
             CardTarget.NONE,
-            1
+            0
     );
 
     private static final int DAMAGE = 0;

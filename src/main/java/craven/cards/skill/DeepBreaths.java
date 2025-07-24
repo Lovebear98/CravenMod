@@ -24,7 +24,7 @@ public class DeepBreaths extends AbstractSecondsCard {
     private static final int UPG_DAMAGE = 0;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 5;
     private static final int UPG_MAGIC = 1;
     private static final int SECOND_MAGIC = 2;
     private static final int UPG_SECOND_MAGIC = 1;

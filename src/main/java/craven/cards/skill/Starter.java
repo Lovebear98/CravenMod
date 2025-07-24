@@ -27,7 +27,7 @@ public class Starter extends AbstractHungryCard implements CravingInterface {
 
     private static final int DAMAGE = 0;
     private static final int UPG_DAMAGE = 0;
-    private static final int BLOCK = 5;
+    private static final int BLOCK = 7;
     private static final int UPG_BLOCK = 0;
     private static final int MAGIC = 0;
     private static final int UPG_MAGIC = 0;

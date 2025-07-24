@@ -28,10 +28,10 @@ public class Craven extends AbstractHungryCard implements CravingInterface {
     private static final int UPG_DAMAGE = 0;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
-    private static final int MAGIC = 3;
-    private static final int UPG_MAGIC = 3;
+    private static final int MAGIC = 6;
+    private static final int UPG_MAGIC = 0;
     private static final int SECOND_MAGIC = 3;
-    private static final int UPG_SECOND_MAGIC = 0;
+    private static final int UPG_SECOND_MAGIC = 1;
 
 
     public Craven() {

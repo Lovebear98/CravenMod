@@ -23,7 +23,7 @@ public class HideTheEvidence extends AbstractHungryCard implements OnDevouredInt
             CardType.SKILL,
             CardRarity.RARE,
             CardTarget.NONE,
-            2
+            0
     );
 
     private static final int DAMAGE = 0;
@@ -44,9 +44,8 @@ public class HideTheEvidence extends AbstractHungryCard implements OnDevouredInt
         setMagic(MAGIC, UPG_MAGIC);
         setSecondMagic(SECOND_MAGIC, UPG_SECOND_MAGIC);
 
-        setCostUpgrade(1);
-        setExhaust(false, true);
-        setPurge(true);
+        setSelfRetain(true);
+        setExhaust(true);
     }
 
     @Override

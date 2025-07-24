@@ -26,8 +26,8 @@ public class Hearty extends AbstractHungryCard implements OnDevouredInterface {
 
     private static final int DAMAGE = 0;
     private static final int UPG_DAMAGE = 0;
-    private static final int BLOCK = 10;
-    private static final int UPG_BLOCK = 4;
+    private static final int BLOCK = 13;
+    private static final int UPG_BLOCK = 5;
     private static final int MAGIC = 0;
     private static final int UPG_MAGIC = 0;
     private static final int SECOND_MAGIC = 0;

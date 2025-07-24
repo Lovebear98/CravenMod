@@ -28,6 +28,7 @@ import craven.cards.starter.Defend;
 import craven.cards.starter.DinnerBell;
 import craven.cards.starter.MissingPerson;
 import craven.cards.starter.Strike;
+import craven.patches.visual.AttackEffectEnum;
 import craven.relics.GoldpawVintage;
 
 import java.util.ArrayList;
@@ -42,7 +43,7 @@ import static craven.util.otherutil.SoundManager.GLASSSOUNDKEY;
 public class CravenCharacter extends CustomPlayer {
     //Stats
     public static final int ENERGY_PER_TURN = 3;
-    public static final int MAX_HP = 73;
+    public static final int MAX_HP = 121;
     public static final int STARTING_GOLD = 99;
     public static final int CARD_DRAW = 5;
     public static final int ORB_SLOTS = 0;
@@ -208,16 +209,16 @@ public class CravenCharacter extends CustomPlayer {
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 8; //Max hp reduction at ascension 14+
+        return 22; //Max hp reduction at ascension 14+
     }
 
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
         //These attack effects will be used when you attack the heart.
         return new AbstractGameAction.AttackEffect[] {
-                AbstractGameAction.AttackEffect.SLASH_VERTICAL,
-                AbstractGameAction.AttackEffect.SLASH_HEAVY,
-                AbstractGameAction.AttackEffect.SLASH_DIAGONAL
+                AttackEffectEnum.WINE,
+                AttackEffectEnum.GILDED,
+                AbstractGameAction.AttackEffect.SLASH_HEAVY
         };
     }
 

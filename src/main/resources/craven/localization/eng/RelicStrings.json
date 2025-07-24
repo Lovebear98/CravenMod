@@ -58,7 +58,8 @@
     "FLAVOR": "She lied to them about what she saw to protect me. At this rate, she'll get even more caught up in all this...",
     "DESCRIPTIONS": [
       "Increase maximum #y${modID}:Risk by #b",
-      " while you don't have #y${modID}:Ravenous."
+      ".",
+      "while you don't have #y${modID}:Ravenous???"
     ]
   },
   "${modID}:VoiceOfReason": {
@@ -107,6 +108,14 @@
       "that many",
       "#b",
       " extra #yRations to your deck and reset the counter."
+    ]
+  },
+  "${modID}:EmptyPot": {
+    "NAME": "Empty Pot",
+    "FLAVOR": "Your fur's falling out and you're chewing on silverware from the stress. This is what you deserve, now endure it.",
+    "DESCRIPTIONS": [
+      "Add #b",
+      " #ySilverware and a #yRinse to your deck. Playing #yRinse will add all #yDevoured #ySilverware to your hand."
     ]
   }
 }

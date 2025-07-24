@@ -44,6 +44,7 @@ public class ProudVintner extends AbstractHungryCard {
         this.cardsToPreview = new Pride();
         this.UpgradePreviewCard = false;
         setCostUpgrade(1);
+        setInnate(false, true);
     }
 
     @Override

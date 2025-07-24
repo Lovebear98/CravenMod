@@ -41,6 +41,7 @@ public class ImportedGoods extends AbstractHungryCard {
         setBlock(BLOCK, UPG_BLOCK);
         setMagic(MAGIC, UPG_MAGIC);
         setSecondMagic(SECOND_MAGIC, UPG_SECOND_MAGIC);
+        setCostUpgrade(3);
 
         setExhaust(true);
     }

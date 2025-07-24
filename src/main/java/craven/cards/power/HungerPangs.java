@@ -19,7 +19,7 @@ public class HungerPangs extends AbstractHungryCard {
             CardType.POWER,
             CardRarity.RARE,
             CardTarget.SELF,
-            2
+            1
     );
 
     private static final int DAMAGE = 0;
@@ -42,8 +42,6 @@ public class HungerPangs extends AbstractHungryCard {
 
         this.cardsToPreview = new Rations();
         this.UpgradePreviewCard = false;
-
-        setCostUpgrade(1);
     }
 
     @Override

@@ -1,24 +1,18 @@
 {
-  "${modID}:CravenThoughtsEvent": {
-    "NAME": "Craven Thoughts",
+  "${modID}:OpportunityEvent": {
+    "NAME": "Opportunity",
     "DESCRIPTIONS": [
-      "Craven Thoughts",
-      "Unbidden, that gnawing @#rneed@ claws up inside your gut again, demanding outlet. Demanding ~#rsacrifice.~ Your stomach churns in @#rdisgust@ at yourself, even as the ~#rsweet~ taste of ~#rflesh~ and ~#rviscera~ invades your mind. NL Are you really this pathetic?",
-      "You are. NL You #rare. NL You are a pathetic little craven ~#rexcuse~ for a man driven by your addiction, no better than a wild ~#ranimal~ chasing a thrill. And here, @#rnobody@ can condemn you for it.",
-      "Pathetic you may be, but you're here because you worked up the #ycourage to change. Everything you've done is @#runforgivable.@ There is @rno redemption. But there is renewal, and if it takes using these twisted impulses to find it you'll keep using them.",
-      "You are, and you don't want to be this hunger's @#rslave@ anymore. You can't bring back the dead, and you can't undo your crimes. You've selfishly ~#rstolen~ so many lives that you no longer deserve yours, but you can't make all those deaths @#rworthless@ by giving up here."
+      "(Whoops! This is supposed to be disabled for testing!) You ~smell~ it before you see it, a man with a #rbloody leg lying against a wall. His wound @reeks@ of #rblood, but his steady breathing and alert gaze tells you he has the injury under control. NL NL @\"Finally!@ Hey, friend, I just need to make it a little further. There's somewhere safe to rest up ahead, I'm almost there. ~Please.\"~ NL NL Your first impulse yells at you to just help someone in need out of your dim goodness, but then that #r~burning,~ #r~twisting~ need rises up in your stomach. He's alone. Injured. #r~Fresh.~ You could just...",
+      "You offer the man your shoulder and start helping him limp, but it's only then that it finally sinks into you. Your blood runs cold, and you freeze. NL NL \"Recognize me now? You #r@killed@ me. Carved up my #yleg and locked me in the basement to bleed. I #rhate you, you know. For #rmurdering me. But I #y~forgive~ you. #rNot for you. For #yme. #r~Lucky~ #r~you.\"~ NL NL The weight lifts off your shoulders all at once, and the taste floods your mouth. #y@Soup.@ The soup you made with his corpse. For the first time in your life the taste #r@revolts@ you, but you can't do anything but accept it.",
+      "You draw up close to the injured man with a practiced #y~innocence.~ Right when he reaches out an arm to welcome your help you take your opening and pounce on him, biting into his neck with a satisfying #r@crunch@ before he can react. He falls limp, and you nurse on the hot tang filling your mouth. NL NL He said there was somewhere safe to rest nearby, right? That means somewhere safe to #reat.",
+      ""
     ],
     "OPTIONS": [
-      "[Give In] #gGain #b",
-      " #yBrazen.",
-      "[Channel It] Pick up  #b1 of #b",
-      " #yX-Cost cards of any color",
-      "[Fight It] Gain #yDim #yHumanity",
-      "[Leave] Ignore it for now.",
-      "Pick a Card to Add to Your Deck.",
-      "[Leave] Time to eat.",
-      "[Leave] Keep your head high.",
-      "[Leave] Is this the right choice?"
+      "[Help Him] #gGain #yEmpty #yPot.",
+      "[Attack Him] #gGain #b",
+      " #yBrazen. #yLose #b",
+      " #rHP.",
+      "[Leave]"
     ]
   }
 }

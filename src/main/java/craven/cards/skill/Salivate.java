@@ -19,17 +19,17 @@ public class Salivate extends AbstractHungryCard {
             CardType.SKILL,
             CardRarity.UNCOMMON,
             CardTarget.SELF,
-            3
+            2
     );
 
     private static final int DAMAGE = 0;
     private static final int UPG_DAMAGE = 0;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
-    private static final int MAGIC = 4;
+    private static final int MAGIC = 6;
     private static final int UPG_MAGIC = 2;
-    private static final int SECOND_MAGIC = 5;
-    private static final int UPG_SECOND_MAGIC = 3;
+    private static final int SECOND_MAGIC = 11;
+    private static final int UPG_SECOND_MAGIC = 4;
 
 
     public Salivate() {

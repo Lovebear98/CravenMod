@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import craven.cards.power.RecipeCard;
 
 import java.util.List;
+import java.util.Objects;
 
 import static craven.CravenMod.makeID;
 
@@ -46,10 +47,12 @@ public class RecipeCardMod extends AbstractCardModifier {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        if(Upgraded){
-            rawDescription = rawDescription + cardStrings.EXTENDED_DESCRIPTION[1];
-        }else{
-            rawDescription = rawDescription + cardStrings.EXTENDED_DESCRIPTION[0];
+        if(!(Objects.equals(card.cardID, RecipeCard.ID))){
+            if(Upgraded){
+                rawDescription = rawDescription + cardStrings.EXTENDED_DESCRIPTION[1];
+            }else{
+                rawDescription = rawDescription + cardStrings.EXTENDED_DESCRIPTION[0];
+            }
         }
         return super.modifyDescription(rawDescription, card);
     }
