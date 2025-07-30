@@ -1,5 +1,6 @@
 package craven.cards.power;
 
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,13 +11,14 @@ import craven.character.CravenCharacter;
 import craven.powers.custompowers.CravingPower;
 import craven.util.CardStats;
 
+@NoCompendium
 public class Cravings extends AbstractHungryCard {
     public static final String[] EXTENDED_DESCRIPTION = CardStrings.getMockCardString().EXTENDED_DESCRIPTION;
     public static final String ID = makeID(Cravings.class.getSimpleName());
     private static final CardStats info = new CardStats(
             CravenCharacter.Meta.CARD_COLOR,
             CardType.POWER,
-            CardRarity.UNCOMMON,
+            CardRarity.SPECIAL,
             CardTarget.SELF,
             0
     );
@@ -33,6 +35,8 @@ public class Cravings extends AbstractHungryCard {
 
     public Cravings() {
         super(ID, info);
+
+        /// Formerly uncommon, gotta adjust this one!
 
         setDamage(DAMAGE, UPG_DAMAGE);
         setBlock(BLOCK, UPG_BLOCK);

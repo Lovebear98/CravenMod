@@ -23,7 +23,7 @@ public class Planning extends AbstractHungryCard implements OnDevouredInterface 
             CardType.SKILL,
             CardRarity.UNCOMMON,
             CardTarget.NONE,
-            2
+            1
     );
 
     private static final int DAMAGE = 0;
@@ -31,7 +31,7 @@ public class Planning extends AbstractHungryCard implements OnDevouredInterface 
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
     private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = 1;
+    private static final int UPG_MAGIC = 2;
     private static final int SECOND_MAGIC = 0;
     private static final int UPG_SECOND_MAGIC = 0;
 
@@ -44,7 +44,7 @@ public class Planning extends AbstractHungryCard implements OnDevouredInterface 
         setMagic(MAGIC, UPG_MAGIC);
         setSecondMagic(SECOND_MAGIC, UPG_SECOND_MAGIC);
 
-        setExhaust(true, false);
+        setSelfRetain(true);
 
     }
 

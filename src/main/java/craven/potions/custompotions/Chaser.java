@@ -65,7 +65,7 @@ public class Chaser extends CustomPotion {
 
     @Override
     public int getPotency(int i) {
-        return 4;
+        return 5;
     }
 
     @Override

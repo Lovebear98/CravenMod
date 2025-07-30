@@ -25,15 +25,15 @@ public class Consume extends AbstractHungryCard implements CravingInterface {
             CardType.ATTACK,
             CardRarity.RARE,
             CardTarget.ENEMY,
-            3
+            2
     );
 
     private static final int DAMAGE = 0;
     private static final int UPG_DAMAGE = 0;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
-    private static final int MAGIC = 9;
-    private static final int UPG_MAGIC = 5;
+    private static final int MAGIC = 10;
+    private static final int UPG_MAGIC = 6;
     private static final int SECOND_MAGIC = 0;
     private static final int UPG_SECOND_MAGIC = 0;
 

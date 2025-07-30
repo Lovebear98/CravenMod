@@ -20,7 +20,7 @@ public class Impulse extends AbstractHungryCard implements OnDevouredInterface {
             CardType.SKILL,
             CardRarity.UNCOMMON,
             CardTarget.NONE,
-            1
+            0
     );
 
     private static final int DAMAGE = 0;
@@ -40,8 +40,6 @@ public class Impulse extends AbstractHungryCard implements OnDevouredInterface {
         setBlock(BLOCK, UPG_BLOCK);
         setMagic(MAGIC, UPG_MAGIC);
         setSecondMagic(SECOND_MAGIC, UPG_SECOND_MAGIC);
-
-        setCostUpgrade(0);
     }
 
     @Override

@@ -30,7 +30,7 @@ public class Aftertaste extends AbstractHungryCard implements OnDevouredInterfac
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
     private static final int MAGIC = 4;
-    private static final int UPG_MAGIC = 0;
+    private static final int UPG_MAGIC = 2;
     private static final int SECOND_MAGIC = 0;
     private static final int UPG_SECOND_MAGIC = 0;
 
@@ -42,8 +42,6 @@ public class Aftertaste extends AbstractHungryCard implements OnDevouredInterfac
         setBlock(BLOCK, UPG_BLOCK);
         setMagic(MAGIC, UPG_MAGIC);
         setSecondMagic(SECOND_MAGIC, UPG_SECOND_MAGIC);
-
-        setSelfRetain(false, true);
     }
 
     @Override

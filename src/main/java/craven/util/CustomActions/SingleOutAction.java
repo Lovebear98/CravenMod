@@ -14,12 +14,14 @@ import static com.megacrit.cardcrawl.actions.defect.SeekAction.TEXT;
 public class SingleOutAction extends AbstractGameAction {
     private final float startingDuration;
     private CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+    private int cardstopick;
 
-    public SingleOutAction(int num) {
+    public SingleOutAction(int num, int cards) {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.startingDuration = Settings.ACTION_DUR_FAST;
         this.duration = this.startingDuration;
         this.amount = num;
+        this.cardstopick = cards;
     }
 
     @Override
@@ -47,7 +49,7 @@ public class SingleOutAction extends AbstractGameAction {
                     tmpGroup.addToTop((AbstractCard) AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
                 }
 
-                AbstractDungeon.gridSelectScreen.open(tmpGroup, 1, false, TEXT[1]);
+                AbstractDungeon.gridSelectScreen.open(tmpGroup, cardstopick, false, TEXT[1]);
             } else if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                 var1 = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
 

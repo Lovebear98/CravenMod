@@ -64,11 +64,19 @@
     "DESCRIPTION": "At the start of your turn, lose #bX HP then #yDevour up to #bX cards to reduce this."
   },
   {
-    "PROPER_NAME": "Hungry",
+    "PROPER_NAME": "Brazen",
     "NAMES": [
-      "Hungry",
-      "hungry"
+      "Brazen",
+      "brazen"
     ],
-    "DESCRIPTION": "Play your next #bX cards by directly gaining #yRavenous."
+    "DESCRIPTION": "#yRavenous also deals its damage to a random enemy. NL NL If you already have the effect, trigger your #yRavenous but take no damage."
+  },
+  {
+    "PROPER_NAME": "Brace",
+    "NAMES": [
+      "Brace",
+      "brace"
+    ],
+    "DESCRIPTION": "Halve the next source of Non-Attack damage you take."
   }
 ]

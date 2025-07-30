@@ -1,6 +1,7 @@
 package craven.cards.power;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -18,7 +19,7 @@ public class SweetNothings extends AbstractHungryCard {
             CardType.POWER,
             CardRarity.UNCOMMON,
             CardTarget.SELF,
-            2
+            1
     );
 
     private static final int DAMAGE = 0;
@@ -40,12 +41,15 @@ public class SweetNothings extends AbstractHungryCard {
         setSecondMagic(SECOND_MAGIC, UPG_SECOND_MAGIC);
 
         setInnate(true);
-        setCostUpgrade(1);
+        setCostUpgrade(0);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new RiskCapPower(p, magicNumber)));
+        if(upgraded){
+            addToBot(new DrawCardAction(1));
+        }
     }
 
 

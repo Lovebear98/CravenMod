@@ -31,7 +31,7 @@ public class FleshyWine extends AbstractHungryCard {
     private static final int UPG_DAMAGE = 0;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
-    private static final int MAGIC = 0;
+    private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 0;
     private static final int SECOND_MAGIC = 0;
     private static final int UPG_SECOND_MAGIC = 0;
@@ -49,8 +49,13 @@ public class FleshyWine extends AbstractHungryCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageType), AttackEffectEnum.WINE));
-        if(p().hasPower(RavenousPower.POWER_ID)){
+        if(!(p == null) && p.hasPower(RavenousPower.POWER_ID)){
+            if(magicNumber > 0){
+                for(int i = magicNumber; i > 0; i -= 1){
+                    addToBot(new DamageAction(m, new DamageInfo(p, damage, damageType), AttackEffectEnum.WINE));
+                }
+            }
+        }else{
             addToBot(new DamageAction(m, new DamageInfo(p, damage, damageType), AttackEffectEnum.WINE));
         }
     }
@@ -62,6 +67,7 @@ public class FleshyWine extends AbstractHungryCard {
             this.glowColor = GlowColor();
         }
     }
+
 
     @Override
     public Color GlowColor() {

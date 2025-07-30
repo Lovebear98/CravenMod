@@ -43,9 +43,9 @@ public class Sharpen extends AbstractHungryCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber)));
         if(upgraded){
-            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber)));
+            addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, magicNumber)));
         }
     }
 

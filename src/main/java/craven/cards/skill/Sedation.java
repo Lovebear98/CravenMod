@@ -75,4 +75,15 @@ public class Sedation extends AbstractSecondsCard {
         return c;
     }
 
+    @Override
+    public void upgrade() {
+        this.SecondsUpgraded = true;
+        super.upgrade();
+    }
+
+    @Override
+    public boolean SecondsUpgraded() {
+        return super.SecondsUpgraded();
+    }
+
 }

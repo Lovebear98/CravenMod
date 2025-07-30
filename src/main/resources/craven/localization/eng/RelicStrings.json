@@ -20,7 +20,7 @@
   },
   "${modID}:WineCasket": {
     "NAME": "Wine Casket",
-    "FLAVOR": "Is it a cute decoration, or some sick humor at all the people you've put in the real deal? Disgusting.",
+    "FLAVOR": "Is it a cute decoration, or some sick humor at all the people you've put in the real deal?",
     "DESCRIPTIONS": [
       "Gain a #rPERMANENT #yIchor #yBordeaux. NL When you use it, #rreset its #yPotency."
     ]
@@ -39,8 +39,8 @@
       "Skill ",
       "Power ",
       "card of a certain type ",
-      "is played twice, then change the type and reset the counter.",
-      "Every #b4 turns your next #ycard of a certain type is played twice, then change the type and reset the counter."
+      "is played twice, then randomize the type and reset the counter.",
+      "Every #b4 turns your next #ycard of a certain type is played twice, then randomize the type and reset the counter."
     ]
   },
   "${modID}:GiggleJuice": {
@@ -107,7 +107,7 @@
       ". NL #yScavenging adds ",
       "that many",
       "#b",
-      " extra #yRations to your deck and reset the counter."
+      " extra #yRations to your deck and resets the counter."
     ]
   },
   "${modID}:EmptyPot": {

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import craven.cards.AbstractSecondsCard;
 import craven.character.CravenCharacter;
@@ -33,10 +34,10 @@ public class Peppers extends AbstractSecondsCard implements OnDevouredInterface 
     private static final int UPG_DAMAGE = 1;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
-    private static final int MAGIC = 3;
-    private static final int UPG_MAGIC = 0;
-    private static final int SECOND_MAGIC = 3;
-    private static final int UPG_SECOND_MAGIC = 2;
+    private static final int MAGIC = 1;
+    private static final int UPG_MAGIC = 1;
+    private static final int SECOND_MAGIC = 1;
+    private static final int UPG_SECOND_MAGIC = 0;
 
     public Peppers() {
         super(ID, info);
@@ -79,6 +80,18 @@ public class Peppers extends AbstractSecondsCard implements OnDevouredInterface 
 
     @Override
     public void PostDevoured() {
-        addToBot(new ApplyPowerAction(p(), p(), new VigorPower(p(), secondMagic)));
+        addToBot(new ApplyPowerAction(p(), p(), new StrengthPower(p(), secondMagic)));
+    }
+
+
+    @Override
+    public void upgrade() {
+        this.SecondsUpgraded = true;
+        super.upgrade();
+    }
+
+    @Override
+    public boolean SecondsUpgraded() {
+        return super.SecondsUpgraded();
     }
 }

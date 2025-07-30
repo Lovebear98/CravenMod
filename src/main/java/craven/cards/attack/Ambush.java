@@ -19,11 +19,11 @@ public class Ambush extends AbstractHungryCard {
             CardType.ATTACK,
             CardRarity.RARE,
             CardTarget.ENEMY,
-            3
+            2
     );
 
     private static final int DAMAGE = 11;
-    private static final int UPG_DAMAGE = 0;
+    private static final int UPG_DAMAGE = 3;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
     private static final int MAGIC = 1;

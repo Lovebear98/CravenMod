@@ -20,9 +20,9 @@ public class Brazen extends AbstractHungryCard {
     private static final CardStats info = new CardStats(
             CravenCharacter.Meta.CARD_COLOR,
             CardType.POWER,
-            CardRarity.RARE,
+            CardRarity.UNCOMMON,
             CardTarget.SELF,
-            4
+            3
     );
 
     private static final int DAMAGE = 0;

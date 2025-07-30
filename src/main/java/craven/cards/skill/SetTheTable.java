@@ -10,6 +10,8 @@ import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
 import craven.util.CardStats;
 
+import static craven.util.otherutil.Wiz.GetTotallyRandomCard;
+
 public class SetTheTable extends AbstractHungryCard {
     public static final String[] EXTENDED_DESCRIPTION = CardStrings.getMockCardString().EXTENDED_DESCRIPTION;
     public static final String ID = makeID(SetTheTable.class.getSimpleName());
@@ -46,13 +48,13 @@ public class SetTheTable extends AbstractHungryCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard c;
 
-        c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.SKILL).makeCopy();
+        c = GetTotallyRandomCard(true, false, CardType.SKILL);
         if(this.upgraded){
             c.upgrade();
         }
         this.addToBot(new MakeTempCardInHandAction(c, true));
 
-        c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
+        c = GetTotallyRandomCard(true, false, CardType.ATTACK);
         if(this.upgraded){
             c.upgrade();
         }

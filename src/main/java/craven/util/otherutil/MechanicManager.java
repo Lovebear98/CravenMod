@@ -19,6 +19,7 @@ import craven.patches.interfaces.CravingInterface;
 import craven.patches.interfaces.OnDevouredInterface;
 import craven.patches.interfaces.PostDevourInterface;
 import craven.patches.interfaces.SecondsInterface;
+import craven.powers.TherianPower;
 import craven.powers.custompowers.CravingPower;
 import craven.powers.custompowers.MealPrepPower;
 import craven.powers.custompowers.PalateCleanserPower;
@@ -36,7 +37,7 @@ import static craven.util.otherutil.variables.Variables.isInCombat;
 import static craven.util.otherutil.variables.Variables.p;
 
 public class MechanicManager {
-
+        public static int CardsExhaustedThisTurn = 0;
 
 
 
@@ -136,6 +137,10 @@ public class MechanicManager {
                                 MealPrepPower pow = (MealPrepPower) p().getPower(MealPrepPower.POWER_ID);
                                 pow.Trigger();
                         }
+                }
+                if(p() != null && p().hasPower(TherianPower.POWER_ID)){
+                        AbstractPower pow = p().getPower(TherianPower.POWER_ID);
+                        pow.updateDescription();
                 }
         }
 

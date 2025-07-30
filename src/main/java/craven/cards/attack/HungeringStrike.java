@@ -28,12 +28,12 @@ public class HungeringStrike extends AbstractHungryCard {
             0
     );
 
-    private static final int DAMAGE = 8;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 13;
+    private static final int UPG_DAMAGE = 5;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
-    private static final int MAGIC = 4;
-    private static final int UPG_MAGIC = 2;
+    private static final int MAGIC = 7;
+    private static final int UPG_MAGIC = 3;
     private static final int SECOND_MAGIC = 0;
     private static final int UPG_SECOND_MAGIC = 0;
 

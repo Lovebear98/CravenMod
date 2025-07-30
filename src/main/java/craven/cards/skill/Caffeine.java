@@ -42,8 +42,8 @@ public class Caffeine extends AbstractHungryCard implements OnDevouredInterface 
     private static final int UPG_DAMAGE = 0;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
-    private static final int MAGIC = 4;
-    private static final int UPG_MAGIC = 2;
+    private static final int MAGIC = 3;
+    private static final int UPG_MAGIC = 3;
     private static final int SECOND_MAGIC = 3;
     private static final int UPG_SECOND_MAGIC = -2;
 
@@ -55,6 +55,8 @@ public class Caffeine extends AbstractHungryCard implements OnDevouredInterface 
         setBlock(BLOCK, UPG_BLOCK);
         setMagic(MAGIC, UPG_MAGIC);
         setSecondMagic(SECOND_MAGIC, UPG_SECOND_MAGIC);
+
+        tags.add(CardTags.HEALING);
 
         PurgeField.purge.set(this, true);
     }

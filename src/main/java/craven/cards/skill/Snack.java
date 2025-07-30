@@ -73,4 +73,15 @@ public class Snack extends AbstractSecondsCard {
     public int SpecialVar() {
         return secondMagic + SecondsUsed;
     }
+
+    @Override
+    public void upgrade() {
+        this.SecondsUpgraded = true;
+        super.upgrade();
+    }
+
+    @Override
+    public boolean SecondsUpgraded() {
+        return super.SecondsUpgraded();
+    }
 }

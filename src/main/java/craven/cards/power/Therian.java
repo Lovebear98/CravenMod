@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
 import craven.patches.interfaces.CravingInterface;
+import craven.powers.TherianPower;
 import craven.util.CardStats;
 
 public class Therian extends AbstractHungryCard implements CravingInterface {
@@ -17,7 +18,7 @@ public class Therian extends AbstractHungryCard implements CravingInterface {
     private static final CardStats info = new CardStats(
             CravenCharacter.Meta.CARD_COLOR,
             CardType.POWER,
-            CardRarity.UNCOMMON,
+            CardRarity.RARE,
             CardTarget.SELF,
             -1
     );
@@ -26,8 +27,8 @@ public class Therian extends AbstractHungryCard implements CravingInterface {
     private static final int UPG_DAMAGE = 0;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
-    private static final int MAGIC = 0;
-    private static final int UPG_MAGIC = 2;
+    private static final int MAGIC = -2;
+    private static final int UPG_MAGIC = 1;
     private static final int SECOND_MAGIC = 0;
     private static final int UPG_SECOND_MAGIC = 0;
 
@@ -44,7 +45,7 @@ public class Therian extends AbstractHungryCard implements CravingInterface {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int e = GetXEnergy();
-        addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, e)));
+        addToBot(new ApplyPowerAction(p, p, new TherianPower(p, e)));
     }
 
 

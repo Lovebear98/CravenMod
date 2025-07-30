@@ -112,5 +112,13 @@
       "If this enemy dies this turn, deal #b",
       " damage to ALL enemies."
     ]
+  },
+  "${modID}:TherianPower": {
+    "NAME": "Therian",
+    "DESCRIPTIONS": [
+      "At the end of your turn, gain #b",
+      " #yBlock for each remaining #yRisk.",
+      " NL Current #yBlock: #b"
+    ]
   }
 }

@@ -47,8 +47,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 import static craven.util.otherutil.ConfigManager.*;
-import static craven.util.otherutil.MechanicManager.AdjustRisk;
-import static craven.util.otherutil.MechanicManager.ResetRisk;
+import static craven.util.otherutil.MechanicManager.*;
 import static craven.util.otherutil.SaveFieldManager.SetupSaveFields;
 import static craven.util.otherutil.SoundManager.GLASSSOUNDKEY;
 import static craven.util.otherutil.Wiz.*;
@@ -377,11 +376,12 @@ public class CravenMod implements
     }
     @Override
     public void receiveOnPlayerTurnStart() {
-
+        CardsExhaustedThisTurn = 0;
+        ResetRisk();
     }
     ///Derp, this is a patch-in method, just put here for simplicity's sake
     public static void receiveOnPlayerTurnEnd(){
-        ResetRisk();
+
     }
     @Override
     public void receiveOnPlayerTurnStartPostDraw() {
@@ -407,5 +407,6 @@ public class CravenMod implements
 
     @Override
     public void receivePostExhaust(AbstractCard abstractCard) {
+        CardsExhaustedThisTurn += 1;
     }
 }

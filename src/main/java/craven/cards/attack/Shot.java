@@ -1,9 +1,7 @@
-package craven.cards.skill;
+package craven.cards.attack;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -15,13 +13,11 @@ import craven.character.CravenCharacter;
 import craven.patches.interfaces.OnDevouredInterface;
 import craven.patches.visual.AttackEffectEnum;
 import craven.util.CardStats;
-import craven.util.CustomActions.NibbleAction;
 import craven.util.CustomActions.generic.BulkExhaustAction;
 
 import java.util.ArrayList;
 
 import static craven.util.otherutil.variables.UIText.ExhaustText;
-import static craven.util.otherutil.variables.Variables.p;
 
 public class Shot extends AbstractHungryCard implements OnDevouredInterface {
     public static final String[] EXTENDED_DESCRIPTION = CardStrings.getMockCardString().EXTENDED_DESCRIPTION;
@@ -31,7 +27,7 @@ public class Shot extends AbstractHungryCard implements OnDevouredInterface {
             CardType.ATTACK,
             CardRarity.UNCOMMON,
             CardTarget.ENEMY,
-            2
+            1
     );
 
     private static final int DAMAGE = 7;

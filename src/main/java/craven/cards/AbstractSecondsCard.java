@@ -27,7 +27,6 @@ public abstract class AbstractSecondsCard extends AbstractHungryCard implements 
 
     @Override
     public void upgrade() {
-        SecondsUpgraded = true;
         super.upgrade();
     }
 

@@ -41,7 +41,7 @@ public class DinnerMenu extends AtlasRelic implements CustomSavable<Integer> {
 
     public DinnerMenu() {
         super(ID, NAME, CravenCharacter.Meta.CARD_COLOR, RARITY, SOUND);
-        this.counter = CounterCap;
+        this.counter = 0;
 
         description = DESCRIPTIONS[11];
         tips.clear();

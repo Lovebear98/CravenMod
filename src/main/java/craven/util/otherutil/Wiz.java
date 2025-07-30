@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.vfx.cardManip.CardFlashVfx;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
+import craven.cards.skill.SetTheTable;
 import craven.cards.starter.DinnerBell;
 import craven.character.CravenCharacter;
 import craven.powers.custompowers.RavenousPower;
@@ -145,6 +146,36 @@ public class Wiz {
 
         if(c == null){
             c = new DinnerBell();
+        }
+        return c;
+    }
+
+    public static AbstractCard GetTotallyRandomCard(boolean inCombat, boolean Colorless, AbstractCard.CardType type) {
+        int Tries = 0;
+
+        AbstractCard.CardRarity rarity;
+
+        int roll = AbstractDungeon.cardRandomRng.random(99);
+        if (roll < 65) {
+            rarity = AbstractCard.CardRarity.COMMON;
+        } else if (roll < 90) {
+            rarity = AbstractCard.CardRarity.UNCOMMON;
+        } else {
+            rarity = AbstractCard.CardRarity.RARE;
+        }
+
+
+        AbstractCard c;
+        do {
+            c = CardLibrary.getAnyColorCard(rarity);
+            AbstractCard card = null;
+        }
+        while (
+                Tries <= MaxTries && (c == null  || c.type != type || !Colorless && c.color == AbstractCard.CardColor.COLORLESS || (inCombat && c.hasTag(AbstractCard.CardTags.HEALING)))
+        );
+
+        if(c == null){
+            c = new SetTheTable();
         }
         return c;
     }

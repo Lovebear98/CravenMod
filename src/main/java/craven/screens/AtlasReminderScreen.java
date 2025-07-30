@@ -216,7 +216,7 @@ public class AtlasReminderScreen extends CustomScreen {
         int pagetoshow = PageFloor;
         float offsetY = 0f;
         if (Settings.BIG_TEXT_MODE) {
-            offsetY = 110f * Settings.scale;
+            offsetY = 0f * Settings.scale;
         }
 
         ///The universal header

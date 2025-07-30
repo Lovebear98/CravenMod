@@ -1,6 +1,7 @@
 package craven.cards.skill;
 
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -44,6 +45,7 @@ public class BoxedLunch extends AbstractSecondsCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainEnergyAction(magicNumber));
+        addToBot(new HealAction(p, p, magicNumber));
     }
 
     @Override

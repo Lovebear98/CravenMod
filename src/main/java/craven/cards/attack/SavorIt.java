@@ -77,4 +77,15 @@ public class SavorIt extends AbstractSecondsCard {
         c.SecondsUsed = this.SecondsUsed;
         return c;
     }
+
+    @Override
+    public void upgrade() {
+        this.SecondsUpgraded = false;
+        super.upgrade();
+    }
+
+    @Override
+    public boolean SecondsUpgraded() {
+        return super.SecondsUpgraded();
+    }
 }

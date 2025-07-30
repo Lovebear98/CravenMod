@@ -36,7 +36,7 @@ public class AttackEffectPatch {
         @SpirePrefixPatch
         public static SpireReturn<TextureAtlas.AtlasRegion> tryLoadImage(AbstractGameEffect __instance, AbstractGameAction.AttackEffect ___effect)
         {
-            CravenMod.logger.info("WE HAVE RECIEVED THIS EFFECT: ["+___effect+"]");
+            ///CravenMod.logger.info("WE HAVE RECIEVED THIS EFFECT: ["+___effect+"]");
             ///Try this whole brick for each unique effect to play it if we ask for it
             try {
                 if (___effect == AttackEffectEnum.WINE) {

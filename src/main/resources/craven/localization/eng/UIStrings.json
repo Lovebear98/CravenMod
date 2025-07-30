@@ -42,19 +42,19 @@
   "${modID}:AtlasReminderScreen": {
     "TEXT": [
       "The Craven",
-      "Energy and Devour",
-      "Food and Seconds",
+      "No Energy",
       "Ravenous",
-      "X-Cost Cards",
+      "Food and Seconds",
+      "X-Cost",
       "Risk"
     ],
     "EXTRA_TEXT": [
       "NONE",
-      "#yAtlas has no #yEnergy - changes to #yEnergy will create or #yDevour cards in the #yExhaust #yPile instead. If you don't have enough cards to #yDevour, gain #rRavenous equal to what you couldn't pay.",
-      "#yFood cards begin combat #yExhausted, and #ySeconds cards will be added back to the hand a limited number of times when they're #yDevoured. NL NL Your deck starts with #b10 #yRations with the #yFood tag.",
-      "At the start of the turn #rRavenous will cause you to #rlose #rHP, then attempt to #yDevour cards in the #yExhaust #yPile to reduce itself.",
-      "#yX-Cost Cards have a displayed #yCap on #bX that shows how much they'll play for. NL NL #yRelics that normally change #bMaximum #bEnergy will change the cap for #yX-Cost cards by the same amount.",
-      "#yRisk is the limit to the number of cards you can draw beyond your #yStarting #yHand each turn, displayed where the #yEnergy #yOrb would be. NL NL It #yresets at the end of each turn."
+      "#yAtlas has no #yEnergy - changes to #yEnergy will create or #yDevour cards in the #yExhaust #yPile instead. If you don't have enough cards #yExhausted, gain #rRavenous equal to the missing cost.",
+      "At the start of the turn #rRavenous will cause you to #rlose #rHP, then try to #yDevour #yExhausted cards to reduce itself.",
+      "#yFood begins combat #yExhausted, and #ySeconds cards will be added back to the hand a certain number of times when they're #yDevoured. NL NL Your deck starts with #b10 pieces of #yFood.",
+      "#yX-Cost Cards have a #yCap on #bX, and will play for exactly that amount. NL NL #yRelics that normally change #bMaximum #bEnergy will change the cap for #yX-Cost cards.",
+      "#yRisk is the limit to cards drawn past the #yStarting #yHand each turn, displayed on the #yEnergy #yOrb. NL NL It #yresets at the start of each turn."
     ]
   },
   "${modID}:ScavengeButton": {

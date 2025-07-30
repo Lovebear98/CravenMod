@@ -1,5 +1,6 @@
 package craven.cards.skill;
 
+import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -44,7 +45,7 @@ public class HideTheEvidence extends AbstractHungryCard implements OnDevouredInt
         setMagic(MAGIC, UPG_MAGIC);
         setSecondMagic(SECOND_MAGIC, UPG_SECOND_MAGIC);
 
-        setSelfRetain(true);
+        setSelfRetain(false, true);
         setExhaust(true);
     }
 
@@ -55,8 +56,7 @@ public class HideTheEvidence extends AbstractHungryCard implements OnDevouredInt
             public void update() {
                 if(p().hasPower(RavenousPower.POWER_ID)){
                  int i = p().getPower(RavenousPower.POWER_ID).amount;
-                 addToTop(new RemoveSpecificPowerAction(p(), p(), RavenousPower.POWER_ID));
-                 addToTop(new LoseHPAction(p(), p(), i));
+                 addToTop(new AddTemporaryHPAction(p, p, i));
                 }
                 isDone = true;
             }

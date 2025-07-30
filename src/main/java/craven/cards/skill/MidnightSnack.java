@@ -74,4 +74,15 @@ public class MidnightSnack extends AbstractSecondsCard {
         return c;
     }
 
+    @Override
+    public void upgrade() {
+        this.SecondsUpgraded = false;
+        super.upgrade();
+    }
+
+    @Override
+    public boolean SecondsUpgraded() {
+        return super.SecondsUpgraded();
+    }
+
 }

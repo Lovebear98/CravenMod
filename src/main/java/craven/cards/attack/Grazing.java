@@ -25,13 +25,13 @@ public class Grazing extends AbstractSecondsCard {
             1
     );
 
-    private static final int DAMAGE = 3;
-    private static final int UPG_DAMAGE = 1;
+    private static final int DAMAGE = 2;
+    private static final int UPG_DAMAGE = 0;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
     private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 1;
-    private static final int SECOND_MAGIC = 2;
+    private static final int SECOND_MAGIC = 0;
     private static final int UPG_SECOND_MAGIC = 0;
 
     public Grazing() {
@@ -47,7 +47,7 @@ public class Grazing extends AbstractSecondsCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for(int i = secondMagic; i > 0; i -= 1){
+        for(int i = SpecialVar(); i > 0; i -= 1){
             addToBot(new DamageAction(m, new DamageInfo(p, damage, damageType), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
     }
@@ -63,6 +63,11 @@ public class Grazing extends AbstractSecondsCard {
     }
 
     @Override
+    public int SpecialVar() {
+        return SecondsCount()+1;
+    }
+
+    @Override
     public AbstractCard makeCopy() {
         Grazing c = new Grazing();
         c.SecondsUpgraded = this.SecondsUpgraded;
@@ -73,5 +78,16 @@ public class Grazing extends AbstractSecondsCard {
         Grazing c = (Grazing) super.makeStatEquivalentCopy();
         c.SecondsUsed = this.SecondsUsed;
         return c;
+    }
+
+    @Override
+    public void upgrade() {
+        this.SecondsUpgraded = true;
+        super.upgrade();
+    }
+
+    @Override
+    public boolean SecondsUpgraded() {
+        return super.SecondsUpgraded();
     }
 }

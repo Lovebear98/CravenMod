@@ -25,8 +25,8 @@ public class Cookies extends AbstractSecondsCard {
     private static final int UPG_DAMAGE = 0;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
-    private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = 2;
+    private static final int MAGIC = 3;
+    private static final int UPG_MAGIC = 3;
     private static final int SECOND_MAGIC = 0;
     private static final int UPG_SECOND_MAGIC = 0;
 
@@ -77,6 +77,17 @@ public class Cookies extends AbstractSecondsCard {
         Cookies c = (Cookies) super.makeStatEquivalentCopy();
         c.SecondsUsed = this.SecondsUsed;
         return c;
+    }
+
+    @Override
+    public void upgrade() {
+        this.SecondsUpgraded = true;
+        super.upgrade();
+    }
+
+    @Override
+    public boolean SecondsUpgraded() {
+        return super.SecondsUpgraded();
     }
 
 }

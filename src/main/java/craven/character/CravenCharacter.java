@@ -43,7 +43,7 @@ import static craven.util.otherutil.SoundManager.GLASSSOUNDKEY;
 public class CravenCharacter extends CustomPlayer {
     //Stats
     public static final int ENERGY_PER_TURN = 3;
-    public static final int MAX_HP = 121;
+    public static final int MAX_HP = 89;
     public static final int STARTING_GOLD = 99;
     public static final int CARD_DRAW = 5;
     public static final int ORB_SLOTS = 0;
@@ -129,7 +129,7 @@ public class CravenCharacter extends CustomPlayer {
                 SHOULDER_1,
                 CORPSE,
                 getLoadout(),
-                -18.0F, -20.0F, 310.0F, 365.0F, //Character hitbox. x y position, then width and height.
+                12.0F, -20.0F, 260.0F, 425.0F, //Character hitbox. x y position, then width and height.
                 new EnergyManager(ENERGY_PER_TURN));
 
         //Location for text bubbles. You can adjust it as necessary later. For most characters, these values are fine.
@@ -209,7 +209,7 @@ public class CravenCharacter extends CustomPlayer {
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 22; //Max hp reduction at ascension 14+
+        return 8; //Max hp reduction at ascension 14+
     }
 
     @Override

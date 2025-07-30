@@ -9,6 +9,8 @@ import craven.cards.AbstractSecondsCard;
 import craven.character.CravenCharacter;
 import craven.util.CardStats;
 
+import static craven.util.otherutil.MechanicManager.CardsExhaustedThisTurn;
+
 public class DeepBreaths extends AbstractSecondsCard {
     public static final String[] EXTENDED_DESCRIPTION = CardStrings.getMockCardString().EXTENDED_DESCRIPTION;
     public static final String ID = makeID(DeepBreaths.class.getSimpleName());
@@ -17,15 +19,15 @@ public class DeepBreaths extends AbstractSecondsCard {
             CardType.SKILL,
             CardRarity.COMMON,
             CardTarget.NONE,
-            3
+            2
     );
 
     private static final int DAMAGE = 0;
     private static final int UPG_DAMAGE = 0;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
-    private static final int MAGIC = 5;
-    private static final int UPG_MAGIC = 1;
+    private static final int MAGIC = 2;
+    private static final int UPG_MAGIC = 0;
     private static final int SECOND_MAGIC = 2;
     private static final int UPG_SECOND_MAGIC = 1;
 
@@ -43,7 +45,7 @@ public class DeepBreaths extends AbstractSecondsCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new AddTemporaryHPAction(p, p, magicNumber));
+        addToBot(new AddTemporaryHPAction(p, p, CardsExhaustedThisTurn * secondMagic));
     }
 
 
@@ -59,7 +61,10 @@ public class DeepBreaths extends AbstractSecondsCard {
     }
 
 
-
+    @Override
+    public int SpecialVar() {
+        return CardsExhaustedThisTurn;
+    }
 
     @Override
     public AbstractCard makeCopy() {
@@ -72,6 +77,18 @@ public class DeepBreaths extends AbstractSecondsCard {
         DeepBreaths c = (DeepBreaths) super.makeStatEquivalentCopy();
         c.SecondsUsed = this.SecondsUsed;
         return c;
+    }
+
+
+    @Override
+    public void upgrade() {
+        this.SecondsUpgraded = true;
+        super.upgrade();
+    }
+
+    @Override
+    public boolean SecondsUpgraded() {
+        return super.SecondsUpgraded();
     }
 
 }
