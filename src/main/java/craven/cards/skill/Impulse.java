@@ -27,10 +27,10 @@ public class Impulse extends AbstractHungryCard implements OnDevouredInterface {
     private static final int UPG_DAMAGE = 0;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
-    private static final int MAGIC = 5;
-    private static final int UPG_MAGIC = 1;
-    private static final int SECOND_MAGIC = 0;
-    private static final int UPG_SECOND_MAGIC = 0;
+    private static final int MAGIC = 9;
+    private static final int UPG_MAGIC = 6;
+    private static final int SECOND_MAGIC = 5;
+    private static final int UPG_SECOND_MAGIC = 2;
 
 
     public Impulse() {
@@ -44,7 +44,7 @@ public class Impulse extends AbstractHungryCard implements OnDevouredInterface {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new RavenousPower(p, magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new RavenousPower(p, secondMagic)));
         addToBot(new GainEnergyAction(magicNumber));
     }
 

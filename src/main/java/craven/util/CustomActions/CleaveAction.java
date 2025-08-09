@@ -22,8 +22,9 @@ public class CleaveAction extends AbstractGameAction {
     private int baseDamage;
     private boolean firstFrame;
     private boolean utilizeBaseDamage;
+    private final int EnNum;
 
-    public CleaveAction(AbstractCreature source, int[] amount, DamageInfo.DamageType type, AbstractGameAction.AttackEffect effect, boolean isFast) {
+    public CleaveAction(AbstractCreature source, int energy, int[] amount, DamageInfo.DamageType type, AbstractGameAction.AttackEffect effect, boolean isFast) {
         this.firstFrame = true;
         this.utilizeBaseDamage = false;
         this.source = source;
@@ -31,6 +32,9 @@ public class CleaveAction extends AbstractGameAction {
         this.actionType = ActionType.DAMAGE;
         this.damageType = type;
         this.attackEffect = effect;
+
+        this.EnNum = energy;
+
         if (isFast) {
             this.duration = Settings.ACTION_DUR_XFAST;
         } else {
@@ -38,12 +42,12 @@ public class CleaveAction extends AbstractGameAction {
         }
 
     }
-    public CleaveAction(AbstractCreature source, int[] amount, DamageInfo.DamageType type, AbstractGameAction.AttackEffect effect) {
-        this(source, amount, type, effect, false);
+    public CleaveAction(AbstractCreature source, int energy, int[] amount, DamageInfo.DamageType type, AbstractGameAction.AttackEffect effect) {
+        this(source, energy, amount, type, effect, false);
     }
 
-    public CleaveAction(AbstractPlayer player, int baseDamage, DamageInfo.DamageType type, AbstractGameAction.AttackEffect effect) {
-        this(player, (int[])null, type, effect, false);
+    public CleaveAction(AbstractPlayer player, int energy, int baseDamage, DamageInfo.DamageType type, AbstractGameAction.AttackEffect effect) {
+        this(player, energy, (int[])null, type, effect, false);
         this.baseDamage = baseDamage;
         this.utilizeBaseDamage = true;
     }
@@ -92,7 +96,7 @@ public class CleaveAction extends AbstractGameAction {
             }
 
             if(e > 0){
-                addToBot(new GainEnergyAction(e));
+                addToBot(new GainEnergyAction(e * EnNum));
             }
 
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {

@@ -27,8 +27,8 @@ public class Cleave extends AbstractHungryCard {
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
     private static final int MAGIC = 0;
-    private static final int UPG_MAGIC = 0;
-    private static final int SECOND_MAGIC = 0;
+    private static final int UPG_MAGIC = 2;
+    private static final int SECOND_MAGIC = 1;
     private static final int UPG_SECOND_MAGIC = 0;
 
     public Cleave() {
@@ -45,7 +45,7 @@ public class Cleave extends AbstractHungryCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new CleaveAction(p, multiDamage, damageType, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        addToBot(new CleaveAction(p, magicNumber, multiDamage, damageType, AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
 
     @Override

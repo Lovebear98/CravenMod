@@ -5,7 +5,8 @@
     "UPGRADE_DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": [
       " NL When ${modID}:Devoured: Shuffle a random power into your draw pile.",
-      " NL When ${modID}:Devoured: Shuffle a random power into your draw pile with this effect."
+      " NL When ${modID}:Devoured: Shuffle a random power into your draw pile with this effect.",
+      "Channel"
     ]
   },
   "${modID}:Rations": {
@@ -170,8 +171,8 @@
   },
   "${modID}:Aftertaste": {
     "NAME": "Aftertaste",
-    "DESCRIPTION": "{@@}Unplayable. NL When ${modID}:Devoured: Gain {!M!|repeat= [E]|>4= !M! [E]} and lose !M! ${modID}:Ravenous.",
-    "UPGRADE_DESCRIPTION": "{@@}Unplayable. NL When ${modID}:Devoured: Gain {!M!|repeat= [E]|>4= !M! [E]} and lose !M! ${modID}:Ravenous.",
+    "DESCRIPTION": "{@@}Unplayable. NL When ${modID}:Devoured: Gain {!M!|repeat= [E]|>4= !M! [E]} and halve your ${modID}:Ravenous.",
+    "UPGRADE_DESCRIPTION": "{@@}Unplayable. NL When ${modID}:Devoured: Gain {!M!|repeat= [E]|>4= !M! [E]} and halve your ${modID}:Ravenous.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -234,8 +235,8 @@
   },
   "${modID}:Impulse": {
     "NAME": "Impulse",
-    "DESCRIPTION": "{@@}Gain !M! ${modID}:Ravenous. NL Gain {!M!|repeat= [E]|>4= !M! [E]} .",
-    "UPGRADE_DESCRIPTION": "{@@}Gain !M! ${modID}:Ravenous. NL Gain {!M!|repeat= [E]|>4= !M! [E]} .",
+    "DESCRIPTION": "{@@}Gain !${modID}:M2! ${modID}:Ravenous. NL Gain {!M!|repeat= [E]|>4= !M! [E]} .",
+    "UPGRADE_DESCRIPTION": "{@@}Gain !${modID}:M2! ${modID}:Ravenous. NL Gain {!M!|repeat= [E]|>4= !M! [E]} .",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -586,8 +587,8 @@
   },
   "${modID}:Salivate": {
     "NAME": "Salivate",
-    "DESCRIPTION": "Gain !${modID}:M2! *Temp. *HP. NL Gain !M! ${modID}:Ravenous.",
-    "UPGRADE_DESCRIPTION": "Gain !${modID}:M2! *Temp. *HP. NL Gain !M! ${modID}:Ravenous.",
+    "DESCRIPTION": "Gain !M! *Temp. *HP. NL Gain !${modID}:M2! ${modID}:Ravenous.",
+    "UPGRADE_DESCRIPTION": "Gain !M! *Temp. *HP. NL Gain !${modID}:M2! ${modID}:Ravenous.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]

@@ -11,6 +11,7 @@ import craven.character.CravenCharacter;
 import craven.patches.interfaces.OnDevouredInterface;
 import craven.powers.custompowers.RavenousPower;
 import craven.util.CardStats;
+import craven.util.CustomActions.AftertasteAction;
 
 import static craven.util.otherutil.variables.Variables.p;
 
@@ -61,6 +62,8 @@ public class Aftertaste extends AbstractHungryCard implements OnDevouredInterfac
     @Override
     public void PostDevoured() {
         addToBot(new GainEnergyAction(magicNumber));
-        addToBot(new ReducePowerAction(p(), p(), RavenousPower.POWER_ID, magicNumber));
+        if(p().hasPower(RavenousPower.POWER_ID)){
+            addToBot(new AftertasteAction());
+        }
     }
 }
