@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.vfx.cardManip.CardFlashVfx;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
+import craven.cards.generated.Mechanics.Rations;
 import craven.cards.skill.SetTheTable;
 import craven.cards.starter.DinnerBell;
 import craven.character.CravenCharacter;
@@ -19,10 +20,10 @@ import craven.powers.custompowers.RavenousPower;
 import craven.util.CustomActions.generic.BulkDevourAction;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import static craven.util.CustomActions.CustomGameEffects.vfx.ShowCardAndAddToExhaustEffect.ModEXHAUST_PILE_X;
-import static craven.util.otherutil.ConfigManager.AllDevour;
-import static craven.util.otherutil.ConfigManager.EnableEyeCandy;
+import static craven.util.otherutil.ConfigManager.*;
 import static craven.util.otherutil.MechanicManager.DevourCallback;
 import static craven.util.otherutil.MechanicManager.ResetRisk;
 import static craven.util.otherutil.variables.Variables.p;
@@ -72,25 +73,32 @@ public class Wiz {
     }
 
     /**
-     * Section for placing the "Skip Optional" hotkey.
+     * Check if we're Craven events are enabled or not.
      */
-    public static boolean CancelOptional() {
-        if (p() != null) {
-            if ((InputHelper.isMouseDown_R && !InputHelper.justClickedRight)) {
-                return true;
+    public static boolean EnableCravenEvents() {
+        if (DevourEnabled() && EnableEvents) {
+            return true;
+        }
+        if(p() == null){
+            return false;
+        }
+        return p() instanceof CravenCharacter;
+    }
+
+
+    /**
+     * Return how many 'Rations' are in the player's deck.
+     */
+    public static int PlayerOwnedRations() {
+        int i = 0;
+        if(p() != null){
+            for(AbstractCard c: p().masterDeck.group){
+                if(Objects.equals(c.cardID, Rations.ID)){
+                    i += 1;
+                }
             }
         }
-        return false;
-    }
-
-    public static int swapKey = Input.Keys.Q;
-
-    public int getKeyCode() {
-        return swapKey;
-    }
-
-    public boolean cancelHotkeyPressed() {
-        return Gdx.input.isKeyJustPressed(getKeyCode());
+        return i;
     }
 
     /**

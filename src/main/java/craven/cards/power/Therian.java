@@ -5,11 +5,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
 import craven.patches.interfaces.CravingInterface;
-import craven.powers.TherianPower;
+import craven.powers.custompowers.TherianPower;
 import craven.util.CardStats;
 
 public class Therian extends AbstractHungryCard implements CravingInterface {

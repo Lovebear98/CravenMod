@@ -1,17 +1,21 @@
 {
-  "${modID}:OpportunityEvent": {
-    "NAME": "Opportunity",
+  "${modID}:NoWitnessesEvent": {
+    "NAME": "No Witnesses",
     "DESCRIPTIONS": [
-      "(Whoops! This is supposed to be disabled for testing!) You ~smell~ it before you see it, a man with a #rbloody leg lying against a wall. His wound @reeks@ of #rblood, but his steady breathing and alert gaze tells you he has the injury under control. NL NL @\"Finally!@ Hey, friend, I just need to make it a little further. There's somewhere safe to rest up ahead, I'm almost there. ~Please.\"~ NL NL Your first impulse yells at you to just help someone in need out of your dim goodness, but then that #r~burning,~ #r~twisting~ need rises up in your stomach. He's alone. Injured. #r~Fresh.~ You could just...",
-      "You offer the man your shoulder and start helping him limp, but it's only then that it finally sinks into you. Your blood runs cold, and you freeze. NL NL \"Recognize me now? You #r@killed@ me. Carved up my #yleg and locked me in the basement to bleed. I #rhate you, you know. For #rmurdering me. But I #y~forgive~ you. #rNot for you. For #yme. #r~Lucky~ #r~you.\"~ NL NL The weight lifts off your shoulders all at once, and the taste floods your mouth. #y@Soup.@ The soup you made with his corpse. For the first time in your life the taste #r@revolts@ you, but you can't do anything but accept it.",
-      "You draw up close to the injured man with a practiced #y~innocence.~ Right when he reaches out an arm to welcome your help you take your opening and pounce on him, biting into his neck with a satisfying #r@crunch@ before he can react. He falls limp, and you nurse on the hot tang filling your mouth. NL NL He said there was somewhere safe to rest nearby, right? That means somewhere safe to #reat.",
-      ""
+      "You #y~smell~ it before you see it, and follow the scent until you find it - a #rbloody #r~corpse~ lying against a wall. It #r@reeks@ of #rblood, but there's no signs of a struggle. He was injured somewhere else and bled out here. You offer a sympathetic moment of silence and turn to leave, but then that #r~burning,~ #r~twisting~ need rises up in your stomach. #r~Fresh.~ #r~No~ #r~witnesses.~ You could just...",
+      "You #r@hate@ giving in after coming this far, but here...you have to use everything you can to make it home. Food is food, and food is in short supply here.",
+      "#y~Nobody~ here to see, #y~nobody~ here to stop you...it'd be a shame to waste good food right? NL NL The wet #r@crunch@ and #r~sweet~ taste are over too soon, but your belly is full and you're ready to keep going.",
+      "#rNo. NL No, no, no, #r@absolutely@ not. NL You will #r@not@ be a #y@craven@ #y@coward@ that can't even hold a conviction anymore."
     ],
     "OPTIONS": [
-      "[Help Him] #gGain #yEmpty #yPot.",
-      "[Attack Him] #gGain #b",
-      " #yBrazen. #yLose #b",
-      " #rHP.",
+      "[Hesitate] #gGain #g",
+      " #gRations and #r",
+      " #rShame.",
+      "[Eat] #rLose #r",
+      " #rRations. #gGain #g",
+      " #gBrazen.",
+      "[Resist] #rLose #r",
+      " #rHP. Gain #gSeed #gof #gChange.",
       "[Leave]"
     ]
   }

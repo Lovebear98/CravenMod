@@ -126,6 +126,7 @@ public class CravenMod implements
         BaseMod.addPotion(HighProofSpirit.class, new Color(198/255f, 255/255f, 255/255f, 100/255f), null, new Color(169/255f, 216/255f, 170/255f, 47/255f), HighProofSpirit.POTION_ID, CravenCharacter.Meta.CRAVEN_CHARACTER);
         BaseMod.addPotion(PinotEcarlate.class, new Color(180/255f, 70/255f, 70/255f, 150/255f), new Color(220/255f, 110/255f, 110/255f, 175/255f), new Color(150/255f, 40/255f, 40/255f, 120/255f), PinotEcarlate.POTION_ID, CravenCharacter.Meta.CRAVEN_CHARACTER);
         BaseMod.addPotion(Moonshine.class, new Color(180/255f, 180/255f, 255/255f, 255/255f), Color.SKY.cpy(), null, Moonshine.POTION_ID, CravenCharacter.Meta.CRAVEN_CHARACTER);
+        BaseMod.addPotion(LiquidBravery.class, new Color(191/255f, 133/255f, 28/255f, 180/255f), new Color(220/255f, 160/255f, 38/255f, 180/255f), null, LiquidBravery.POTION_ID, CravenCharacter.Meta.CRAVEN_CHARACTER);
 
 
         BaseMod.addPotion(IchorBordeaux.class, Color.GOLDENROD.cpy(), Color.YELLOW.cpy(), Color.FIREBRICK.cpy(), IchorBordeaux.POTION_ID, CravenCharacter.Meta.CRAVEN_CHARACTER);

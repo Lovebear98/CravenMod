@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
 import craven.powers.BasePower;
 import craven.relics.VoiceOfReason;
+import craven.util.CustomActions.LoseHPAllEnemiesAction;
 
 import static craven.CravenMod.makeID;
 import static craven.util.otherutil.Wiz.DevourCards;
@@ -57,7 +58,14 @@ public class RavenousPower extends BasePower implements CloneablePowerInterface,
     @Override
     public void atStartOfTurn() {
         if(!p().hasRelic(VoiceOfReason.ID)){
-        Trigger(true);
+            if(p().hasPower(ShotPower.POWER_ID)){
+                ShotPower pow = (ShotPower) p().getPower(ShotPower.POWER_ID);
+                addToBot(new ReducePowerAction(p(), p(), pow, 1));
+                pow.flash();
+                Trigger(false);
+            }else{
+                Trigger(true);
+            }
         }
         super.atStartOfTurn();
     }
@@ -65,7 +73,14 @@ public class RavenousPower extends BasePower implements CloneablePowerInterface,
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         if(p().hasRelic(VoiceOfReason.ID)) {
-            Trigger(true);
+            if(p().hasPower(ShotPower.POWER_ID)){
+                ShotPower pow = (ShotPower) p().getPower(ShotPower.POWER_ID);
+                addToBot(new ReducePowerAction(p(), p(), pow, 1));
+                pow.flash();
+                Trigger(false);
+            }else{
+                Trigger(true);
+            }
         }
         super.atEndOfTurn(isPlayer);
     }
@@ -83,8 +98,7 @@ public class RavenousPower extends BasePower implements CloneablePowerInterface,
                 addToTop(new LoseHPAction(owner, owner, amount));
             }
             if(p().hasPower(BrazenPower.POWER_ID)){
-                AbstractMonster m = AbstractDungeon.getRandomMonster();
-                addToBot(new LoseHPAction(m, owner, amount));
+                addToBot(new LoseHPAllEnemiesAction(owner, amount));
             }
         }else if(p().hasRelic(VoiceOfReason.ID)){
             this.flash();
@@ -97,8 +111,11 @@ public class RavenousPower extends BasePower implements CloneablePowerInterface,
                 addToTop(new DamageAction(owner, new DamageInfo(owner, amount * 2, DamageInfo.DamageType.NORMAL)));
             }
             if(p().hasPower(BrazenPower.POWER_ID)){
-                AbstractMonster m = AbstractDungeon.getRandomMonster();
-                addToTop(new DamageAction(m, new DamageInfo(owner, amount * 2, DamageInfo.DamageType.NORMAL)));
+                for(AbstractMonster m : AbstractDungeon.getMonsters().monsters){
+                    if(!m.isDeadOrEscaped()){
+                        addToTop(new DamageAction(m, new DamageInfo(owner, amount * 2, DamageInfo.DamageType.NORMAL)));
+                    }
+                }
             }
         }
     }
@@ -110,6 +127,9 @@ public class RavenousPower extends BasePower implements CloneablePowerInterface,
 
     @Override
     public int getHealthBarAmount() {
+        if(owner.hasPower(ShotPower.POWER_ID)){
+            return 0;
+        }
         ///Get the damage we'll ostensibly deal, always flooring with 0
         int result = amount;
 

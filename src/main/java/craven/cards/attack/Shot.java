@@ -1,6 +1,7 @@
 package craven.cards.attack;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -12,6 +13,7 @@ import craven.cards.AbstractHungryCard;
 import craven.character.CravenCharacter;
 import craven.patches.interfaces.OnDevouredInterface;
 import craven.patches.visual.AttackEffectEnum;
+import craven.powers.custompowers.ShotPower;
 import craven.util.CardStats;
 import craven.util.CustomActions.generic.BulkExhaustAction;
 
@@ -25,19 +27,19 @@ public class Shot extends AbstractHungryCard implements OnDevouredInterface {
     private static final CardStats info = new CardStats(
             CravenCharacter.Meta.CARD_COLOR,
             CardType.ATTACK,
-            CardRarity.UNCOMMON,
+            CardRarity.RARE,
             CardTarget.ENEMY,
             1
     );
 
     private static final int DAMAGE = 7;
     private static final int UPG_DAMAGE = 0;
-    private static final int BLOCK = 4;
-    private static final int UPG_BLOCK = 2;
+    private static final int BLOCK = 0;
+    private static final int UPG_BLOCK = 0;
     private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = 1;
-    private static final int SECOND_MAGIC = 0;
-    private static final int UPG_SECOND_MAGIC = 0;
+    private static final int UPG_MAGIC = 0;
+    private static final int SECOND_MAGIC = 2;
+    private static final int UPG_SECOND_MAGIC = -1;
 
 
     public Shot() {
@@ -48,6 +50,7 @@ public class Shot extends AbstractHungryCard implements OnDevouredInterface {
         setMagic(MAGIC, UPG_MAGIC);
         setSecondMagic(SECOND_MAGIC, UPG_SECOND_MAGIC);
 
+        setExhaust(false, true);
     }
 
     @Override
@@ -66,10 +69,8 @@ public class Shot extends AbstractHungryCard implements OnDevouredInterface {
             if(!tmp.isEmpty()){
                 addToTop(new BulkExhaustAction(tmp));
             }
-            if(i > 0){
-                for(int e = i; e > 0; e -= 1){
-                    addToBot(new GainBlockAction(p, block));
-                }
+            if(i >= secondMagic){
+                addToBot(new ApplyPowerAction(p, p, new ShotPower(p, i/secondMagic)));
             }
         }));
     }

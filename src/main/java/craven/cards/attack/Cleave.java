@@ -17,7 +17,7 @@ public class Cleave extends AbstractHungryCard {
     private static final CardStats info = new CardStats(
             CravenCharacter.Meta.CARD_COLOR,
             CardType.ATTACK,
-            CardRarity.UNCOMMON,
+            CardRarity.COMMON,
             CardTarget.ALL_ENEMY,
             3
     );

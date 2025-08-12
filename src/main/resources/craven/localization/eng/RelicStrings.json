@@ -110,12 +110,14 @@
       " extra #yRations to your deck and resets the counter."
     ]
   },
-  "${modID}:EmptyPot": {
-    "NAME": "Empty Pot",
-    "FLAVOR": "Your fur's falling out and you're chewing on silverware from the stress. This is what you deserve, now endure it.",
+  "${modID}:SeedOfChange": {
+    "NAME": "Seed of Change",
+    "FLAVOR": "Members of the Amau tribe say that even the truly vile can be redeemed. You don't believe it, but you can hope.",
     "DESCRIPTIONS": [
-      "Add #b",
-      " #ySilverware and a #yRinse to your deck. Playing #yRinse will add all #yDevoured #ySilverware to your hand."
+      "At the start of each turn, add #b",
+      " #yUpgraded #yMiracle",
+      "s",
+      " to your hand."
     ]
   }
 }

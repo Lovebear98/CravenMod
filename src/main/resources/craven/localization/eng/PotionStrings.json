@@ -67,5 +67,16 @@
       "Ravenous",
       "At the start of your turn, lose #bX HP then #yDevour up to #bX cards to reduce this."
     ]
+  },
+  "${modID}:LiquidBravery": {
+    "NAME": "Liquid Bravery",
+    "DESCRIPTIONS": [
+      "Lose HP equal to your #yRavenous, then  prevent the #yRavenous damage you'd take #b",
+      "time",
+      "s",
+      ".",
+      "Ravenous",
+      "At the start of your turn, lose #bX HP then #yDevour up to #bX cards to reduce this."
+    ]
   }
 }

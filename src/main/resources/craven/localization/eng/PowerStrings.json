@@ -72,9 +72,9 @@
   "${modID}:GnashingFangsPower": {
     "NAME": "Gnashing Fangs",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
-      " #yTemp. #yHP and #b",
-      " #yRavenous."
+      "The first #b",
+      " #gHP you'd lose each turn are gained as #yRavenous instead. NL Remaining: #y",
+      "."
     ]
   },
   "${modID}:MealPrepPower": {
@@ -119,6 +119,15 @@
       "At the end of your turn, gain #b",
       " #yBlock for each remaining #yRisk.",
       " NL Current #yBlock: #b"
+    ]
+  },
+  "${modID}:ShotPower": {
+    "NAME": "Shot",
+    "DESCRIPTIONS": [
+      "The next #b",
+      " time",
+      "s",
+      " your #yRavenous would deal damage to you, prevent it."
     ]
   }
 }

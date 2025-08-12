@@ -1,5 +1,6 @@
 package craven.cards.power;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -7,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import craven.cards.AbstractHungryCard;
+import craven.cards.attack.FleshyWine;
 import craven.character.CravenCharacter;
 import craven.powers.custompowers.BrazenPower;
 import craven.powers.custompowers.RavenousPower;
@@ -57,6 +59,28 @@ public class Brazen extends AbstractHungryCard {
         }
     }
 
+
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
+        if(p() != null && p().hasPower(BrazenPower.POWER_ID)){
+            this.glowColor = GlowColor();
+        }
+    }
+
+    @Override
+    public Color GlowColor() {
+        return Color.RED.cpy();
+    }
+
+
+    @Override
+    public boolean freeToPlay() {
+        if(p() != null && p().hasPower(BrazenPower.POWER_ID)){
+            return true;
+        }
+        return super.freeToPlay();
+    }
 
     @Override
     public AbstractCard makeCopy() { //Optional

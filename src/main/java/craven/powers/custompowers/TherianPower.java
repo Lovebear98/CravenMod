@@ -1,4 +1,4 @@
-package craven.powers;
+package craven.powers.custompowers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import craven.powers.BasePower;
 
 import static craven.CravenMod.makeID;
 import static craven.util.otherutil.MechanicManager.Risk;

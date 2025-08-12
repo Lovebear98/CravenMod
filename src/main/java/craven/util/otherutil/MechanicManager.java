@@ -19,7 +19,7 @@ import craven.patches.interfaces.CravingInterface;
 import craven.patches.interfaces.OnDevouredInterface;
 import craven.patches.interfaces.PostDevourInterface;
 import craven.patches.interfaces.SecondsInterface;
-import craven.powers.TherianPower;
+import craven.powers.custompowers.TherianPower;
 import craven.powers.custompowers.CravingPower;
 import craven.powers.custompowers.MealPrepPower;
 import craven.powers.custompowers.PalateCleanserPower;

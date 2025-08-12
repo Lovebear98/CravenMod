@@ -23,7 +23,7 @@ public class Consume extends AbstractHungryCard implements CravingInterface {
     private static final CardStats info = new CardStats(
             CravenCharacter.Meta.CARD_COLOR,
             CardType.ATTACK,
-            CardRarity.RARE,
+            CardRarity.UNCOMMON,
             CardTarget.ENEMY,
             2
     );

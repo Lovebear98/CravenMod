@@ -107,8 +107,8 @@
   },
   "${modID}:SweetNothings": {
     "NAME": "Sweet Nothings",
-    "DESCRIPTION": "Innate. NL Increase maximum ${modID}:Risk by !M!.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Increase maximum ${modID}:Risk by !M!. NL Draw a card.",
+    "DESCRIPTION": "Innate. NL Gain !M! maximum ${modID}:Risk.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! maximum ${modID}:Risk. NL Draw a card.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -276,7 +276,7 @@
   "${modID}:PalateCleanser": {
     "NAME": "Palate Cleanser",
     "DESCRIPTION": "Reset ${modID}:Risk. NL You cannot reduce *Risk for !${modID}:M2! turns.",
-    "UPGRADE_DESCRIPTION": "Reset ${modID}:Risk and increase maximum *Risk by !M!. NL You cannot reduce *Risk for the rest of combat.",
+    "UPGRADE_DESCRIPTION": "Reset ${modID}:Risk and gain !M! maximum *Risk. NL You cannot reduce *Risk for the rest of combat.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -291,8 +291,8 @@
   },
   "${modID}:RiskTaker": {
     "NAME": "Risk Taker",
-    "DESCRIPTION": "{@@}Increase maximum ${modID}:Risk by !M! this turn.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Increase maximum ${modID}:Risk by !M! this turn.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
+    "DESCRIPTION": "{@@}Lose 5 [E] . NL Gain !M! maximum ${modID}:Risk and !M! Strength this turn.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}Lose 5 [E] . NL Gain !M! maximum ${modID}:Risk and !M! Strength this turn.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -315,8 +315,8 @@
   },
   "${modID}:GnashingFangs": {
     "NAME": "Gnashing Fangs",
-    "DESCRIPTION": "At the start of your turn, gain !M! *Temp. *HP and half as much ${modID}:Ravenous.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, gain !M! *Temp. *HP and half as much ${modID}:Ravenous.",
+    "DESCRIPTION": "The first !M! HP you'd lose each turn is gained as ${modID}:Ravenous instead.",
+    "UPGRADE_DESCRIPTION": "The first !M! HP you'd lose each turn is gained as ${modID}:Ravenous instead.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -443,8 +443,8 @@
   },
   "${modID}:Brazen": {
     "NAME": "Brazen",
-    "DESCRIPTION": "{@@}{!${modID}:HasBrazen!|1=Trigger your ${modID}:Ravenous without taking damage.|@=Your ${modID}:Ravenous damage is also dealt to a random enemy.}",
-    "UPGRADE_DESCRIPTION": "{@@}Retain. NL {!${modID}:HasBrazen!|1=Trigger your ${modID}:Ravenous without taking damage.|@=Your ${modID}:Ravenous damage is also dealt to a random enemy.}",
+    "DESCRIPTION": "{@@}{!${modID}:HasBrazen!|1=Trigger your ${modID}:Ravenous without taking damage.|@=Your ${modID}:Ravenous damage is also dealt to ALL enemies.}",
+    "UPGRADE_DESCRIPTION": "{@@}Retain. NL {!${modID}:HasBrazen!|1=Trigger your ${modID}:Ravenous without taking damage.|@=Your ${modID}:Ravenous damage is also dealt to ALL enemies.}",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -563,8 +563,8 @@
   },
   "${modID}:ChitChat": {
     "NAME": "Chit-Chat",
-    "DESCRIPTION": "{@@}Gain !B! Block.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL If you're ${modID}:Ravenous, also gain *Temp. *HP.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block. NL If you're ${modID}:Ravenous, also gain *Temp. *HP.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -579,8 +579,8 @@
   },
   "${modID}:BoneBroth": {
     "NAME": "Bone Broth",
-    "DESCRIPTION": "{@@}Draw !${modID}:M2! cards.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Draw !${modID}:M2! cards.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
+    "DESCRIPTION": "{@@}Draw !${modID}:M2! cards. NL If you're ${modID}:Ravenous, they become free to play once.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}Draw !${modID}:M2! cards. NL If you're ${modID}:Ravenous, they become free to play once.{!${modID}:S!|>0= NL ${modID}:Seconds !${modID}:S!.|<1=} NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -622,8 +622,8 @@
   },
   "${modID}:Shot": {
     "NAME": "Shot",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Exhaust !M! card{!M!|>1,<1=s}. NL Gain !B! Block for each card Exhausted.",
-    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL Exhaust !M! card{!M!|>1,<1=s}. NL Gain !B! Block for each card Exhausted.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Exhaust !M! card{!M!|>1,<1=s}. NL Prevent ${modID}:Ravenous damage once for each {!${modID}:M2!|>1,<1=!${modID}:M2! cards|@=card}.",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL Exhaust !M! card{!M!|>1,<1=s}. NL Prevent ${modID}:Ravenous damage once for each {!${modID}:M2!|>1,<1=!${modID}:M2! cards|@=card}. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -656,6 +656,14 @@
     "NAME": "Silverware",
     "DESCRIPTION": "Deal !D! damage. NL Exhaust any number of cards, and add that many *Shivs to your hand.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust any number of cards, and add that many Upgraded *Shivs to your hand.",
+    "EXTENDED_DESCRIPTION": [
+      ""
+    ]
+  },
+  "${modID}:Hunger": {
+    "NAME": "Hunger",
+    "DESCRIPTION": "Deal !D! damage. NL Damaged is equal to half your missing HP. NL When ${modID}:Devoured: Apply !M! Vulnerable to a random enemy.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Damaged is equal to half your missing HP. NL When ${modID}:Devoured: Apply !M! Vulnerable to a random enemy.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]

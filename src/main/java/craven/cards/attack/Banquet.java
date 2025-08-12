@@ -26,7 +26,7 @@ public class Banquet extends AbstractHungryCard {
     private static final CardStats info = new CardStats(
             CravenCharacter.Meta.CARD_COLOR,
             CardType.ATTACK,
-            CardRarity.COMMON,
+            CardRarity.UNCOMMON,
             CardTarget.ALL_ENEMY,
             0
     );

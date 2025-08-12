@@ -1,10 +1,13 @@
 package craven.cards.skill;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import craven.cards.AbstractSecondsCard;
 import craven.character.CravenCharacter;
 import craven.powers.custompowers.LoseRiskCapPower;
@@ -19,17 +22,17 @@ public class RiskTaker extends AbstractSecondsCard {
             CardType.SKILL,
             CardRarity.UNCOMMON,
             CardTarget.NONE,
-            2
+            0
     );
 
     private static final int DAMAGE = 0;
     private static final int UPG_DAMAGE = 0;
     private static final int BLOCK = 0;
     private static final int UPG_BLOCK = 0;
-    private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 1;
-    private static final int SECOND_MAGIC = 1;
-    private static final int UPG_SECOND_MAGIC = 0;
+    private static final int MAGIC = 3;
+    private static final int UPG_MAGIC = 0;
+    private static final int SECOND_MAGIC = 0;
+    private static final int UPG_SECOND_MAGIC = 1;
 
 
     public RiskTaker() {
@@ -40,14 +43,17 @@ public class RiskTaker extends AbstractSecondsCard {
         setMagic(MAGIC, UPG_MAGIC);
         setSecondMagic(SECOND_MAGIC, UPG_SECOND_MAGIC);
 
-        setExhaust(true);
+        setExhaust(false, true);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new LoseEnergyAction(5));
+
         addToBot(new ApplyPowerAction(p, p, new RiskCapPower(p, magicNumber)));
         addToBot(new ApplyPowerAction(p, p, new LoseRiskCapPower(p, magicNumber)));
-
+        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, magicNumber)));
     }
 
 
